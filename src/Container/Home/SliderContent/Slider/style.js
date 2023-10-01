@@ -78,6 +78,10 @@ export const SliderWrapper = styled.div`
       width: 100%;
     }
   }
+  .slider-content a {
+    width:  100%;
+    height: 300px;
+  }
   .slider-content img {
     width: 100%;
     height: 100%;
