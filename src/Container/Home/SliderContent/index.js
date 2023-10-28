@@ -71,7 +71,7 @@ const SliderContent = () => {
           <div className="content-top">
             {listTop.map((item) => {
               return (
-                <div key={item.id} className="">
+                <div key={item.id} className="item-image">
                   <img src={item.image} alt="" />
                 </div>
               );

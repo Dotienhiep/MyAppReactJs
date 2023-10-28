@@ -11,10 +11,12 @@ import FilterAccessory from "./FilterAccessory";
 import Footer from "./../../Components/Common/Footer";
 import Copyright from "./../../Components/Common/Copyright";
 import { HomeWrapper } from "./style";
+import ScrollToTop from "react-scroll-to-top";
 
 const Home = ({onAdd}) => {
   return (
     <HomeWrapper>
+      <ScrollToTop smooth color="#6f00ff" />
       <Header />
       <Navigation />
       <Banner />

@@ -42,8 +42,22 @@ export const SliderContentWrapper = styled.div`
   }
   .content-right {
     min-width: 15%;
-    padding-left: 38px;
+    padding-left: 20px;
     padding-right: 0px;
+    @media ${device.laptopL} {
+      min-width: 25%;
+      padding-left: 18px;
+    }
+    @media ${device.laptopS} {
+      min-width: 30%;
+      padding-left: 18px;
+    }
+    @media ${device.laptopM} {
+      display: none;
+    }
+    @media ${device.laptopX} {
+      display: none;
+    }
     @media ${device.laptop} {
       display: none;
     }
@@ -65,6 +79,17 @@ export const SliderContentWrapper = styled.div`
   }
   .content-top {
     padding-bottom: 10px;
+    position: relative;
+  }
+  .content-top .item-image {
+    width: 100%; /* Đặt chiều rộng của div cha theo mong muốn */
+    max-width: 400px; /* Đặt giá trị tối đa cho chiều rộng của div cha */
+  }
+  .content-top .item-image img {
+    width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của div */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    max-width: 100%; /* Đặt giá trị tối đa cho chiều rộng của hình ảnh */
+    max-height: 100%; /* Đặt giá trị tối đa cho chiều cao của hình ảnh */
   }
   .content-bottom .content-title {
     display: flex;

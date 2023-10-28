@@ -1,17 +1,16 @@
 import styled from "styled-components";
+import { device } from "../../../../contants";
 
 export default styled.div`
   display: flex;
   height: auto;
-  margin-top: 20px;
   justify-content: center;
-  flex-direction: column;
-  padding: 15px;
+  padding: 15px 0;
   width: 94%;
   border-radius: 6px;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-image: url("/assets/images/khung-product.png");
+  background-image: url("/assets/images/boder-product.png");
   background-repeat: no-repeat;
   background-position: center top 15px;
   &:hover {
@@ -36,17 +35,31 @@ export default styled.div`
     flex-direction: column;
     border-radius: 10px;
   }
-  .content .title {
+  .content a {
     font-size: 1.2rem;
-    color: #000;
     font-weight: bold;
+    color: #000;
+    padding: 0 20px;
+    white-space: nowrap; /* Ngăn text quá dài xuống dòng */
+    overflow: hidden; /* Ẩn phần dư thừa của văn bản */
+    text-overflow: ellipsis; /* Hiển thị dấu chấm ellipsis (...) */
+    width: 350px; /* Độ rộng của phần tử chứa văn bản */
     font-family: "Helvetica Neue", Helvetica;
+    @media ${device.laptopL} {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 300px;
+    }
+    @media ${device.tablet} {
+      
+    }
   }
   .content .title:hover {
     color: #cb1a21;
   }
   .content .title:active {
-    color: #8A2BE2;
+    color: #8a2be2;
   }
   a {
     text-decoration: none;
