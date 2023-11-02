@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "./../../../contants";
 export const NavWrapper = styled.div`
-  width: 100vw;
+  width: 100%; //fix
   background-color: #000;
   color: #fff;
   .list-nav {

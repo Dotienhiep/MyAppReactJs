@@ -9,7 +9,7 @@ export const SliderProductWrapper = styled.div`
   .slick-list {
     margin: 0 75px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     @media ${device.mobile} {
       margin: 0 35px;
     }
@@ -33,10 +33,10 @@ export const SliderProductWrapper = styled.div`
   }
   .slick-slide {
     /* border: 1px solid black; */
-    margin: 0 7px;
+    margin: 0 3px;
 
     @media ${device.laptopL} {
-      margin: 0 6px;
+      margin: 0 3px;
     }
   }
   .slick-slide > div {

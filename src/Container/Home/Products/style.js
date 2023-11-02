@@ -4,6 +4,36 @@ import { device } from "./../../../contants";
 export const ProductsWrapper = styled.div`
   width: 100%;
   margin-top: 20px;
+  .banner-product {
+    display: flex;
+    justify-content: center;
+    padding: 20px 100px;
+    max-width: 100%;
+    height: auto;
+    @media ${device.laptop} {
+    padding: 20px 50px;
+  }
+  @media ${device.tablet} {
+    padding: 10px 50px;
+  }
+  @media ${device.mobile} {
+    padding: 7px 30px;
+  }
+  @media ${device.mobileL} {
+    padding: 5px 15px;
+  }
+  @media ${device.mobileM} {
+    padding: 5px 15px;
+  }
+  @media ${device.mobileS} {
+    padding: 5px 15px;
+  }
+  }
+  .banner-product img {
+    border-radius: 10px;
+    min-width: 100%;
+    height: 100%;
+  }
 `;
 
 export const PhoneProductWrapper = styled.div`
@@ -11,6 +41,7 @@ export const PhoneProductWrapper = styled.div`
   border-radius: 5px;
   margin-bottom: 40px;
   border: 1px solid #ccc;
+  background-color: #fff;
   @media ${device.laptop} {
     margin: 0 50px;
   }
@@ -102,6 +133,7 @@ export const LaptopProductWrapper = styled.div`
   margin: 0 100px 40px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background-color: #fff;
   @media ${device.laptop} {
     margin: 0 50px;
   }
@@ -188,6 +220,7 @@ export const TabletProductWrapper = styled.div`
   margin: 0 100px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background-color: #fff;
   @media ${device.laptop} {
     margin: 0 50px;
   }

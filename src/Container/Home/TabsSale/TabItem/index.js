@@ -4,25 +4,30 @@ import { TabItemWrapper } from "./style";
 const TabItem = ({ listTab, children, currentIndexActive, onChangeTab }) => {
   return (
     <TabItemWrapper>
-      <ul id="sale" className="list-tab">
+      <div id="sale" className="list-tab">
         {listTab.map((item, index) => {
           return (
-            <li
+            <div
               key={index}
               className={`tab-item ${
-                currentIndexActive === index ? "active" : ""
-              }`}
+                item.content === "Đã kết thúc"
+                  ? "tab-item-ended enabled-ended"
+                  : "tab-item-upcoming"
+              } 
+              ${currentIndexActive === index ? "active" : ""}`}
               onClick={() => onChangeTab(index)}
             >
-              <p className="title">{item.title}</p>
-              <p className="content">{item.content}</p>
-              <div className="">
-                <p className="button"></p>
+              <div className="content-tab">
+                <div className="title">{item.title}</div>
+                <div className={`content ${item.content === "Đã kết thúc" ? "bg-color-ended" : "bg-color-upcoming"}`}>{item.content}</div>
               </div>
-            </li>
+              {/* <div className="">
+                <p className="button"></p>
+              </div> */}
+            </div>
           );
         })}
-      </ul>
+      </div>
       <div className="list-content">{children}</div>
     </TabItemWrapper>
   );

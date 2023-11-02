@@ -9,8 +9,7 @@ export const TabItemWrapper = styled.div`
     margin: 0 100px;
     display: flex;
     align-items: center;
-    border: 1px solid #cacaca;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     @media ${device.laptop} {
       margin: 0 50px;
     }
@@ -40,7 +39,7 @@ export const TabItemWrapper = styled.div`
     font-size: 1.2em;
     font-weight: 500;
     cursor: pointer;
-    padding: 20px 10px;
+    padding: 10px 5px;
     color: #000;
     @media ${device.laptop} {
       font-size: 1em;
@@ -61,15 +60,50 @@ export const TabItemWrapper = styled.div`
       font-size: 0.5em;
     }
   }
+  //
+  .tab-item-ended {
+    background-color: #6a7379;
+  }
+  .tab-item-upcoming {
+    background-color: #ff0000;
+  }
   .tab-item:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 2);
   }
-  .active {
+  /* .active {
     color: #fff;
-    background-color: #ff0000;
+    background-color: #cb1c22;
+  } */
+  .content-tab {
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
-  .title {
-    margin-bottom: 10px;
+  .content-tab .title {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 700;
+  }
+  .content {
+    margin: 0 10px;
+    display: flex;
+    padding: 2px 4px;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .bg-color-ended {
+    background-color: #5a6267;
+  }
+  .enabled-ended {
+    cursor: not-allowed;
+  pointer-events: none;
+  }
+  .bg-color-upcoming {
+    background-color: #eba93a;
+    color: #cb1c22;
   }
   .list-content {
     list-style-type: none;
@@ -79,7 +113,7 @@ export const TabItemWrapper = styled.div`
     font-size: 15px;
   }
   .button {
-    background-color: #ff0000;
+    background-color: #cb1c22;
 
     -webkit-border-radius: 10px;
 

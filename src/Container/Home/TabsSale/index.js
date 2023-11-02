@@ -305,8 +305,17 @@ const TabsSale = () => {
         return "";
     }
   };
+  //
   return (
     <TabsSaleWrapper>
+      <div className="container-content-banner">
+        <div className="flashsale-title">
+          <img src="/assets/images/flashsale-banner.png" alt="" />
+        </div>
+        <div className="flashsale-banner">
+          <img src="/assets/images/flash-banner-image.png" alt="" />
+        </div>
+      </div>
       <TabItem
         listTab={listTab}
         currentIndexActive={currentIndexActive}

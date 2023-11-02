@@ -10,7 +10,7 @@ import { selectIsLoading, selectListProduct } from "./../selectors";
 import { getListProductHome } from "./../actions";
 import Loading from "../../../Components/Common/Loading";
 
-const Products = ({onAdd}) => {
+const Products = ({ onAdd }) => {
   // const [listProduct, setListProduct] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
   // const listProduct = [
@@ -249,8 +249,17 @@ const Products = ({onAdd}) => {
   if (listProduct.length) return <h1>empty....</h1>;
   return (
     <ProductsWrapper>
+      <div className="banner-product">
+        <img src="/assets/images/Banner-dienthoai.png" alt="" />
+      </div>
       <PhoneProduct listProduct={listProduct} onAdd={onAdd}></PhoneProduct>
+      <div className="banner-product">
+        <img src="/assets/images/Banner-laptop.png" alt="" />
+      </div>
       <LaptopProduct listProduct={listProduct} onAdd={onAdd}></LaptopProduct>
+      <div className="banner-product">
+        <img src="/assets/images/Banner-tablet.png" alt="" />
+      </div>
       <TabletProduct listProduct={listProduct} onAdd={onAdd}></TabletProduct>
     </ProductsWrapper>
   );
