@@ -355,7 +355,7 @@ export const ProductWrapper = styled.div`
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
-    filter: brightness(90%);
+    filter: brightness(100%);
   }
   &:hover .list-btn {
     display: block;
