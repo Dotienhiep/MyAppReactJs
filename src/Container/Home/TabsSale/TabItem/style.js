@@ -75,7 +75,7 @@ export const TabItemWrapper = styled.div`
     background-color: #cb1c22;
   } */
   .content-tab {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -99,7 +99,7 @@ export const TabItemWrapper = styled.div`
   }
   .enabled-ended {
     cursor: not-allowed;
-  pointer-events: none;
+    pointer-events: none;
   }
   .bg-color-upcoming {
     background-color: #eba93a;

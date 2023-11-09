@@ -3,7 +3,7 @@ import { TabletProductWrapper } from "../style";
 import Product from "./../Product";
 import { Link } from "react-router-dom";
 
-const TabletProduct = ({onAdd, listProduct }) => {
+const TabletProduct = ({ onAdd, listProduct }) => {
   return (
     <TabletProductWrapper>
       <div className="title">
@@ -14,7 +14,7 @@ const TabletProduct = ({onAdd, listProduct }) => {
       </div>
       <div className="list-product">
         {listProduct?.ipad?.map((item) => {
-          return <Product key={item._id} product={item} onAdd={onAdd}/>;
+          return <Product key={item._id} product={item} onAdd={onAdd} />;
         })}
       </div>
     </TabletProductWrapper>

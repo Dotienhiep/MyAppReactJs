@@ -14,7 +14,7 @@ export default styled.div`
   background-repeat: no-repeat;
   background-position: center top 15px;
   &:hover {
-    border: 1px solid #ccc;
+    border: 1px solid black;
   }
   &:hover .list-btn {
     display: block;
@@ -26,9 +26,13 @@ export default styled.div`
     margin: 50px auto;
   }
   img {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  img:hover {
+    transform: scale(1.2);
   }
   .content {
     display: flex;
@@ -52,7 +56,6 @@ export default styled.div`
       width: 300px;
     }
     @media ${device.tablet} {
-      
     }
   }
   .content .title:hover {

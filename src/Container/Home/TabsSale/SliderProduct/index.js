@@ -22,7 +22,7 @@ const SliderProduct = ({ listData }) => {
   const settings = {
     slidesToShow: 6,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     responsive: [
       {

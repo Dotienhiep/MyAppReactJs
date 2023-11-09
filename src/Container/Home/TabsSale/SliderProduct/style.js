@@ -9,7 +9,7 @@ export const SliderProductWrapper = styled.div`
   .slick-list {
     margin: 0 75px;
     display: flex;
-    justify-content: flex-start;//111111111
+    justify-content: flex-start; //111111111
     @media ${device.mobile} {
       margin: 0 35px;
     }
@@ -29,10 +29,16 @@ export const SliderProductWrapper = styled.div`
     align-items: center;
   }
   .rec-carousel-item {
-    /* border: 1px solid red; */
+    /* border: 5px solid blue; */
   }
   .slick-slide {
-    margin: 0 3px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    /* border: 2px solid red; */
+  }
+  .slick-slide button {
+    display: none;
   }
   .slick-slide > div {
     /* border: 1px solid red; */

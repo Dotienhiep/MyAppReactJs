@@ -11,23 +11,23 @@ export const ProductsWrapper = styled.div`
     max-width: 100%;
     height: auto;
     @media ${device.laptop} {
-    padding: 20px 50px;
-  }
-  @media ${device.tablet} {
-    padding: 10px 50px;
-  }
-  @media ${device.mobile} {
-    padding: 7px 30px;
-  }
-  @media ${device.mobileL} {
-    padding: 5px 15px;
-  }
-  @media ${device.mobileM} {
-    padding: 5px 15px;
-  }
-  @media ${device.mobileS} {
-    padding: 5px 15px;
-  }
+      padding: 20px 50px;
+    }
+    @media ${device.tablet} {
+      padding: 10px 50px;
+    }
+    @media ${device.mobile} {
+      padding: 7px 30px;
+    }
+    @media ${device.mobileL} {
+      padding: 5px 15px;
+    }
+    @media ${device.mobileM} {
+      padding: 5px 15px;
+    }
+    @media ${device.mobileS} {
+      padding: 5px 15px;
+    }
   }
   .banner-product img {
     border-radius: 10px;
@@ -306,7 +306,7 @@ export const TabletProductWrapper = styled.div`
 export const ProductWrapper = styled.div`
   display: flex;
   height: 100%;
-  width: calc((100% - 45px) / 4);
+  width: calc((100% - 45px) / 6);
   margin-top: 20px;
   justify-content: center;
   flex-direction: column;
@@ -315,6 +315,15 @@ export const ProductWrapper = styled.div`
   background-image: url("/assets/images/boder-product.png");
   background-repeat: no-repeat;
   background-position: center top 15px;
+  @media ${device.desktopS} {
+    width: calc((100% - 45px) / 5);
+  }
+  @media ${device.desktopM} {
+    width: calc((100% - 45px) / 4);
+  }
+  @media ${device.laptopL} {
+    width: calc((100% - 45px) / 4);
+  }
   @media ${device.laptopS} {
     width: calc((100% - 45px) / 3);
   }
@@ -328,10 +337,10 @@ export const ProductWrapper = styled.div`
     width: calc((100% - 45px) / 2);
   }
   @media ${device.tablet} {
-    width: calc((100% - 45px) / 2);
+    width: 100%;
   }
   @media ${device.mobile} {
-    width: calc((100% - 45px) / 2);
+    width: 100%;
   }
   @media ${device.mobileL} {
     width: 100%;
@@ -355,10 +364,10 @@ export const ProductWrapper = styled.div`
     margin: 50px auto;
   }
   img {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
   }
   img:hover {
     transform: scale(1.2);
@@ -399,7 +408,7 @@ export const ProductWrapper = styled.div`
     color: #cb1a21;
   }
   .title:active {
-    color: #8A2BE2;
+    color: #8a2be2;
   }
   .cost {
     margin: 20px 0;
@@ -426,6 +435,10 @@ export const ProductWrapper = styled.div`
     display: none;
     margin: 20px 0 0 0;
   }
+  .list-btn-responsive {
+    display: flex;
+    justify-content: space-between;
+  }
   .list-btn button {
     padding: 5px 8px;
     font-size: 18px;
@@ -439,7 +452,7 @@ export const ProductWrapper = styled.div`
     background-color: #cb1a21;
     cursor: pointer;
     color: #fff;
-    transition: opacity 0.25s ease-in-out; 
+    transition: opacity 0.25s ease-in-out;
   }
   .buy-now:hover {
     opacity: 0.8;
@@ -448,7 +461,7 @@ export const ProductWrapper = styled.div`
   .cart {
     background-color: #00bfff;
     cursor: pointer;
-    transition: opacity 0.25s ease-in-out; 
+    transition: opacity 0.25s ease-in-out;
   }
   .cart:hover {
     opacity: 0.8;
@@ -469,16 +482,16 @@ export const ProductWrapper = styled.div`
   }
   .list-info .cpu {
     padding-right: 15px;
-  } 
+  }
   .list-info .screen {
     padding-right: 15px;
-  } 
+  }
   .list-info .ram {
     padding-right: 15px;
-  } 
+  }
   .list-info .memory {
     padding-right: 15px;
-  } 
+  }
   .item-info svg {
     color: #a9a9a9;
   }

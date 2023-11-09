@@ -52,7 +52,6 @@ export default styled.div`
       width: 300px;
     }
     @media ${device.tablet} {
-      
     }
   }
   .content .title:hover {

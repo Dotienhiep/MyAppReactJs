@@ -3,7 +3,7 @@ import { LaptopProductWrapper } from "../style";
 import Product from "./../Product";
 import { Link } from "react-router-dom";
 
-const LaptopProduct = ({onAdd, listProduct }) => {
+const LaptopProduct = ({ onAdd, listProduct }) => {
   return (
     <LaptopProductWrapper>
       <div className="title">

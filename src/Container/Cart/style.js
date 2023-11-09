@@ -1,9 +1,28 @@
 import styled from "styled-components";
+import { device } from "../../contants";
 
 export const CartWrapper = styled.div`
   width: 100%;
   .product-cart {
     margin: 100px;
+    @media ${device.laptop} {
+      margin: 100px 50px;
+    }
+    @media ${device.tablet} {
+      margin: 100px 50px;
+    }
+    @media ${device.mobile} {
+      margin: 100px 30px;
+    }
+    @media ${device.mobileL} {
+      margin: 100px 15px;
+    }
+    @media ${device.mobileM} {
+      margin: 100px 15px;
+    }
+    @media ${device.mobileS} {
+      margin: 100px 15px;
+    }
   }
   .no-product {
     margin: 70px 0;
@@ -52,7 +71,43 @@ export const CartWrapper = styled.div`
   }
   .content-cart {
     display: flex;
-    margin-top: 100px;
+    justify-content: center;
+    margin-top: 50px;
+    @media ${device.tablet} {
+      display: flex;
+      flex-direction: column;
+      .list-cart {
+        width: 100%;
+      }
+    }
+    @media ${device.mobile} {
+      display: flex;
+      flex-direction: column;
+      .list-cart {
+        width: 100%;
+      }
+    }
+    @media ${device.mobileL} {
+      display: flex;
+      flex-direction: column;
+      .list-cart {
+        width: 100%;
+      }
+    }
+    @media ${device.mobileM} {
+      display: flex;
+      flex-direction: column;
+      .list-cart {
+        width: 100%;
+      }
+    }
+    @media ${device.mobileS} {
+      display: flex;
+      flex-direction: column;
+      .list-cart {
+        width: 100%;
+      }
+    }
   }
   .content-product-cart .image-product-cart {
     width: 130px;

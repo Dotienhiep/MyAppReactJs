@@ -19,7 +19,15 @@ const TabItem = ({ listTab, children, currentIndexActive, onChangeTab }) => {
             >
               <div className="content-tab">
                 <div className="title">{item.title}</div>
-                <div className={`content ${item.content === "Đã kết thúc" ? "bg-color-ended" : "bg-color-upcoming"}`}>{item.content}</div>
+                <div
+                  className={`content ${
+                    item.content === "Đã kết thúc"
+                      ? "bg-color-ended"
+                      : "bg-color-upcoming"
+                  }`}
+                >
+                  {item.content}
+                </div>
               </div>
               {/* <div className="">
                 <p className="button"></p>

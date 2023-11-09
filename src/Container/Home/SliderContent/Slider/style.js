@@ -79,7 +79,7 @@ export const SliderWrapper = styled.div`
     }
   }
   .slider-content a {
-    width:  100%;
+    width: 100%;
     height: 300px;
   }
   .slider-content img {

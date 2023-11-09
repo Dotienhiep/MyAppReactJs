@@ -183,7 +183,7 @@ const Navigation = () => {
     },
     {
       id: uuidv4(),
-      title: "APPLE",
+      title: "APPLE",/// trống
       icon: <FontAwesomeIcon icon={faAppleWhole} />,
       listSubMenu: {
         titleTop: "Hãng sản xuất",

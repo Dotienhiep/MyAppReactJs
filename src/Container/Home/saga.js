@@ -20,12 +20,12 @@ function* getListProductHomeProcess(params) {
 
     const response = yield call(getListProductHomeAPI, key);
     console.log("response =====", response);
-    console.log("111111111111");
+    // console.log("111111111111");
 
     const { status, data } = response;
     // console.log("data",data.products);
     if (status === 200) {
-      console.log("==============call here ========");
+      // console.log("==============call here ========");
       /// BUOC 2: DIspacth action cap nhat list PRODUCT trrong reducer
       yield put(getListProductHomeSuccess(data.products));
     } else {

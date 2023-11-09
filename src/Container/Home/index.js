@@ -13,7 +13,7 @@ import Copyright from "./../../Components/Common/Copyright";
 import { HomeWrapper } from "./style";
 import ScrollToTop from "react-scroll-to-top";
 
-const Home = ({onAdd}) => {
+const Home = ({ onAdd }) => {
   return (
     <HomeWrapper>
       <ScrollToTop smooth color="#6f00ff" />
@@ -24,7 +24,7 @@ const Home = ({onAdd}) => {
       <Filter />
       <TabsSale />
       <LaptopGaming />
-      <Products onAdd={onAdd}/>
+      <Products onAdd={onAdd} />
       <FilterAccessory />
       <Footer />
       <Copyright />

@@ -6,7 +6,7 @@ export const TabsSaleWrapper = styled.div`
   .container-content-banner {
     position: relative;
     z-index: 2 !important;
-    width: calc(100% - 200px)!important;
+    width: calc(100% - 200px) !important;
     /* max-width: 1236px; */
     margin: 0 auto;
     display: flex;
@@ -19,22 +19,22 @@ export const TabsSaleWrapper = styled.div`
     box-shadow: 0 4px 4px 0 #00000040;
     overflow: unset;
     @media ${device.laptop} {
-      width: calc(100% - 100px)!important;
+      width: calc(100% - 100px) !important;
     }
     @media ${device.tablet} {
-      width: calc(100% - 100px)!important;
+      width: calc(100% - 100px) !important;
     }
     @media ${device.mobile} {
-      width: calc(100% - 60px)!important;
+      width: calc(100% - 60px) !important;
     }
     @media ${device.mobileL} {
-      width: calc(100% - 30px)!important;
+      width: calc(100% - 30px) !important;
     }
     @media ${device.mobileM} {
-      width: calc(100% - 30px)!important;
+      width: calc(100% - 30px) !important;
     }
     @media ${device.mobileS} {
-      width: calc(100% - 30px)!important;
+      width: calc(100% - 30px) !important;
     }
   }
   .container-content-banner::before {
