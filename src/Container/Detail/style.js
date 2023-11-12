@@ -1,9 +1,28 @@
 import styled from "styled-components";
+import { device } from "../../contants";
 
 export const DetailWrapper = styled.div`
   width: 100%;
   .detail-wrapper {
     margin: 50px 100px;
+    @media ${device.laptop} {
+    margin: 50px 50px;
+  }
+  @media ${device.tablet} {
+    margin: 50px 50px;
+  }
+  @media ${device.mobile} {
+    margin: 40px 30px;
+  }
+  @media ${device.mobileL} {
+    margin: 20px 15px;
+  }
+  @media ${device.mobileM} {
+    margin: 20px 15px;
+  }
+  @media ${device.mobileS} {
+    margin: 20px 15px;
+  }
   }
   .title-detail-product-length {
     margin-top: 60px;
@@ -12,42 +31,300 @@ export const DetailWrapper = styled.div`
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
   }
-  .title-detail {
-    font-size: 1.75rem;
+  ..title-detail-product-length h1 {
+    font-size: 1.8rem;
+    @media ${device.desktopS} {
+      font-size: 1.7rem;
+    }
+    @media ${device.desktopXM} {
+      font-size: 1.6rem;
+    }
+    @media ${device.desktopM} {
+      font-size: 1.6rem;
+    }
+    @media ${device.laptopL} {
+      font-size: 1.4rem;
+    }
+    @media ${device.laptopS} {
+      font-size: 1.4rem;
+    }
+    @media ${device.laptopM} {
+      font-size: 1.3rem;
+    }
+    @media ${device.laptopX} {
+      font-size: 1.3rem;
+    }
+    @media ${device.laptop} {
+      font-size: 1.5rem;
+    }
+    @media ${device.tablet} {
+      font-size: 1.5rem;
+    }
+    @media ${device.mobile} {
+      font-size: 1.5rem;
+    }
+    @media ${device.mobileL} {
+      font-size: 1.5rem;
+    }
+    @media ${device.mobileM} {
+      font-size: 2rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 1.4rem;
+    }
+  }
+  .length-product {
+    font-size: 1.6rem;
+    @media ${device.desktopS} {
+      font-size: 1.4rem;
+    }
+    @media ${device.desktopXM} {
+      font-size: 1.2rem;
+    }
+    @media ${device.desktopM} {
+      font-size: 1.1rem;
+    }
+    @media ${device.laptopL} {
+      font-size: 1rem;
+    }
+    @media ${device.laptopS} {
+      font-size: .9rem;
+    }
+    @media ${device.laptopM} {
+      font-size: .8rem;
+    }
+    @media ${device.laptopX} {
+      font-size: .8rem;
+    }
+    @media ${device.laptop} {
+      font-size: .8rem;
+    }
+    @media ${device.tablet} {
+      font-size: .8rem;
+    }
+    @media ${device.mobile} {
+      font-size: .7rem;
+    }
+    @media ${device.mobileL} {
+      font-size: .7rem;
+    }
+    @media ${device.mobileM} {
+      font-size: .7rem;
+    }
+    @media ${device.mobileS} {
+      font-size: .7rem;
+    }
   }
   .content-detail-product {
     display: flex;
+    @media ${device.laptop} {
+      display: flex;
+      flex-direction: column;
+    }
+    @media ${device.tablet} {
+      display: flex;
+      flex-direction: column;
+    }
+    @media ${device.mobile} {
+      display: flex;
+      flex-direction: column;
+    }
+    @media ${device.mobileL} {
+      display: flex;
+      flex-direction: column;
+    }
+    @media ${device.mobileM} {
+      display: flex;
+      flex-direction: column;
+    }
+    @media ${device.mobileS} {
+      display: flex;
+      flex-direction: column;
+    }
   }
   .image-detail-product {
     flex-grow: 1;
     border: 1px solid transparent;
     margin-top: 30px;
   }
+  /* .image-acc:hover img {
+    transform: scale(1.2);
+  } */
   .image-acc {
     width: 100%;
-    height: auto;
+    height: 700px;
     border: 1px solid transparent;
     background-image: url(/assets/images/banner-detail.png);
+    background-size: contain; /* Background sẽ nằm bên trong phần nền của div mà không tràn ra ngoài */
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center top;
+    position: relative;
+    @media ${device.desktop} {
+      height: 600px;
+    }
+    @media ${device.desktopS} {
+      height: 500px;
+    }
+    @media ${device.desktopXM} {
+      height: 450px;
+    }
+    @media ${device.desktopM} {
+      height: 450px;
+    }
+    @media ${device.laptopL} {
+      height: 400px;
+    }
+    @media ${device.laptopS} {
+      height: 370px;
+    }
+    @media ${device.laptopM} {
+      height: 350px;
+    }
+    @media ${device.laptopX} {
+      height: 300px;
+    }
+    @media ${device.laptop} {
+      height: 400px;
+    }
+    @media ${device.tablet} {
+      height: 200px;
+    }
+    @media ${device.mobile} {
+      height: 200px;
+    }
+    @media ${device.mobileL} {
+      height: 150px;
+    }
+    @media ${device.mobileM} {
+      height: 140px;
+    }
+    @media ${device.mobileS} {
+      height: 120px;
+    }
   }
   .image-acc img {
-    margin: 150px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 35%; /* Đảm bảo ảnh không vượt quá chiều rộng của div */
+    max-height: 100%;
+    display:block;
+    background: transparent;
+    overflow: hidden;
+    @media ${device.desktop} {
+      max-width: 35%;
+    }
+    @media ${device.desktopS} {
+      max-width: 40%;
+    }
+    @media ${device.desktopXM} {
+      max-width: 40%;
+    }
+    @media ${device.desktopM} {
+      max-width: 42%;
+    }
+    @media ${device.laptopL} {
+      max-width: 44%;
+    }
+    @media ${device.laptopS} {
+      max-width: 43%;
+    }
+    @media ${device.laptopM} {
+      max-width: 35%;
+    }
+    @media ${device.laptopX} {
+      max-width: 35%;
+    }
+    @media ${device.laptop} {
+      max-width: 35%;
+    }
+    @media ${device.tablet} {
+      max-width: 25%;
+    }
+    @media ${device.mobile} {
+      max-width: 35%;
+    }
+    @media ${device.mobileL} {
+      max-width: 35%;
+    }
+    @media ${device.mobileM} {
+      max-width: 35%;
+    }
+    @media ${device.mobileS} {
+      max-width: 35%;
+    }
   }
   .information-product-detail {
     width: 50%;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    @media ${device.laptop} {
+      width: 100%;
+    }
+    @media ${device.tablet} {
+      width: 100%;
+    }
+    @media ${device.mobile} {
+      width: 100%;
+    }
+    @media ${device.mobileL} {
+      width: 100%;
+    }
+    @media ${device.mobileM} {
+      width: 100%;
+    }
+    @media ${device.mobileS} {
+      width: 100%;
+    }
   }
   .price-detail {
     font-size: 30px;
     color: #cd1916;
     font-weight: bold;
     margin: 10px 15px;
+    font-size: 2rem;
+    @media ${device.desktopS} {
+      font-size: 1.7rem;
+    }
+    @media ${device.desktopXM} {
+      font-size: 1.6rem;
+    }
+    @media ${device.desktopM} {
+      font-size: 1.6rem;
+    }
+    @media ${device.laptopL} {
+      font-size: 1.5rem;
+    }
+    @media ${device.laptopS} {
+      font-size: 1.5rem;
+    }
+    @media ${device.laptopM} {
+      font-size: 1.4rem;
+    }
+    @media ${device.laptopX} {
+      font-size: 1.4rem;
+    }
+    @media ${device.laptop} {
+      font-size: 1.6rem;
+    }
+    @media ${device.tablet} {
+      font-size: 1.5rem;
+    }
+    @media ${device.mobile} {
+      font-size: 1.5rem;
+    }
+    @media ${device.mobileL} {
+      font-size: 1.5rem;
+    }
+    @media ${device.mobileM} {
+      font-size: 2rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 1.4rem;
+    }
+    
   }
   .react-tabs__tab-list {
     display: flex;
@@ -84,6 +361,88 @@ export const DetailWrapper = styled.div`
   .title-info {
     margin-right: 10px;
     font-weight: bold;
+    font-size: 1.8rem;
+    @media ${device.desktopS} {
+      font-size: 1.6rem;
+    }
+    @media ${device.desktopXM} {
+      font-size: 1.4rem;
+    }
+    @media ${device.desktopM} {
+      font-size: 1.3rem;
+    }
+    @media ${device.laptopL} {
+      font-size: 1.2rem;
+    }
+    @media ${device.laptopS} {
+      font-size: 1rem;
+    }
+    @media ${device.laptopM} {
+      font-size: 1rem;
+    }
+    @media ${device.laptopX} {
+      font-size: 1rem;
+    }
+    @media ${device.laptop} {
+      font-size: 1rem;
+    }
+    @media ${device.tablet} {
+      font-size: 1rem;
+    }
+    @media ${device.mobile} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileL} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileM} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 1rem;
+    }
+  }
+  .content-info {
+    font-size: 1.8rem;
+    @media ${device.desktopS} {
+      font-size: 1.6rem;
+    }
+    @media ${device.desktopXM} {
+      font-size: 1.4rem;
+    }
+    @media ${device.desktopM} {
+      font-size: 1.3rem;
+    }
+    @media ${device.laptopL} {
+      font-size: 1.2rem;
+    }
+    @media ${device.laptopS} {
+      font-size: 1rem;
+    }
+    @media ${device.laptopM} {
+      font-size: 1rem;
+    }
+    @media ${device.laptopX} {
+      font-size: 1rem;
+    }
+    @media ${device.laptop} {
+      font-size: 1rem;
+    }
+    @media ${device.tablet} {
+      font-size: 1rem;
+    }
+    @media ${device.mobile} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileL} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileM} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 1rem;
+    }
   }
   .title------ {
     font-size: 18px;
@@ -186,6 +545,7 @@ export const DetailWrapper = styled.div`
     flex-direction: column;
     margin-top: 50px;
     margin-left: 15px;
+    border: 10px solid black;
   }
   .list-btn-detail .submit-btn-detail-first {
     padding: 10px 20px;
@@ -213,6 +573,13 @@ export const DetailWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media ${device.laptopM} {
+    display:flex;
+    flex-direction: column;
+    & button {
+      min-width: 100%;
+    }
+  }
   }
   .list-btn-bottom button {
     padding: 10px 65px;
@@ -221,12 +588,32 @@ export const DetailWrapper = styled.div`
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    margin-bottom: 10px;
   }
   .list-btn-bottom button:hover {
     opacity: 0.8;
   }
   .vote-detail-product {
     margin: 50px 100px;
+    @media ${device.laptop} {
+    margin: 50px 50px;
+  }
+  @media ${device.tablet} {
+    margin: 50px 50px;
+  }
+  @media ${device.mobile} {
+    margin: 40px 30px;
+  }
+  @media ${device.mobileL} {
+    margin: 20px 15px;
+  }
+  @media ${device.mobileM} {
+    margin: 20px 15px;
+  }
+  @media ${device.mobileS} {
+    margin: 20px 15px;
+  }
+    
   }
   .vote-detail-product h4 {
     margin: 15px 0;

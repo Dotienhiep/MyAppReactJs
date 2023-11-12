@@ -16,7 +16,7 @@ function Form({ order }) {
     const newOrder = await createOrder(order);
     console.log("newODER =====", newOrder);
     if (newOrder.status === 201) {
-      alert("Bạn đã đặt hàng thành công . Cảm ơn bạn đã tin tưởng shop");
+      alert("Bạn đã đặt hàng thành công . Cảm ơn bạn đã tin tưởng shop <3");
     }
     reset();
   };

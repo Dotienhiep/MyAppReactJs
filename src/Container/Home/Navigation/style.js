@@ -4,6 +4,29 @@ export const NavWrapper = styled.div`
   width: 100%; //fix
   background-color: #000;
   color: #fff;
+  position: fixed;
+  z-index: 100000000;
+  top: 60px;
+  left: 0;
+  @media ${device.laptop} {
+      top: 3px;
+    }
+    @media ${device.tablet} {
+      top: 3px;
+    }
+    @media ${device.mobile} {
+      top: 3px;
+    }
+    @media ${device.mobileL} {
+      top: 3px;
+    }
+    @media ${device.mobileM} {
+      top: 3px;
+    }
+    @media ${device.mobileS} {
+      top: 3px;
+    }
+
   .list-nav {
     margin: 0 100px;
     padding: 0;

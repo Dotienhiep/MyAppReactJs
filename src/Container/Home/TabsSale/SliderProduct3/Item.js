@@ -18,6 +18,9 @@ export default styled.div`
     transform: translateY(-5px);
     filter: brightness(100%);
   } */
+  &:hover img {
+    transform: scale(1.2);
+  }
   &:hover .list-btn {
     display: block;
   }

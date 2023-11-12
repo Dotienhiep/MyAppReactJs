@@ -56,6 +56,24 @@ export const ContentLapTopWrapper = styled.div`
     flex-wrap: wrap;
     margin-bottom: 50px;
     justify-content: space-between;
+    @media ${device.laptop} {
+      margin: 10px 40px;
+    }
+    @media ${device.tablet} {
+      margin: 10px 40px;
+    }
+    @media ${device.mobile} {
+      margin: 10px 30px;
+    }
+    @media ${device.mobileL} {
+      margin: 10px 15px;
+    }
+    @media ${device.mobileM} {
+      margin: 10px 15px;
+    }
+    @media ${device.mobileS} {
+      margin: 10px 15px;
+    }
   }
   .product-item {
     width: calc((100% - 50px) / 4);

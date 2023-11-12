@@ -83,7 +83,7 @@ const SliderContent = () => {
                 <a href="#sale">Thông tin nổi bật</a>
               </span>
               <span className="hove">
-                <Link to="/product">Xem tất cả</Link>
+                <Link to="/dien-thoai">Xem tất cả</Link>
               </span>
             </div>
             {listBot.map((item) => {

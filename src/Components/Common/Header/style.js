@@ -3,10 +3,16 @@ import { device } from "./../../../contants";
 // cd1817
 
 export const HeaderWrapper = styled.div`
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  
   background-color: #ff3233;
   padding: 8px 100px;
   /* responsive */

@@ -357,6 +357,9 @@ export const ProductWrapper = styled.div`
     transform: translateY(-5px);
     filter: brightness(100%);
   }
+  &:hover img {
+    transform: scale(1.2);
+  }
   &:hover .list-btn {
     display: block;
   }
@@ -371,9 +374,6 @@ export const ProductWrapper = styled.div`
     height: 140px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
-  }
-  img:hover {
-    transform: scale(1.2);
   }
   .content {
     display: flex;

@@ -13,11 +13,14 @@ export default styled.div`
   background-image: url("/assets/images/boder-product.png");
   background-repeat: no-repeat;
   background-position: center top 15px;
-  /* transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
   &:hover {
     transform: translateY(-5px);
-    filter: brightness(90%);
-  } */
+    filter: brightness(100%);
+  }
+  &:hover img {
+    transform: scale(1.2);
+  }
   &:hover .list-btn {
     display: block;
   }
@@ -32,9 +35,6 @@ export default styled.div`
     height: 140px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
-  }
-  img:hover {
-    transform: scale(1.2);
   }
   .content {
     display: flex;

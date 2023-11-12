@@ -39,6 +39,7 @@ export const SliderProductWrapper = styled.div`
     &:hover {
       transform: translateY(-5px);
       filter: brightness(100%);
+      box-shadow: 0px -5px 0px 0px #3498db;
     }
   }
   .slick-slide > div {

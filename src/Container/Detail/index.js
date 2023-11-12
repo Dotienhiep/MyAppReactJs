@@ -10,6 +10,7 @@ import Loading from "../../Components/Common/Loading";
 import { Link } from "react-router-dom";
 import "./font-awesome.css";
 import Modal from "./Modal";
+import axios from "axios"
 
 const Detail = ({ onAdd }) => {
   const lorem = "Thông tin đang được cập nhật";
@@ -21,6 +22,8 @@ const Detail = ({ onAdd }) => {
   const [comment, setComment] = useState("");
   const [refresh, setRefresh] = useState(1);
   const { productId } = useParams();
+  // const [mainImage, setMainImage] = useState('');
+  // const [thumbnailImages, setThumbnailImages] = useState([]);
   // console.log("idpro",productId);
   const callAPI = (api) => {
     const response = getListProduct(api);
@@ -41,25 +44,22 @@ const Detail = ({ onAdd }) => {
     const initData = async () => {
       try {
         setIsLoading(true);
-        // const response = await getListProduct(
-        //   `https://api-nodejs-backend.onrender.com/product/${productId}`
-        // );
         const response = await callAPI(
           `https://api-nodejs-backend.onrender.com/product/${productId}`
         );
-        const response1 = await callAPI(
+        const responseReview = await callAPI(
           `https://api-nodejs-backend.onrender.com/review/${productId}`
         );
+        // const urlImage = await callAPI(
+        //   `https://api-nodejs-backend.onrender.com/product/${productId}`
+        // )
         const { data, status } = response;
-        // console.log("res", response);
-        // const response1 = await getListProduct(
-        //   `https://api-nodejs-backend.onrender.com/review/${productId}`
-        // );
 
-        if (status === 200 && response1) {
+        if (status === 200 && responseReview) {
           setIsLoading(false);
           setListData(data.product);
-          setListReview(response1.data.listReview);
+          console.log("dataaaaaproduct=====".data.product);
+          setListReview(responseReview.data.listReview);
         } else {
           setIsLoading(false);
         }
@@ -69,7 +69,11 @@ const Detail = ({ onAdd }) => {
     };
     initData();
   }, []);
+  //imageapi
   if (isLoading) return <Loading />;
+  // const handleThumbnailClick = (imagePath) => {
+  //   setMainImage(imagePath);
+  // };
   // console.log(listReview)
   console.log("listData", listData);
   // const productDetail = listData?.find((item) => {
@@ -97,12 +101,20 @@ const Detail = ({ onAdd }) => {
         <div className="content-detail-product">
           <div className="image-detail-product">
             <div className="image-acc">
-              <img
-                src={image.concat(listData?.urlPicture)}
-                style={{ width: "200px" }}
-                alt=""
-              />
+              <img src={image.concat(listData?.urlPicture)} alt="" />
             </div>
+            {/* callAPI lấy image */}
+            {/* <div className="thumbnail-list">
+              {thumbnailImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="thumbnail"
+                  onClick={() => handleThumbnailClick(image)}
+                >
+                  <img src={image} alt={`Thumbnail ${index + 1}`} />
+                </div>
+              ))}
+            </div> */}
           </div>
           <div className="information-product-detail">
             {/* <Tabs

@@ -142,6 +142,9 @@ export const ProductItemWrapper = styled.div`
     transform: translateY(-5px);
     filter: brightness(90%);
   }
+  &:hover img {
+    transform: scale(1.2);
+  }
   @media ${device.desktopS} {
     width: calc((100% - 45px) / 4);
   }
