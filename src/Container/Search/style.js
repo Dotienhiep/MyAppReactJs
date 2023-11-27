@@ -4,7 +4,7 @@ export const SearchWrapper = styled.div`
   .list-search {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 100px;
+    margin: 100px 100px 0;
     justify-content: space-between;
   }
   .list-search .content {

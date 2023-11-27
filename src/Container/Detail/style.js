@@ -545,7 +545,6 @@ export const DetailWrapper = styled.div`
     flex-direction: column;
     margin-top: 50px;
     margin-left: 15px;
-    border: 10px solid black;
   }
   .list-btn-detail .submit-btn-detail-first {
     padding: 10px 20px;
