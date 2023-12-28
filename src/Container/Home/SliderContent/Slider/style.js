@@ -86,12 +86,7 @@ export const SliderWrapper = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .list-dot {
-    display: flex;
-    justify-content: center;
-    z-index: 200;
-    margin-top: 10px;
+    border-radius: 5px;
   }
   .btn-prev {
     margin-right: -50px;
@@ -101,27 +96,6 @@ export const SliderWrapper = styled.div`
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    /* @media ${device.laptopX} {
-      width: 100%;
-    }
-    @media ${device.laptop} {
-      width: 100%;
-    }
-    @media ${device.tablet} {
-      width: 100%;
-    }
-    @media ${device.mobile} {
-      width: 100%;
-    }
-    @media ${device.mobileL} {
-      width: 100%;
-    }
-    @media ${device.mobileM} {
-      width: 100%;
-    }
-    @media ${device.mobileS} {
-      width: 100%;
-    } */
   }
   .btn-next {
     margin-left: -50px;
@@ -132,20 +106,30 @@ export const SliderWrapper = styled.div`
     border: none;
     cursor: pointer;
   }
-  .dot {
-    border-radius: 50%;
+  button:disabled {
+  opacity: 0; /* Làm mờ nút đi */
+  cursor: not-allowed; /* Đổi con trỏ chuột */
+}
+  .list-content-slider {
+    display: flex;
+    justify-content: center;
+    z-index: 20000;
+    margin-top: 10px; 
+  }
+  .content-slider-item {
     cursor: pointer;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #000;
-    margin-right: 6px;
+    font-size: .9rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
   }
   .active {
-    background-color: #000;
+    border-bottom: 2px solid #b00000;
+    border-radius: 1px;
+    font-weight: bold;
   }
 `;

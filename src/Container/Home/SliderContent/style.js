@@ -4,11 +4,11 @@ import { device } from "./../../../contants";
 export const SliderContentWrapper = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: -150px 100px 100px 100px;
-  padding: 5px;
+  padding: 5px 5px 2px;
   border-radius: 5px;
   position: relative;
   background-color: #fff;
-  z-index: 10000;
+  z-index: 100;
   display: flex;
   @media ${device.laptop} {
     margin: -150px 50px 100px 50px;
@@ -82,8 +82,8 @@ export const SliderContentWrapper = styled.div`
     position: relative;
   }
   .content-top .item-image {
-    width: 100%; /* Đặt chiều rộng của div cha theo mong muốn */
-    max-width: 400px; /* Đặt giá trị tối đa cho chiều rộng của div cha */
+    width: 100%;
+    max-width: 400px;
   }
   .content-top .item-image img {
     width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của div */
@@ -95,7 +95,7 @@ export const SliderContentWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     padding-bottom: 8px;
-    margin-right: 25px;
+    margin-right: 8px;
   }
   .content-title .hove a {
     color: #0168fa;
@@ -126,10 +126,18 @@ export const SliderContentWrapper = styled.div`
   .content-image {
     display: flex;
     margin-bottom: 8px;
+    overflow: hidden;
   }
   .content-image .title-img {
     padding-left: 5px;
     font-size: 15px;
+    font-weight: bold;
+  }
+  .content-image img {
+    border-radius: 5px;
+    padding: 3px;
+    border: 1px solid #cd1917;
+    transition: transform 0.3s ease-in-out;
   }
   //content
   .hehe {

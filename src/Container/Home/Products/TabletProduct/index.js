@@ -9,7 +9,7 @@ const TabletProduct = ({ onAdd, listProduct }) => {
       <div className="title">
         <h3 className="">Tablet bán chạy</h3>
         <span className="">
-          <Link to="/product">Xem tất cả</Link>
+          <Link to="/may-tinh-bang">Xem tất cả</Link>
         </span>
       </div>
       <div className="list-product">

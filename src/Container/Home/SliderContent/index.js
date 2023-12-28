@@ -8,35 +8,33 @@ const SliderContent = () => {
   const listData = [
     {
       id: uuidv4(),
-      image: "/assets/images/slider-image1.png",
+      image: "/assets/images/slider-banner-1.png",
+      content: "Galaxy A15|A25 5G mới từ 4.99 triệu",
     },
     {
       id: uuidv4(),
-      image: "assets/images/slider-image2.png",
+      image: "/assets/images/slider-banner-2.png",
+      content: "Lên đời Smartphone xịn - đổi mới",
     },
     {
       id: uuidv4(),
-      image: "assets/images/slider-image3.png",
+      image: "/assets/images/slider-banner-3.png",
+      content: "Iphone 15 promax giảm giá 2 triệu",
     },
     {
       id: uuidv4(),
-      image: "assets/images/slider-image4.png",
+      image: "/assets/images/slider-banner-4.png",
+      content: "Deal giảm giá phụ kiện máy",
     },
     {
       id: uuidv4(),
-      image: "assets/images/slider-image5.png",
+      image: "/assets/images/slider-banner-5.png",
+      content: "Realmi note 12 5G mới từ 3.99 triệu",
     },
     {
       id: uuidv4(),
-      image: "assets/images/slider-image6.png",
-    },
-    {
-      id: uuidv4(),
-      image: "assets/images/slider-image7.png",
-    },
-    {
-      id: uuidv4(),
-      image: "assets/images/slider-image8.png",
+      image: "/assets/images/slider-banner-6.png",
+      content: "Tivi Samsung giảm từ 3.99 triệu",
     },
   ];
   const listTop = [
@@ -89,7 +87,7 @@ const SliderContent = () => {
             {listBot.map((item) => {
               return (
                 <div key={item.id} className="content-image">
-                  <img src={item.image} alt="" />
+                  <img src={item.image} class="single-image" alt="" />
                   <span className="title-img">{item.title}</span>
                 </div>
               );

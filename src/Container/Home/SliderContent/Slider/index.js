@@ -9,9 +9,10 @@ import { Link } from "react-router-dom";
 
 const Slider = ({ listData, isInfinity = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  console.log("currrentIndex =====", isInfinity);
   const handlePrev = () => {
     if (isInfinity && currentIndex === 0) {
-      // prev vo han
+      //Preview vô hạn
       setCurrentIndex(listData.length - 1);
     } else {
       setCurrentIndex(currentIndex - 1);
@@ -19,13 +20,13 @@ const Slider = ({ listData, isInfinity = false }) => {
   };
   const handleNext = () => {
     if (isInfinity && currentIndex === listData.length - 1) {
-      // next vo han
+      //Next vô hạn
       setCurrentIndex(0);
     } else {
       setCurrentIndex(currentIndex + 1);
     }
   };
-  const handleDot = (index) => {
+  const handleHover = (index) => {
     setCurrentIndex(index);
   };
   useEffect(() => {
@@ -36,7 +37,8 @@ const Slider = ({ listData, isInfinity = false }) => {
       }
     }, 2000);
     return () => clearInterval(ef);
-  }, [currentIndex]);
+  }, [currentIndex, listData.length]);
+  //slider content
   return (
     <SliderWrapper>
       <div className="wrapper">
@@ -60,14 +62,17 @@ const Slider = ({ listData, isInfinity = false }) => {
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
-      <div className="list-dot">
+      <div className="list-content-slider">
         {listData.map((item, index) => {
           return (
             <span
-              onClick={() => handleDot(index)}
-              className={`dot ${currentIndex === index ? "active" : ""}`}
-              key={item.id}
-            />
+              onClick={() => handleHover(index)}
+              className={`content-slider-item ${
+                currentIndex === index ? "active" : ""
+              }`}
+            >
+              {item.content}
+            </span>
           );
         })}
       </div>

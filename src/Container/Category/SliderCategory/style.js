@@ -3,7 +3,7 @@ import { device } from "../../../contants";
 
 export const SliderContentWrapper = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 30px 100px 0 100px;
+  margin: 120px 100px 0 100px;
   border-radius: 5px;
   position: relative;
   background-color: #fff;

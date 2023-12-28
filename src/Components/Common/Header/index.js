@@ -20,7 +20,6 @@ const Header = () => {
   const navigate = useNavigate();
   /*Tìm kiếm sản phẩm Button*/
   const handleChange = (event) => {
-    console.log("hehehehehheh");
     const { name, value } = event.target;
     setKey(value);
     setFormData({
@@ -66,7 +65,7 @@ const Header = () => {
             onKeyDown={handleKeyDown}
           />
         </div>
-        {/* Tuyền link key để lấy dữ liệu keys */}
+        {/* Truyền link key để lấy dữ liệu keys */}
         <Link to={`/search/${key}`}>
           <button className="btn-search">
             <FontAwesomeIcon icon={faMagnifyingGlass} />

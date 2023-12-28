@@ -5,7 +5,7 @@ export const NavWrapper = styled.div`
   background-color: #000;
   color: #fff;
   position: fixed;
-  z-index: 100000000;
+  z-index: 100000;
   top: 60px;
   left: 0;
   @media ${device.laptop} {
@@ -220,7 +220,7 @@ export const NavItemWrapper = styled.div`
     display: none;
     width: 100%;
     height: auto;
-    z-index: 10000000;
+    z-index: 10000;
     background-color: #fff;
   }
   .submenu-content {

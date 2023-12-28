@@ -7,6 +7,10 @@ export const BannerWrapper = styled.div`
   line-height: 1.4;
   width: 100%;
   z-index: 100;
+  margin-top: 90px;
+  #canvas {
+    z-index: 10000000000;
+  }
   .container {
     height: 60vh;
     background-color: transparent;
@@ -85,7 +89,7 @@ export const BannerWrapper = styled.div`
     left: 50%;
     width: 6000px;
     height: 6000px;
-    background: #fff;
+    background: #cd1917;
     margin-left: -3000px;
     transform-origin: 50% 50%;
     border-radius: 46%;
@@ -141,12 +145,12 @@ export const BannerWrapper = styled.div`
     }
   }
   .text {
-    color: #fff;
+    color: #cd1917;
   }
   .footer a {
-    color: #fff;
+    color: #cd1917;
   }
   .title {
-    color: #fff;
+    color: #cd1917;
   }
 `;
