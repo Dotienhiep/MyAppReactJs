@@ -15,7 +15,7 @@ export const SliderContentWrapper = styled.div`
       margin: 30px 50px 0 50px;
     }
     @media ${device.mobile} {
-      margin:  margin: 30px 30px 0 30px;
+      margin: 30px 30px 0 30px;
     }
     @media ${device.mobileL} {
       margin: 20px 15px 0 15px;

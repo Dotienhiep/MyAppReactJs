@@ -4,25 +4,25 @@ import { device } from "../../contants";
 export const DetailWrapper = styled.div`
   width: 100%;
   .detail-wrapper {
-    margin: 50px 100px;
+    margin: 100px 100px;
     @media ${device.laptop} {
-    margin: 50px 50px;
-  }
-  @media ${device.tablet} {
-    margin: 50px 50px;
-  }
-  @media ${device.mobile} {
-    margin: 40px 30px;
-  }
-  @media ${device.mobileL} {
-    margin: 20px 15px;
-  }
-  @media ${device.mobileM} {
-    margin: 20px 15px;
-  }
-  @media ${device.mobileS} {
-    margin: 20px 15px;
-  }
+      margin: 50px 50px;
+    }
+    @media ${device.tablet} {
+      margin: 50px 50px;
+    }
+    @media ${device.mobile} {
+      margin: 40px 30px;
+    }
+    @media ${device.mobileL} {
+      margin: 20px 15px;
+    }
+    @media ${device.mobileM} {
+      margin: 20px 15px;
+    }
+    @media ${device.mobileS} {
+      margin: 20px 15px;
+    }
   }
   .title-detail-product-length {
     margin-top: 60px;
@@ -88,31 +88,31 @@ export const DetailWrapper = styled.div`
       font-size: 1rem;
     }
     @media ${device.laptopS} {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
     @media ${device.laptopM} {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
     @media ${device.laptopX} {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
     @media ${device.laptop} {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
     @media ${device.tablet} {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
     @media ${device.mobile} {
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
     @media ${device.mobileL} {
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
     @media ${device.mobileM} {
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
     @media ${device.mobileS} {
-      font-size: .7rem;
+      font-size: 0.7rem;
     }
   }
   .content-detail-product {
@@ -209,7 +209,7 @@ export const DetailWrapper = styled.div`
     transform: translate(-50%, -50%);
     max-width: 35%; /* Đảm bảo ảnh không vượt quá chiều rộng của div */
     max-height: 100%;
-    display:block;
+    display: block;
     background: transparent;
     overflow: hidden;
     @media ${device.desktop} {
@@ -324,7 +324,6 @@ export const DetailWrapper = styled.div`
     @media ${device.mobileS} {
       font-size: 1.4rem;
     }
-    
   }
   .react-tabs__tab-list {
     display: flex;
@@ -573,12 +572,12 @@ export const DetailWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     @media ${device.laptopM} {
-    display:flex;
-    flex-direction: column;
-    & button {
-      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      & button {
+        min-width: 100%;
+      }
     }
-  }
   }
   .list-btn-bottom button {
     padding: 10px 65px;
@@ -595,24 +594,23 @@ export const DetailWrapper = styled.div`
   .vote-detail-product {
     margin: 50px 100px;
     @media ${device.laptop} {
-    margin: 50px 50px;
-  }
-  @media ${device.tablet} {
-    margin: 50px 50px;
-  }
-  @media ${device.mobile} {
-    margin: 40px 30px;
-  }
-  @media ${device.mobileL} {
-    margin: 20px 15px;
-  }
-  @media ${device.mobileM} {
-    margin: 20px 15px;
-  }
-  @media ${device.mobileS} {
-    margin: 20px 15px;
-  }
-    
+      margin: 50px 50px;
+    }
+    @media ${device.tablet} {
+      margin: 50px 50px;
+    }
+    @media ${device.mobile} {
+      margin: 40px 30px;
+    }
+    @media ${device.mobileL} {
+      margin: 20px 15px;
+    }
+    @media ${device.mobileM} {
+      margin: 20px 15px;
+    }
+    @media ${device.mobileS} {
+      margin: 20px 15px;
+    }
   }
   .vote-detail-product h4 {
     margin: 15px 0;

@@ -5,39 +5,40 @@ export const FooterWrapper = styled.div`
   .footer {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 100px;
+    padding: 20px 100px;
+    background-color: #fff;
     @media ${device.laptop} {
-      margin: 0 50px;
+      padding: 0 50px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
     }
     @media ${device.tablet} {
-      margin: 0 50px;
+      padding: 0 50px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
     }
     @media ${device.mobile} {
-      margin: 0 30px;
+      padding: 0 30px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
     }
     @media ${device.mobileL} {
-      margin: 0 15px;
+      padding: 0 15px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
     }
     @media ${device.mobileM} {
-      margin: 0 15px;
+      padding: 0 15px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
     }
     @media ${device.mobileS} {
-      margin: 0 15px;
+      padding: 0 15px;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;

@@ -50,7 +50,8 @@ const Slider = ({ listData, isInfinity = false }) => {
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
         <div className="slider-content">
-          <Link to="/product">
+          <Link to="/sale">
+            {/* page /sale */}
             <img src={listData[currentIndex].image} alt="" />
           </Link>
         </div>

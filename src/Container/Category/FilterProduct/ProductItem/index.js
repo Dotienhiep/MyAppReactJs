@@ -55,7 +55,7 @@ const ProductItem = ({ onAdd, listData }) => {
   //   }
   // };
   // console.log("listData",listData);
-    /* <Memory
+  /* <Memory
   listData={listData}
   currentIndexActive={currentIndexActive}
   onChangeTab={handleChangeTab}>
@@ -84,58 +84,69 @@ const ProductItem = ({ onAdd, listData }) => {
             </Link>
           </div>
           <div className="cost">
-          <span>{formatCurrency(listData.price)}</span>
-        </div>
+            <span>{formatCurrency(listData.price)}</span>
+          </div>
           <div className="content">
-          <div className="info">
-            <div className="list-info">
-              <div className="item-info cpu">
-                {listData.listAttrDetailShort.slice(5, 6).map((item, index) => {
-                  return (
-                    <div>
-                      <FontAwesomeIcon className="icon" icon={faMicrochip} />{" "}
-                      {item.value}
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="item-info screen">
-                {listData.listAttrDetailShort.slice(0, 1).map((item, index) => {
-                  const screen = item.value.split(", ");
-                  return (
-                    <div>
-                      <FontAwesomeIcon className="icon" icon={faMobile} />{" "}
-                      {screen[0]}
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="item-info ram">
-                {listData.listAttrDetailShort.slice(3, 4).map((item, index) => {
-                  const screen = item.value.split(", ");
-                  return (
-                    <div>
-                      <FontAwesomeIcon className="icon" icon={faMemory} />{" "}
-                      {screen[0]}
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="item-info memmory">
-                {listData.listAttrDetailShort.slice(4, 5).map((item, index) => {
-                  const screen = item.value.split(", ");
-                  return (
-                    <div>
-                      <FontAwesomeIcon className="icon" icon={faInbox} />{" "}
-                      {screen[0]}
-                    </div>
-                  );
-                })}
+            <div className="info">
+              <div className="list-info">
+                <div className="item-info cpu">
+                  {listData.listAttrDetailShort
+                    .slice(5, 6)
+                    .map((item, index) => {
+                      return (
+                        <div>
+                          <FontAwesomeIcon
+                            className="icon"
+                            icon={faMicrochip}
+                          />{" "}
+                          {item.value}
+                        </div>
+                      );
+                    })}
+                </div>
+                <div className="item-info screen">
+                  {listData.listAttrDetailShort
+                    .slice(0, 1)
+                    .map((item, index) => {
+                      const screen = item.value.split(", ");
+                      return (
+                        <div>
+                          <FontAwesomeIcon className="icon" icon={faMobile} />{" "}
+                          {screen[0]}
+                        </div>
+                      );
+                    })}
+                </div>
+                <div className="item-info ram">
+                  {listData.listAttrDetailShort
+                    .slice(3, 4)
+                    .map((item, index) => {
+                      const screen = item.value.split(", ");
+                      return (
+                        <div>
+                          <FontAwesomeIcon className="icon" icon={faMemory} />{" "}
+                          {screen[0]}
+                        </div>
+                      );
+                    })}
+                </div>
+                <div className="item-info memmory">
+                  {listData.listAttrDetailShort
+                    .slice(4, 5)
+                    .map((item, index) => {
+                      const screen = item.value.split(", ");
+                      return (
+                        <div>
+                          <FontAwesomeIcon className="icon" icon={faInbox} />{" "}
+                          {screen[0]}
+                        </div>
+                      );
+                    })}
+                </div>
               </div>
             </div>
+            {/* <div>{product.listAttrDetailShort.value}</div> */}
           </div>
-          {/* <div>{product.listAttrDetailShort.value}</div> */}
-        </div>
           <div className="list-btn">
             <div className="list-btn-responsive">
               <Link to="/cart">

@@ -34,12 +34,11 @@ export const SliderProductWrapper = styled.div`
   .slick-slide {
     padding: 5px;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #cd1917;
     transition: transform 0.3s ease, filter 0.3s ease;
     &:hover {
       transform: translateY(-5px);
       filter: brightness(100%);
-      background-color: #fff;
     }
   }
   .slick-slide button {
@@ -51,5 +50,11 @@ export const SliderProductWrapper = styled.div`
     justify-content: flex-start;
     align-items: center;
     width: 100% important!;
+  }
+  .slick-prev {
+    display: none;
+  }
+  .slick-next {
+    display: none;
   }
 `;

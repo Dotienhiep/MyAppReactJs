@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../Components/Common/Header";
 import Banner from "./Banner";
 import Navigation from "./Navigation";
@@ -12,7 +12,8 @@ import Footer from "./../../Components/Common/Footer";
 import Copyright from "./../../Components/Common/Copyright";
 import { HomeWrapper } from "./style";
 import ScrollToTop from "react-scroll-to-top";
-import SwingingCouplets from "../../Container/Home/SwingingCouplets"
+import SwingingCouplets from "../../Container/Home/SwingingCouplets";
+import Fireworks from "../../Components/Common/Fireworks";
 
 const Home = ({ onAdd }) => {
   const [showBanner, setShowBanner] = useState(false);
@@ -27,32 +28,32 @@ const Home = ({ onAdd }) => {
   useEffect(() => {
     const bannerTimeout = setTimeout(() => {
       setShowBanner(true);
-    }, 1000); // Hiển thị Header sau 2s
+    }, 2000); // Hiển thị Header sau 2s
 
     const sliderContentTimeout = setTimeout(() => {
       setShowSliderContent(true);
-    }, 2000); 
+    }, 2000);
     const filterTimeout = setTimeout(() => {
       setShowFilter(true);
-    }, 3000); 
+    }, 2000);
     const tabsSaleTimeout = setTimeout(() => {
       setShowTabsSale(true);
-    }, 4000); 
+    }, 4000);
     const laptopGamingTimeout = setTimeout(() => {
       setShowLaptopGaming(true);
-    }, 5000); 
+    }, 5000);
     const productsTimeout = setTimeout(() => {
       setShowProducts(true);
     }, 6000);
     const filterAccessoryTimeout = setTimeout(() => {
       setShowFilterAccessory(true);
-    }, 7000); 
+    }, 7000);
     const footerTimeout = setTimeout(() => {
       setShowFooter(true);
-    }, 8000); 
+    }, 8000);
     const copyrightTimeout = setTimeout(() => {
       setShowCopyright(true);
-    }, 9000); 
+    }, 9000);
     // Xóa các timeouts khi unmount component để tránh memory leak
     return () => {
       clearTimeout(bannerTimeout);
@@ -69,14 +70,14 @@ const Home = ({ onAdd }) => {
   }, []); // Chạy 1 lần
 
   return (
-    
     <HomeWrapper>
+      <Fireworks />
       <ScrollToTop smooth color="#6f00ff" />
       <Header />
       <Navigation />
       {showBanner && <Banner />}
       {showSliderContent && <SliderContent />}
-      <SwingingCouplets/>
+      <SwingingCouplets />
       {showFilter && <Filter />}
       {showTabsSale && <TabsSale />}
       {showLaptopGaming && <LaptopGaming />}

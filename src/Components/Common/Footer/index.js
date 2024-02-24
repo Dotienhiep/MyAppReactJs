@@ -2,10 +2,9 @@ import React from "react";
 import { FooterWrapper } from "./style";
 
 const Footer = () => {
-
   return (
     <FooterWrapper>
-      <canvas id="canvas"></canvas>
+      {/* <canvas id="canvas"></canvas> */}
       <div className="footer">
         <div className="left">
           <ul className="">
@@ -89,7 +88,6 @@ const Footer = () => {
         </div>
       </div>
     </FooterWrapper>
-    
   );
 };
 

@@ -14,7 +14,10 @@ const getListProductHome = async () => {
 };
 const createOrder = async (order) => {
   try {
-    const response = axios.post("https://api-nodejs-backend.onrender.com/order", order);
+    const response = axios.post(
+      "https://api-nodejs-backend.onrender.com/order",
+      order
+    );
     return response;
   } catch (err) {}
 };

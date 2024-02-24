@@ -9,10 +9,12 @@ export default styled.div`
   width: 94%;
   border-radius: 6px;
   border: 1px solid #ccc;
+  background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-image: url("/assets/images/boder-product.png");
   background-repeat: no-repeat;
   background-position: center top 15px;
+  background-color: #fff;
   /* transition: transform 0.3s ease, filter 0.3s ease;
   &:hover {
     transform: translateY(-5px);

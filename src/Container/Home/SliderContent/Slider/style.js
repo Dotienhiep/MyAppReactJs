@@ -3,6 +3,10 @@ import { device } from "./../../../../contants";
 
 export const SliderWrapper = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
   @media ${device.laptop} {
     width: 100%;
   }
@@ -55,7 +59,6 @@ export const SliderWrapper = styled.div`
     justify-content: center;
     align-items: center;
     height: auto;
-    cursor: pointer;
     @media ${device.laptopX} {
       width: 100%;
     }
@@ -87,6 +90,7 @@ export const SliderWrapper = styled.div`
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+    cursor: pointer;
   }
   .btn-prev {
     margin-right: -50px;
@@ -107,18 +111,18 @@ export const SliderWrapper = styled.div`
     cursor: pointer;
   }
   button:disabled {
-  opacity: 0; /* Làm mờ nút đi */
-  cursor: not-allowed; /* Đổi con trỏ chuột */
-}
+    opacity: 0; /* Làm mờ nút đi */
+    cursor: not-allowed; /* Đổi con trỏ chuột */
+  }
   .list-content-slider {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 20000;
-    margin-top: 10px; 
+    margin-top: 10px;
   }
   .content-slider-item {
     cursor: pointer;
-    font-size: .9rem;
+    font-size: 1.4rem;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -126,6 +130,45 @@ export const SliderWrapper = styled.div`
     margin: 0 5px;
     padding-bottom: 2px;
     text-overflow: ellipsis;
+    @media ${device.desktopS} {
+      font-size: 1rem;
+    }
+    @media ${device.desktopXM} {
+      font-size: 0.9rem;
+    }
+    @media ${device.desktopM} {
+      font-size: 0.9rem;
+    }
+    @media ${device.laptopL} {
+      font-size: 0.8rem;
+    }
+    @media ${device.laptopS} {
+      font-size: 0.8rem;
+    }
+    @media ${device.laptopM} {
+      font-size: 0.8rem;
+    }
+    @media ${device.laptopX} {
+      font-size: 0.8rem;
+    }
+    @media ${device.laptop} {
+      font-size: 0.6rem;
+    }
+    @media ${device.tablet} {
+      font-size: 0.6rem;
+    }
+    @media ${device.mobile} {
+      font-size: 0.6rem;
+    }
+    @media ${device.mobileL} {
+      font-size: 0.5rem;
+    }
+    @media ${device.mobileM} {
+      font-size: 0.5rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 0.5rem;
+    }
   }
   .active {
     border-bottom: 2px solid #b00000;

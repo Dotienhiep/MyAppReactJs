@@ -32,10 +32,29 @@ export const device = {
 };
 //import { device } from "./../../../contants";
 
-//css
-// @media ${device.laptop} {}
-// @media ${device.tablet} {}
-// @media ${device.mobile} {}
-// @media ${device.mobileL} {}
-// @media ${device.mobileM} {}
-// @media ${device.mobileS} {}
+// @media ${device.desktopS} {
+// }
+// @media ${device.desktopXM} {
+// }
+// @media ${device.desktopM} {
+// }
+// @media ${device.laptopL} {
+// }
+// @media ${device.laptopS} {
+// }
+// @media ${device.laptopM} {
+// }
+// @media ${device.laptopX} {
+// }
+// @media ${device.laptop} {
+// }
+// @media ${device.tablet} {
+// }
+// @media ${device.mobile} {
+// }
+// @media ${device.mobileL} {
+// }
+// @media ${device.mobileM} {
+// }
+// @media ${device.mobileS} {
+// }

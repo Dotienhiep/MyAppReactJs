@@ -9,23 +9,23 @@ export const NavWrapper = styled.div`
   top: 60px;
   left: 0;
   @media ${device.laptop} {
-      top: 3px;
-    }
-    @media ${device.tablet} {
-      top: 3px;
-    }
-    @media ${device.mobile} {
-      top: 3px;
-    }
-    @media ${device.mobileL} {
-      top: 3px;
-    }
-    @media ${device.mobileM} {
-      top: 3px;
-    }
-    @media ${device.mobileS} {
-      top: 3px;
-    }
+    top: 3px;
+  }
+  @media ${device.tablet} {
+    top: 3px;
+  }
+  @media ${device.mobile} {
+    top: 3px;
+  }
+  @media ${device.mobileL} {
+    top: 3px;
+  }
+  @media ${device.mobileM} {
+    top: 3px;
+  }
+  @media ${device.mobileS} {
+    top: 3px;
+  }
 
   .list-nav {
     margin: 0 100px;
@@ -220,7 +220,7 @@ export const NavItemWrapper = styled.div`
     display: none;
     width: 100%;
     height: auto;
-    z-index: 10000;
+    z-index: 100000;
     background-color: #fff;
   }
   .submenu-content {

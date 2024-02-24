@@ -10,7 +10,7 @@ import Loading from "../../Components/Common/Loading";
 import { Link } from "react-router-dom";
 import "./font-awesome.css";
 import Modal from "./Modal";
-import axios from "axios"
+import axios from "axios";
 
 const Detail = ({ onAdd }) => {
   const lorem = "Thông tin đang được cập nhật";

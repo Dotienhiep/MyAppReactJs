@@ -8,12 +8,12 @@ export const BannerWrapper = styled.div`
   width: 100%;
   z-index: 100;
   margin-top: 90px;
-  #canvas {
-    z-index: 10000000000;
-  }
   .container {
-    height: 60vh;
+    height: 400px; //độ dài banner
     background-color: transparent;
+  }
+  .container img {
+    object-fit: cover;
   }
   .content {
     color: #000;
@@ -119,10 +119,9 @@ export const BannerWrapper = styled.div`
   }
   .container .banner {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    max-width: 100%;
-    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
     object-fit: cover;
   }
 

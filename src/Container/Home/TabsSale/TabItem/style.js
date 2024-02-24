@@ -201,4 +201,7 @@ export const TabItemWrapper = styled.div`
     -o-animation: glowing 1500ms infinite;
     animation: glowing 1500ms infinite;
   }
+  .list-content .slick-slider .slick-arrow {
+    display: none;
+  }
 `;

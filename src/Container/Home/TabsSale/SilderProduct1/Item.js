@@ -9,6 +9,7 @@ export default styled.div`
   width: 94%;
   border-radius: 6px;
   border: 1px solid #ccc;
+  background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-image: url("/assets/images/boder-product.png");
   background-repeat: no-repeat;

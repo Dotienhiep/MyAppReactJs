@@ -5,4 +5,9 @@ export const HomeWrapper = styled.div`
   height: auto;
   /* background-color: #f8f9fa; */
   background-color: #cd1917;
+  .canvas {
+    position: absolute;
+    top: 100px;
+    z-index: 99999;
+  }
 `;

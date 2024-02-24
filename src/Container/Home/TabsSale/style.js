@@ -13,7 +13,7 @@ export const TabsSaleWrapper = styled.div`
     padding-top: 42px;
     justify-content: center;
     align-items: center;
-    background-color: #cb1c22;
+    background-color: gray;
     border-radius: 6px 6px 0 0;
     box-sizing: border-box;
     box-shadow: 0 4px 4px 0 #00000040;
