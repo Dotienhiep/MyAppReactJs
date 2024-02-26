@@ -108,9 +108,13 @@ export const TabItemWrapper = styled.div`
   .list-content {
     list-style-type: none;
     padding: 1.5rem;
+    overflow-x: hidden;
   }
   .content-item {
     font-size: 15px;
+  }
+  .list-content button {
+    display: none;
   }
   .button {
     background-color: #cb1c22;

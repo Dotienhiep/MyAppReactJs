@@ -8,7 +8,7 @@ export const SliderContentWrapper = styled.div`
   border-radius: 5px;
   position: relative;
   background-color: #fff;
-  z-index: 1000;
+  z-index: 9998;
   display: flex;
   @media ${device.laptop} {
     margin: -150px 50px 100px 50px;

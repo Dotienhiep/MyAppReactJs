@@ -7,12 +7,13 @@ export const SwingingCoupletsWrapper = styled.div`
   align-items: center;
   position: absolute;
   top: 340px;
-  width: 100%; /* Điều chỉnh kích thước của wrapper theo ý của bạn */
+  width: 100%; /* Điều1 chỉnh kích thước của wrapper theo ý của bạn */
   height: auto; /* Điều chỉnh kích thước của wrapper theo ý của bạn */
   margin-bottom: 50px;
   background-color: transparent;
   z-index: 10000;
   pointer-events: none;
+  cursor: pointer;
   @media ${device.desktopS} {
   }
   @media ${device.desktopXM} {

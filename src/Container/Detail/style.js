@@ -148,13 +148,13 @@ export const DetailWrapper = styled.div`
     margin-top: 30px;
   }
   /* .image-acc:hover img {
-    transform: scale(1.2);
+    transform: scale(1.12);
   } */
   .image-acc {
     width: 100%;
     height: 700px;
     border: 1px solid transparent;
-    background-image: url(/assets/images/banner-detail.png);
+    background-image: url(/assets/images/boder-product1.png);
     background-size: contain; /* Background sẽ nằm bên trong phần nền của div mà không tràn ra ngoài */
     background-position: center;
     background-repeat: no-repeat;

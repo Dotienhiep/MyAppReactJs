@@ -11,16 +11,17 @@ export default styled.div`
   border: 1px solid #ccc;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-image: url("/assets/images/boder-product.png");
+  background-image: url("/assets/images/boder-product1.png");
+  background-size: 95% auto;
   background-repeat: no-repeat;
-  background-position: center top 15px;
+  background-position: center top 5px;
   transition: transform 0.3s ease, filter 0.3s ease;
   &:hover {
     transform: translateY(-5px);
     filter: brightness(90%);
   }
   &:hover img {
-    transform: scale(1.2);
+    transform: scale(1.12);
   }
   &:hover .list-btn {
     display: block;

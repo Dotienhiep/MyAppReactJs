@@ -11,7 +11,6 @@ import Pay from "./Container/Pay";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-
   const onAdd = (product) => {
     const exist = cartItems?.find((item) => item._id === product._id);
     if (exist) {

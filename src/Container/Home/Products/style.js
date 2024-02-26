@@ -310,11 +310,12 @@ export const ProductWrapper = styled.div`
   margin-top: 20px;
   justify-content: center;
   flex-direction: column;
-  padding: 15px;
+  padding: 0 15px;
   border-radius: 6px;
-  background-image: url("/assets/images/boder-product.png");
+  background-image: url("/assets/images/boder-product1.png");
+  background-size: 95% auto;
   background-repeat: no-repeat;
-  background-position: center top 15px;
+  background-position: center top 5px;
   transition: transform 0.3s ease, filter 0.3s ease;
   @media ${device.desktopS} {
     width: calc((100% - 45px) / 5);
@@ -358,7 +359,7 @@ export const ProductWrapper = styled.div`
     filter: brightness(100%);
   }
   &:hover img {
-    transform: scale(1.2);
+    transform: scale(1.12);
   }
   &:hover .list-btn {
     display: block;
@@ -436,7 +437,7 @@ export const ProductWrapper = styled.div`
   }
   .list-btn {
     display: none;
-    margin: 20px 0 0 0;
+    margin: 20px 0;
   }
   .list-btn-responsive {
     display: flex;

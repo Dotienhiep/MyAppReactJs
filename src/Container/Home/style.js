@@ -9,5 +9,6 @@ export const HomeWrapper = styled.div`
     position: absolute;
     top: 100px;
     z-index: 99999;
+    pointer-events: none;
   }
 `;

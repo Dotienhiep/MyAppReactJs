@@ -132,18 +132,18 @@ export const ProductItemWrapper = styled.div`
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  background-image: url("/assets/images/boder-product.png");
+  background-image: url("/assets/images/boder-product1.png");
+  background-size: 95% auto;
   background-repeat: no-repeat;
-  background-position: center top 15px;
+  background-position: center top 5px;
   background-color: #fff;
-  object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease;
   &:hover {
     transform: translateY(-5px);
     filter: brightness(90%);
   }
   &:hover img {
-    transform: scale(1.2);
+    transform: scale(1.12);
   }
   @media ${device.desktopS} {
     width: calc((100% - 45px) / 4);
@@ -202,7 +202,7 @@ export const ProductItemWrapper = styled.div`
     transition: transform 0.3s ease-in-out;
   }
   img:hover {
-    transform: scale(1.2);
+    transform: scale(1.12);
   }
   .content-pro {
     display: flex;

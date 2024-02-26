@@ -94,7 +94,6 @@ export const BannerWrapper = styled.div`
     transform-origin: 50% 50%;
     border-radius: 46%;
     animation: wave 12s infinite linear;
-    pointer-events: none;
   }
   .wave2 {
     animation: wave 28s infinite linear;

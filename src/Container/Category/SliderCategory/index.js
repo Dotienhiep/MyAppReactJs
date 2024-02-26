@@ -34,14 +34,6 @@ const SliderCategory = () => {
       id: uuidv4(),
       image: "assets/images/slider7.png",
     },
-    {
-      id: uuidv4(),
-      image: "assets/images/slider8.png",
-    },
-    {
-      id: uuidv4(),
-      image: "assets/images/slider9.png",
-    },
   ];
   return (
     <SliderContentWrapper>
