@@ -13,7 +13,7 @@ export const HeaderWrapper = styled.div`
   left: 0;
   z-index: 100000;
   background-color: #ff3233;
-  padding: 8px 100px;
+  padding: 4px 100px;
   /* responsive */
   @media ${device.laptop} {
     padding: 0 50px;
@@ -37,6 +37,7 @@ export const HeaderWrapper = styled.div`
   .header-left {
     display: flex;
     color: #fff;
+    flex-grow: 1;
     justify-content: flex-start;
     align-items: center;
   }
@@ -67,15 +68,31 @@ export const HeaderWrapper = styled.div`
     font-weight: bold;
   }
   .header-left label input {
-    min-width: 450px;
+    min-width: 100%;
     height: 36px;
     border-radius: 5px 0 0 5px;
     padding-left: 10px;
     outline: none;
     border: none;
   }
-  /* Input Search */
   .input-header {
+    flex-grow: 1;
+    @media ${device.desktop} {
+    }
+    @media ${device.desktopS} {
+    }
+    @media ${device.desktopXM} {
+    }
+    @media ${device.desktopM} {
+    }
+    @media ${device.laptopL} {
+    }
+    @media ${device.laptopS} {
+    }
+    @media ${device.laptopM} {
+    }
+    @media ${device.laptopX} {
+    }
     @media ${device.laptop} {
       display: none;
     }
@@ -122,6 +139,9 @@ export const HeaderWrapper = styled.div`
     }
   }
   /* Header Right */
+  .header-right {
+    max-width: 40%;
+  }
   .header-right ul {
     display: flex;
     padding: 0;
@@ -186,6 +206,21 @@ export const HeaderWrapper = styled.div`
   }
   .header-right ul li a .title-icon-header {
     font-size: 0.9rem;
+    @media ${device.laptopS} {
+      font-size: 0.8rem;
+    }
+    @media ${device.mobile} {
+      font-size: 0.7rem;
+    }
+    @media ${device.mobileL} {
+      font-size: 0.6rem;
+    }
+    @media ${device.mobileM} {
+      font-size: 0.5rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 0.4rem;
+    }
   }
   .cart-icon {
     text-decoration: none;

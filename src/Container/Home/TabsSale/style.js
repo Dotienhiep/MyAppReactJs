@@ -7,12 +7,14 @@ export const TabsSaleWrapper = styled.div`
     position: relative;
     z-index: 2 !important;
     width: calc(100% - 200px) !important;
+    border: 1px solid #fff;
     /* max-width: 1236px; */
     margin: 0 auto;
     display: flex;
-    padding-top: 42px;
+    padding-top: 20px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: gray;
     border-radius: 6px 6px 0 0;
     box-sizing: border-box;
@@ -44,7 +46,7 @@ export const TabsSaleWrapper = styled.div`
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     height: 0;
-    width: 952px;
+    width: 49.5%;
     top: -18px;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -55,6 +57,7 @@ export const TabsSaleWrapper = styled.div`
   .container-content-banner::after {
     content: "";
     display: table;
+
     clear: both;
   }
   .flashsale-title {
@@ -68,12 +71,16 @@ export const TabsSaleWrapper = styled.div`
     transform: translateX(-50%);
   }
   .flashsale-title img {
-    max-width: 960px;
+    width: 100%;
   }
   .flashsale-banner {
     background-color: #cb1c22;
+    border: 1px solid #fff;
+    width: 100%;
   }
   .flashsale-banner img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 `;

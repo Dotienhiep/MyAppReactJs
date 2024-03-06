@@ -12,6 +12,8 @@ export const size = {
   desktopM: "1600px",
   desktopXM: "1800px",
   desktopS: "2020px",
+  desktopA: "2345px",
+  destopXS: "2480px",
   desktop: "2560px",
 };
 export const device = {
@@ -28,6 +30,8 @@ export const device = {
   desktopM: `(max-width: ${size.desktopM})`,
   desktopXM: `(max-width: ${size.desktopXM})`,
   desktopS: `(max-width: ${size.desktopS})`,
+  desktopA: `(max-width: ${size.desktopA})`,
+  desktopXS: `(max-width: ${size.desktopXS})`,
   desktop: `(max-width: ${size.desktop})`,
 };
 //import { device } from "./../../../contants";

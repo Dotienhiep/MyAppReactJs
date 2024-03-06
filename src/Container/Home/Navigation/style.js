@@ -1,37 +1,44 @@
 import styled from "styled-components";
 import { device } from "./../../../contants";
 export const NavWrapper = styled.div`
-  width: 100%; //fix
+  width: 100%;
+  height: 35px;
   background-color: #000;
   color: #fff;
   position: fixed;
   z-index: 100000;
-  top: 60px;
+  top: 53px;
   left: 0;
   @media ${device.laptop} {
-    top: 3px;
+    top: 0px;
+    background-color: transparent;
   }
   @media ${device.tablet} {
-    top: 3px;
+    top: 0px;
+    background-color: transparent;
   }
   @media ${device.mobile} {
-    top: 3px;
+    top: 0px;
+    background-color: transparent;
   }
   @media ${device.mobileL} {
-    top: 3px;
+    top: 0px;
+    background-color: transparent;
   }
   @media ${device.mobileM} {
-    top: 3px;
+    top: 0px;
+    background-color: transparent;
   }
   @media ${device.mobileS} {
-    top: 3px;
+    top: 0px;
+    background-color: transparent;
   }
 
   .list-nav {
-    margin: 0 100px;
-    padding: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 100px;
     display: flex;
-    position: relative;
     justify-content: space-between;
     @media ${device.laptop} {
       display: none;
@@ -55,10 +62,6 @@ export const NavWrapper = styled.div`
   .menu-icon {
     display: none;
     cursor: pointer;
-    position: absolute;
-    top: 5px;
-    left: 2px;
-    border: 1px solid black;
     @media ${device.laptop} {
       display: block;
     }
@@ -79,18 +82,58 @@ export const NavWrapper = styled.div`
     }
   }
   .menu-icon button {
+    margin-top: 5px;
   }
-  /* .menu-content-mobile {
-    width: 50%;
-    height: 500px;
-    z-index: 1000000eh;
-    background-color: #fff;
-  } */
-  .hidden {
-    transform: translateX(-100%) !important;
+  /* logo */
+  & a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
   }
-  .show {
-    transform: translateX(0%) !important;
+  & img {
+    width: 80px;
+  }
+  & .logoo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+  }
+  & .shop {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  & .com {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  /*  */
+  .menu-content-mobile {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    background-color: #ff3233;
+    color: black;
+  }
+
+  .menu-content-mobile.open {
+    transform: translateX(0%);
+    width: 80%;
+    padding: 0px 0px 0px 50px;
+  }
+
+  /* menu-nav-mobile */
+  .menu-mobile-nav .list-nav-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .menu-mobile-nav .list-nav-mobile li .submenu {
+    display: none;
   }
   .nav-wrapper:nth-child(2) .submenu .product {
     display: none;
@@ -98,29 +141,35 @@ export const NavWrapper = styled.div`
   .nav-wrapper:nth-child(4) .submenu .cost {
     display: none;
   }
-  .nav-wrapper:nth-child(5) .submenu {
+  /* .nav-wrapper:nth-child(5) .submenu {
     width: 200px;
     position: absolute;
     top: 35px;
     left: 415px;
-  }
+  } */
+  /*
   .nav-wrapper:nth-child(5) .submenu .submenu-content .left {
     width: 100%;
     padding: 0 10px 10px 10px;
-  }
-  .nav-wrapper:nth-child(5) .submenu .submenu-content .left .top {
+  } */
+  /* .nav-wrapper:nth-child(5) .submenu .submenu-content .left .top {
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: start;
     align-items: start;
-  }
-  .nav-wrapper:nth-child(5) .submenu .submenu-content .left .list-top {
+  } */
+  /* .nav-wrapper:nth-child(5) .submenu .submenu-content .left .list-top {
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
     width: 100%;
+  } */
+  .nav-wrapper:nth-child(5) .submenu .submenu-content {
+    width: 15%;
+    position: absolute;
+    left: 35%;
   }
   .nav-wrapper:nth-child(5) .submenu .submenu-content .left .bottom {
     display: none;
@@ -158,11 +207,10 @@ export const NavWrapper = styled.div`
   .nav-wrapper:last-child .submenu .image {
     display: none;
   }
-  .nav-wrapper:last-child .submenu {
-    width: 200px;
+  .nav-wrapper:last-child .submenu .submenu-content {
     position: absolute;
-    top: 35px;
-    left: 83%;
+    left: 80%;
+    width: 15%;
   }
   .nav-wrapper:last-child .submenu .submenu-content .left {
     width: 100%;
@@ -204,6 +252,9 @@ export const NavItemWrapper = styled.div`
     color: #fff;
     padding-bottom: 10px;
     font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .svg-inline--fa {
     margin-right: 6px;
@@ -219,9 +270,9 @@ export const NavItemWrapper = styled.div`
     bottom: 0;
     display: none;
     width: 100%;
+    padding: 0 100px;
     height: auto;
-    z-index: 100000;
-    background-color: #fff;
+    z-index: 10000000;
   }
   .submenu-content {
     background-color: #fff;
@@ -229,6 +280,7 @@ export const NavItemWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    border: 1px solid gray;
   }
   li:hover .submenu {
     display: block;

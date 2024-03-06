@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../contants";
 
 export const BannerWrapper = styled.div`
   font-family: "Roboto", sans-serif;
@@ -7,7 +8,25 @@ export const BannerWrapper = styled.div`
   line-height: 1.4;
   width: 100%;
   z-index: 100;
-  margin-top: 90px;
+  margin-top: 83px; //45px
+  @media ${device.laptop} {
+    margin-top: 45px;
+  }
+  @media ${device.tablet} {
+    margin-top: 45px;
+  }
+  @media ${device.mobile} {
+    margin-top: 45px;
+  }
+  @media ${device.mobileL} {
+    margin-top: 45px;
+  }
+  @media ${device.mobileM} {
+    margin-top: 45px;
+  }
+  @media ${device.mobileS} {
+    margin-top: 45px;
+  }
   .container {
     height: 400px; //độ dài banner
     background-color: transparent;
@@ -115,6 +134,7 @@ export const BannerWrapper = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
   }
   .container .banner {
     display: flex;

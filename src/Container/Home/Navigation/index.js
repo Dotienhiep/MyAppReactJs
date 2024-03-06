@@ -15,8 +15,10 @@ import {
   faSimCard,
   faUniversalAccess,
   faBars,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import Burger from "./Burguer";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
@@ -558,6 +560,7 @@ const Navigation = () => {
       ],
     },
   ];
+
   return (
     <NavWrapper>
       <ul className="list-nav">
@@ -568,7 +571,24 @@ const Navigation = () => {
       <div className="menu-icon">
         <Burger open={open} setOpen={setOpen} />
       </div>
-      <div className="menu-content-mobile hidden"></div>
+      <div className={`menu-content-mobile ${open ? "open" : ""}`}>
+        <Link to="/">
+          <span className="logo">
+            <img src="/assets/images/logoshoplaptop.png" alt="logo" />
+          </span>
+          <div className="logoo">
+            <span className="shop">Shop</span>
+            <span className="com">.Com.vn</span>
+          </div>
+        </Link>
+        <div className="menu-mobile-nav">
+          <ul className="list-nav-mobile">
+            {listNavigation.map((item) => {
+              return <NavItem key={item.id} NavItem={item} />;
+            })}
+          </ul>
+        </div>
+      </div>
     </NavWrapper>
   );
 };

@@ -15,14 +15,13 @@ export default styled.div`
   background-size: 95% auto;
   background-repeat: no-repeat;
   background-position: center top 5px;
-  background-color: #fff;
-  /* transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
   &:hover {
-    transform: translateY(-5px);
-    filter: brightness(100%);
-  } */
-  &:hover img {
-    transform: scale(1.12);
+    transform: translateY(-1px);
+    filter: brightness(80%);
+  }
+  &:hover {
+    transform: scale(1.02);
   }
   &:hover .list-btn {
     display: block;
@@ -31,16 +30,70 @@ export default styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px auto;
+    margin: 50px auto; //responsive
+    width: fit-content;
+    @media ${device.desktop} {
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopA} {
+      img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopXS} {
+      img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptopL} {
+      img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptopS} {
+      img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptopX} {
+      img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.tablet} {
+      img {
+        width: 290px;
+        height: 290px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
   }
   img {
     width: 140px;
     height: 140px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
-  }
-  img:hover {
-    transform: scale(1.12);
   }
   .content {
     display: flex;
