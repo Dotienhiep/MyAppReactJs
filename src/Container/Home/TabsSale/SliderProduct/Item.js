@@ -30,25 +30,12 @@ export default styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px auto; //responsive
+    margin: 40px auto; //responsive
     width: fit-content;
-    @media ${device.desktop} {
-      img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
+    @media ${device.desktopS} {
+      & {
+        margin: 38px auto;
       }
-    }
-    @media ${device.desktopA} {
-      img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopXS} {
       img {
         width: 170px;
         height: 170px;
@@ -56,7 +43,51 @@ export default styled.div`
         transition: transform 0.3s ease-in-out;
       }
     }
+    @media ${device.desktopA} {
+      & {
+        margin: 50px auto;
+      }
+      img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopXS} {
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopXM} {
+      .image {
+        margin: 40px auto;
+      }
+      img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopM} {
+      .image {
+        margin: 30px auto;
+      }
+      img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
     @media ${device.laptopL} {
+      & {
+        margin: 40px auto;
+      }
       img {
         width: 140px;
         height: 140px;
@@ -66,32 +97,89 @@ export default styled.div`
     }
     @media ${device.laptopS} {
       img {
-        width: 170px;
-        height: 170px;
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptopM} {
+      & {
+        margin: 50px auto;
+      }
+      img {
+        width: 160px;
+        height: 160px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
       }
     }
     @media ${device.laptopX} {
       img {
-        width: 120px;
-        height: 120px;
+        width: 210px;
+        height: 210px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptop} {
+      & {
+        margin: 40px auto;
+      }
+      img {
+        width: 150px;
+        height: 150px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
       }
     }
     @media ${device.tablet} {
+      & {
+        margin: 40px auto;
+      }
       img {
-        width: 290px;
-        height: 290px;
+        width: 245px;
+        height: 245px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.mobile} {
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.mobileL} {
+      img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.mobileM} {
+      img {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.mobileS} {
+      img {
+        width: 100px;
+        height: 100px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
       }
     }
   }
   img {
-    width: 140px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
   }
@@ -99,25 +187,18 @@ export default styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    justify-content: flex-start;
   }
   .content a {
     font-size: 1.2rem;
     font-weight: bold;
     color: #000;
-    padding: 0 20px;
+    padding: 0;
+    width: 100%;
     white-space: nowrap; /* Ngăn text quá dài xuống dòng */
     overflow: hidden; /* Ẩn phần dư thừa của văn bản */
-    text-overflow: ellipsis; /* Hiển thị dấu chấm ellipsis (...) */
-    width: 350px; /* Độ rộng của phần tử chứa văn bản */
+    text-overflow: ellipsis; /* Hiển thị dấu chấm ellipsis (...) */ /* Độ rộng của phần tử chứa văn bản */
     font-family: "Helvetica Neue", Helvetica;
-    @media ${device.laptopL} {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: 300px;
-    }
-    @media ${device.tablet} {
-    }
   }
   .content .title:hover {
     color: #cb1a21;
