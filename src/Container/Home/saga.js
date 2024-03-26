@@ -14,6 +14,7 @@ function* getListProductHomeProcess(params) {
   // console.log("param",params.props.location);
   const key = params.payload;
   console.log("key", key);
+  console.log("key")
   try {
     // BUOC 1: goi api thong qua ham call(tenHamBatDongBo, thamso1, thamso2, ..thamson)
     // thamso1, thamso2...la cac tham so cua ham service
@@ -64,7 +65,6 @@ function* watchGetListProductHome() {
 //       // put action failed
 //     }
 //   } catch (err) {
-//     // handle err
 //     // put action failed
 //   }
 // }
