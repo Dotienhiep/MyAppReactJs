@@ -11,7 +11,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ cartItemsCount }) => {
+  // console.log("cảrrtHeader=====", cartItemsCount);
   /**Set giá trị input*/
   const [formData, setFormData] = useState({
     nameproduct: "",
@@ -40,6 +41,7 @@ const Header = () => {
       navigate(`/search/${key}`);
     }
   };
+  // const totalQuantity = cartItems ? cartItems.length : "";
   return (
     <HeaderWrapper>
       <div className="header-left">
@@ -104,6 +106,13 @@ const Header = () => {
                 <FontAwesomeIcon icon={faCartShopping} />
               </span>
               <span className="title-icon-header">Giỏ hàng</span>
+              <span
+                class={
+                  "number-total-product " + (cartItemsCount > 0 ? "" : "hide")
+                }
+              >
+                {cartItemsCount > 0 ? cartItemsCount : ""}
+              </span>
             </Link>
           </li>
         </ul>

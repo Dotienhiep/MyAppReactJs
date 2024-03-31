@@ -10,13 +10,13 @@ import { getListProduct } from "./../../services";
 import Loading from "../../Components/Common/Loading";
 
 const Search = ({ onAdd }) => {
-  const [dataList, setDataList] = useState([]);
+  // const [dataList, setDataList] = useState([]);
   const [listData, setListData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { key } = useParams();
-  const [inputValue, setInputValue] = useState("");
+  // const [inputValue, setInputValue] = useState("");
   // console.log(listData);
-  console.log("key", key);
+  // console.log("key", key);
   // console.log("Inputvalue", inputValue);
   // const dataFilter = () => {
   //   let data = [];

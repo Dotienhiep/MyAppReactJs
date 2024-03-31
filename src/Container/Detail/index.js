@@ -214,7 +214,7 @@ const Detail = ({ onAdd }) => {
                 type="radio"
                 name="star"
               />
-              <label className="star star-5" for="star-5"></label>
+              <label className="star star-5" htmlFor="star-5"></label>
               <input
                 onClick={() => setStar(4)}
                 className="star star-4"
@@ -222,7 +222,7 @@ const Detail = ({ onAdd }) => {
                 type="radio"
                 name="star"
               />
-              <label className="star star-4" for="star-4"></label>
+              <label className="star star-4" htmlFor="star-4"></label>
               <input
                 onClick={() => setStar(3)}
                 className="star star-3"
@@ -230,7 +230,7 @@ const Detail = ({ onAdd }) => {
                 type="radio"
                 name="star"
               />
-              <label className="star star-3" for="star-3"></label>
+              <label className="star star-3" htmlFor="star-3"></label>
               <input
                 onClick={() => setStar(2)}
                 className="star star-2"
@@ -238,7 +238,7 @@ const Detail = ({ onAdd }) => {
                 type="radio"
                 name="star"
               />
-              <label className="star star-2" for="star-2"></label>
+              <label className="star star-2" htmlFor="star-2"></label>
               <input
                 onClick={() => setStar(1)}
                 className="star star-1"
@@ -246,7 +246,7 @@ const Detail = ({ onAdd }) => {
                 type="radio"
                 name="star"
               />
-              <label className="star star-1" for="star-1"></label>
+              <label className="star star-1" htmlFor="star-1"></label>
             </form>
           </div>
         </div>

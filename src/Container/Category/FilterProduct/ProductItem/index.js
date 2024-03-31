@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartPlus,
   faInbox,
-  faMedal,
+  // faMedal,
   faMemory,
   faMicrochip,
   faMobile,
 } from "@fortawesome/free-solid-svg-icons";
 import { ProductItemWrapper } from "./../style";
 import { Link } from "react-router-dom";
-import Memory from "./Memory";
-import Price from "./Price";
+// import Memory from "./Memory";
+// import Price from "./Price";
 
 const ProductItem = ({ onAdd, listData }) => {
-  const [currentIndexActive, setCurrentIndexActive] = useState(0);
+  // const [currentIndexActive, setCurrentIndexActive] = useState(0);
   const image = "https://api-nodejs-backend.onrender.com/";
 
-  const handleChangeTab = (index) => {
-    setCurrentIndexActive(index);
-  };
+  // const handleChangeTab = (index) => {
+  //   setCurrentIndexActive(index);
+  // };
   // const renderTabContent = () => {
   //   switch (currentIndexActive) {
   //     case 0:
@@ -94,7 +94,7 @@ const ProductItem = ({ onAdd, listData }) => {
                     .slice(5, 6)
                     .map((item, index) => {
                       return (
-                        <div>
+                        <div className="" key={index}>
                           <FontAwesomeIcon
                             className="icon"
                             icon={faMicrochip}
@@ -110,7 +110,7 @@ const ProductItem = ({ onAdd, listData }) => {
                     .map((item, index) => {
                       const screen = item.value.split(", ");
                       return (
-                        <div>
+                        <div className="" key={index}>
                           <FontAwesomeIcon className="icon" icon={faMobile} />{" "}
                           {screen[0]}
                         </div>
@@ -123,7 +123,7 @@ const ProductItem = ({ onAdd, listData }) => {
                     .map((item, index) => {
                       const screen = item.value.split(", ");
                       return (
-                        <div>
+                        <div className="" key={index}>
                           <FontAwesomeIcon className="icon" icon={faMemory} />{" "}
                           {screen[0]}
                         </div>
@@ -136,7 +136,7 @@ const ProductItem = ({ onAdd, listData }) => {
                     .map((item, index) => {
                       const screen = item.value.split(", ");
                       return (
-                        <div>
+                        <div className="" key={index}>
                           <FontAwesomeIcon className="icon" icon={faInbox} />{" "}
                           {screen[0]}
                         </div>

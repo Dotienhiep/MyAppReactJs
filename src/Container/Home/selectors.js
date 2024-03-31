@@ -8,7 +8,7 @@ export const selectIsLoading = createSelector(
 );
 
 export const selectListProduct = createSelector(homeReducer, (state) => {
-  console.log("stateeeeeeeeee====", state.listProduct);
+  // console.log("stateeeeeeeeee====", state.listProduct);
   return state.listProduct;
 });
 

@@ -148,6 +148,7 @@ export const HeaderWrapper = styled.div`
     margin: 0;
   }
   .header-right ul li {
+    position: relative;
     list-style-type: none;
     padding: 0px 7px;
     color: #fff;
@@ -224,5 +225,23 @@ export const HeaderWrapper = styled.div`
   }
   .cart-icon {
     text-decoration: none;
+  }
+  .number-total-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    font-size: 7px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+  .hide {
+    display: none;
   }
 `;

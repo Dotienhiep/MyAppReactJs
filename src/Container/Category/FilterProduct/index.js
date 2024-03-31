@@ -8,7 +8,7 @@ import removeVietnameseTones from "../../../utils/CharAsciiConvert";
 import { range } from "lodash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const ProductType = [
   {
@@ -283,8 +283,11 @@ const FilterProduct = ({ onAdd }) => {
     brand: params.brand || brand.toString(),
     page: params.page || currentIndex,
   };
+  // const type = ProductType.filter((obj) => {
+  //   if (obj.nameAscii === productType) return obj;
+  // });
   const type = ProductType.filter((obj) => {
-    if (obj.nameAscii === productType) return obj;
+    return obj.nameAscii === productType;
   });
   const listBrand = type[0].brand;
   const searchParams = new URLSearchParams(Object.entries(queryObject));
@@ -322,7 +325,7 @@ const FilterProduct = ({ onAdd }) => {
         const array = checked.reduce((arr, item) => {
           if (item === value) return arr;
           arr.push(item);
-          console.log(arr);
+          // console.log(arr);
           return arr;
         }, []);
         setChecked(array);
@@ -357,15 +360,15 @@ const FilterProduct = ({ onAdd }) => {
       setCurrentIndex(currentIndex + 1);
     }
   };
-  // console.log("rrrrr",);
+  console.log("rrrrr",listData);
   return (
     <FilterProductWrapper>
       <div className="list-filter">
         <div className="brand">Hãng sản xuất </div>
         <div className="filter">
-          {listBrand.map((item, index) => {
+          {listBrand.map((item) => {
             return (
-              <div className="filter-item" key={index}>
+              <div className="filter-item" key={item.id}>
                 <label htmlFor="checkbox">
                   <input
                     value={item.name}
@@ -396,7 +399,7 @@ const FilterProduct = ({ onAdd }) => {
           <div className="list-product">
             {listData.map((item) => {
               return (
-                <ProductItem listData={item} key={item._id} onAdd={onAdd} />
+                <ProductItem key={item._id} listData={item} onAdd={onAdd} />
               );
             })}
           </div>

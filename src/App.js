@@ -55,9 +55,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home onAdd={onAdd} />} />
+          <Route
+            path="/"
+            element={<Home onAdd={onAdd} cartItemsCount={cartItems.length} />}
+          />
           <Route
             path="/:productType"
+            exact
             element={<Category onAdd={onAdd} onRemove={onRemove} />}
           />
           <Route

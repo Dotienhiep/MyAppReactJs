@@ -70,7 +70,7 @@ const SliderContent = () => {
             {listTop.map((item) => {
               return (
                 <div key={item.id} className="item-image">
-                  <img src={item.image} alt="" />
+                  <img className="" src={item.image} alt="" />
                 </div>
               );
             })}
@@ -87,7 +87,7 @@ const SliderContent = () => {
             {listBot.map((item) => {
               return (
                 <div key={item.id} className="content-image">
-                  <img src={item.image} class="single-image" alt="" />
+                  <img src={item.image} className="single-image" alt="" />
                   <span className="title-img">{item.title}</span>
                 </div>
               );

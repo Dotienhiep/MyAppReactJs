@@ -9,23 +9,23 @@ export const SliderContentWrapper = styled.div`
   background-color: #fff;
   z-index: 10000;
   @media ${device.laptop} {
-      margin: 30px 50px 0 50px;
-    }
-    @media ${device.tablet} {
-      margin: 30px 50px 0 50px;
-    }
-    @media ${device.mobile} {
-      margin: 30px 30px 0 30px;
-    }
-    @media ${device.mobileL} {
-      margin: 20px 15px 0 15px;
-    }
-    @media ${device.mobileM} {
-      margin: 20px 15px 0 15px;
-    }
-    @media ${device.mobileS} {
-      margin: 20px 15px 0 15px;
-    }
+    margin: 30px 50px 0 50px;
+  }
+  @media ${device.tablet} {
+    margin: 30px 50px 0 50px;
+  }
+  @media ${device.mobile} {
+    margin: 30px 30px 0 30px;
+  }
+  @media ${device.mobileL} {
+    margin: 20px 15px 0 15px;
+  }
+  @media ${device.mobileM} {
+    margin: 20px 15px 0 15px;
+  }
+  @media ${device.mobileS} {
+    margin: 20px 15px 0 15px;
+  }
   .wrapper {
     display: flex;
     width: 100%;

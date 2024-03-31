@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import LaptopProduct from "./LaptopProduct";
 import PhoneProduct from "./PhoneProduct";
 import { ProductsWrapper } from "./style";
@@ -237,14 +237,12 @@ const Products = ({ onAdd }) => {
   // }, []);
   // if (isLoading) return <Loading />
   useEffect(() => {
-    // dispatch action get list country trong component didmount
     dispatch(getListProductHome(listProduct));
-    console.log("Prodcut===", listProduct);
   }, []);
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const listProduct = useSelector(selectListProduct);
-  console.log("ListProductHome", listProduct);
+  // console.log("ListProductHome", listProduct);
   if (isLoading) return <Loading />;
   if (listProduct.length) return <h1>empty....</h1>;
   return (

@@ -8,9 +8,10 @@ import SliderCategory from "./SliderCategory";
 import FilterProduct from "./FilterProduct";
 
 const Category = ({ onAdd, cartItems }) => {
+  // console.log("cartCatee",cartItems);
   return (
     <CategoryWrapper>
-      <Header />
+      <Header cartItems={cartItems} />
       <Navigation />
       <SliderCategory />
       <FilterProduct cartItems={cartItems} onAdd={onAdd} />

@@ -6,21 +6,21 @@ import {
   getListProductHomeFailed,
   //   getCoutryByNameSuccess
 } from "./actions";
-import { take } from "lodash";
+// import { take } from "lodash";
 
 // const searchParams = new URLSearchParams(this.props.search);
 //   console.log("searchParam====",searchParams.get(`productType`));
-function* getListProductHomeProcess(params) {
+function* getListProductHomeProcess(action) {
   // console.log("param",params.props.location);
-  const key = params.payload;
-  console.log("key", key);
-  console.log("key")
+  const key = action.payload;
+  // console.log("key", key);
+  // console.log("key")
   try {
     // BUOC 1: goi api thong qua ham call(tenHamBatDongBo, thamso1, thamso2, ..thamson)
     // thamso1, thamso2...la cac tham so cua ham service
 
     const response = yield call(getListProductHomeAPI, key);
-    console.log("response =====", response);
+    // console.log("response =====", response);
     // console.log("111111111111");
 
     const { status, data } = response;

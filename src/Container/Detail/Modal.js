@@ -50,12 +50,12 @@ const Modal = ({
           review
         );
         if (postReview) {
-          console.log(postReview);
+          // console.log(postReview);
           closeModal();
           setRefresh(++refresh);
         }
       } catch (err) {
-        console.log(err);
+        // console.log(err);
         closeModal();
         setRefresh(++refresh);
       }

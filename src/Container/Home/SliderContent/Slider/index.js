@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 const Slider = ({ listData, isInfinity = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log("currrentIndex =====", isInfinity);
   const handlePrev = () => {
     if (isInfinity && currentIndex === 0) {
       //Preview vô hạn
@@ -50,7 +49,7 @@ const Slider = ({ listData, isInfinity = false }) => {
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
         <div className="slider-content">
-          <Link to="/sale">
+          <Link to="/">
             {/* page /sale */}
             <img src={listData[currentIndex].image} alt="" />
           </Link>
@@ -67,6 +66,7 @@ const Slider = ({ listData, isInfinity = false }) => {
         {listData.map((item, index) => {
           return (
             <span
+              key={index}
               onClick={() => handleHover(index)}
               className={`content-slider-item ${
                 currentIndex === index ? "active" : ""

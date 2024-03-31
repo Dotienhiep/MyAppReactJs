@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { CartWrapper } from "./style";
 import Header from "../../Components/Common/Header";
 import Navigation from "./../Home/Navigation";
@@ -7,10 +7,9 @@ import Copyright from "../../Components/Common/Copyright";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
-import Input from "../../Components/Common/Input";
 import Form from "./Form";
 
-const Cart = ({ cartItems, onAdd, onRemove, onRemoveAll }) => {
+const Cart = ({ cartItems, onAdd, onRemove, onRemoveAll, cartItemsCount }) => {
   // console.log("cartItemCart", cartItems);
   //format
   function format(n, currency) {
@@ -25,20 +24,20 @@ const Cart = ({ cartItems, onAdd, onRemove, onRemoveAll }) => {
     }
   }, [cartItems.length]);
   //form input
-  const [formData, setFormData] = useState({
-    name: "",
-    phoneNumber: "",
-    email: "",
-    address: "",
-    textNote: "",
-  });
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   phoneNumber: "",
+  //   email: "",
+  //   address: "",
+  //   textNote: "",
+  // });
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value,
+  //   });
+  // };
   //logic
   const itemsPrice = cartItems.reduce((a, c) => a + c.amount * c.price, 0);
   const priceCart = format(itemsPrice, " VND");
@@ -66,7 +65,7 @@ const Cart = ({ cartItems, onAdd, onRemove, onRemoveAll }) => {
   const image = "https://api-nodejs-backend.onrender.com/";
   return (
     <CartWrapper>
-      <Header />
+      <Header cartItems={cartItems} />
       <Navigation />
       <div className="product-cart">
         {cartItems.length === 0 && (

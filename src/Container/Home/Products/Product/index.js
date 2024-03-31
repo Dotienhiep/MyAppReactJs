@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartPlus,
   faInbox,
-  faMedal,
+  // faMedal,
   faMemory,
   faMicrochip,
   faMobile,
@@ -20,7 +20,7 @@ const Product = ({ onAdd, product }) => {
     });
     return formattedPrice;
   }
-  console.log("listDeetail====", product.listAttrDetailShort.slice(0, 8));
+  // console.log("listDeetail====", product.listAttrDetailShort.slice(0, 8));
   const image = "https://api-nodejs-backend.onrender.com/";
   return (
     <ProductWrapper>
@@ -42,7 +42,7 @@ const Product = ({ onAdd, product }) => {
               <div className="item-info cpu">
                 {product.listAttrDetailShort.slice(5, 6).map((item, index) => {
                   return (
-                    <div>
+                    <div className="" key={index}>
                       <FontAwesomeIcon className="icon" icon={faMicrochip} />{" "}
                       {item.value}
                     </div>
@@ -53,7 +53,7 @@ const Product = ({ onAdd, product }) => {
                 {product.listAttrDetailShort.slice(0, 1).map((item, index) => {
                   const screen = item.value.split(", ");
                   return (
-                    <div>
+                    <div className="" key={index}>
                       <FontAwesomeIcon className="icon" icon={faMobile} />{" "}
                       {screen[0]}
                     </div>
@@ -64,7 +64,7 @@ const Product = ({ onAdd, product }) => {
                 {product.listAttrDetailShort.slice(3, 4).map((item, index) => {
                   const screen = item.value.split(", ");
                   return (
-                    <div>
+                    <div className="" key={index}>
                       <FontAwesomeIcon className="icon" icon={faMemory} />{" "}
                       {screen[0]}
                     </div>
@@ -75,7 +75,7 @@ const Product = ({ onAdd, product }) => {
                 {product.listAttrDetailShort.slice(4, 5).map((item, index) => {
                   const screen = item.value.split(", ");
                   return (
-                    <div>
+                    <div className="" key={index}>
                       <FontAwesomeIcon className="icon" icon={faInbox} />{" "}
                       {screen[0]}
                     </div>
