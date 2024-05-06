@@ -80,7 +80,7 @@ const Search = ({ onAdd }) => {
           listData.map((item) => {
             return (
               <ProductItem
-                className="product-item"
+                className="product"
                 key={item._id}
                 onAdd={onAdd}
                 listData={item}

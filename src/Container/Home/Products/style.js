@@ -404,7 +404,8 @@ export const ProductWrapper = styled.div`
     }
     @media ${device.desktopM} {
       .image {
-        margin: 30px auto;
+        margin: 20px auto;
+        border: 1px solid #000;
       }
       img {
         width: 160px;
@@ -414,9 +415,12 @@ export const ProductWrapper = styled.div`
       }
     }
     @media ${device.laptopL} {
+      .image {
+        margin: 10px auto;
+      }
       img {
-        width: 140px;
-        height: 140px;
+        width: 105px;
+        height: 105px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
       }
@@ -515,16 +519,15 @@ export const ProductWrapper = styled.div`
     border-radius: 10px;
     background-color: #f8f9fa;
   }
-  .title {
+  & a .title {
     font-size: 1.2rem;
     font-weight: bold;
     color: #000;
-    padding: 0;
-    width: 100%;
-    white-space: nowrap; /* Ngăn text quá dài xuống dòng */
-    overflow: hidden; /* Ẩn phần dư thừa của văn bản */
-    text-overflow: ellipsis; /* Hiển thị dấu chấm ellipsis (...) */ /* Độ rộng của phần tử chứa văn bản */
-    font-family: "Helvetica Neue", Helvetica;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 270px; /* Độ rộng tối đa cho phép */
+    display: inline-block;
   }
   .title:hover {
     color: #cb1a21;
@@ -533,7 +536,7 @@ export const ProductWrapper = styled.div`
     color: #8a2be2;
   }
   .cost {
-    margin: 20px 0;
+    margin: 10px 0;
     border-radius: 30px;
     font-weight: bold;
   }

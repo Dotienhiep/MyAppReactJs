@@ -15,6 +15,7 @@ function* getListProductHomeProcess(action) {
   const key = action.payload;
   // console.log("key", key);
   // console.log("key")
+  // console.log
   try {
     // BUOC 1: goi api thong qua ham call(tenHamBatDongBo, thamso1, thamso2, ..thamson)
     // thamso1, thamso2...la cac tham so cua ham service

@@ -5,7 +5,7 @@ export default styled.div`
   display: flex;
   height: auto;
   justify-content: center;
-  padding: 15px 0;
+  padding: 15px 0 3px 0;
   width: 94%;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -86,7 +86,7 @@ export default styled.div`
     }
     @media ${device.laptopL} {
       & {
-        margin: 40px auto;
+        margin: 35px auto;
       }
       img {
         width: 140px;
@@ -194,7 +194,7 @@ export default styled.div`
     font-weight: bold;
     color: #000;
     padding: 0;
-    width: 100%;
+    width: 280px;
     white-space: nowrap; /* Ngăn text quá dài xuống dòng */
     overflow: hidden; /* Ẩn phần dư thừa của văn bản */
     text-overflow: ellipsis; /* Hiển thị dấu chấm ellipsis (...) */ /* Độ rộng của phần tử chứa văn bản */

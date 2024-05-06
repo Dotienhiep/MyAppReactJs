@@ -7,11 +7,11 @@ export const SearchWrapper = styled.div`
     margin: 100px 100px 0;
     justify-content: space-between;
   }
-  .list-search .content {
-    margin: 0 50px;
+  .list-btn {
+    margin: 10px 0px;
+    width: 100%;
   }
-  .list-search .list-btn {
-    margin: 10px 50px;
+  .list-btn .list-bth-responsive {
     display: flex;
     justify-content: space-between;
   }

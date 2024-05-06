@@ -93,11 +93,12 @@ const Header = ({ cartItemsCount }) => {
             </Link>
           </li>
           <li>
-            <Link to="/user">
+            <Link to="/login">
               <span className="icon-right-header">
                 <FontAwesomeIcon icon={faCircleUser} />
               </span>
               <span className="title-icon-header">Tài khoản của tôi</span>
+              {/* login */}
             </Link>
           </li>
           <li>

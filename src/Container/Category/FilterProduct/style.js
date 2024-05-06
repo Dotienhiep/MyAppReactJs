@@ -238,12 +238,13 @@ export const ProductItemWrapper = styled.div`
     margin: 15px 0;
   }
   .list-btn {
+    width: 100%;
     display: none;
-    margin: 20px 0 0 0;
   }
   .list-btn-responsive {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Sử dụng layout flexbox */
+    justify-content: space-between; /* Các phần tử con sẽ được căn chỉnh từng đầu */
+    align-items: center;
   }
   .list-btn button {
     padding: 5px 8px;
