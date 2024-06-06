@@ -69,7 +69,7 @@ const Detail = ({ onAdd }) => {
     };
     initData();
   }, []);
-  //imageapi
+  //
   if (isLoading) return <Loading />;
   // const handleThumbnailClick = (imagePath) => {
   //   setMainImage(imagePath);

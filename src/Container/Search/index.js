@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ProductItem from "../Category/FilterProduct/ProductItem";
+import ProductItem from "../Search/ProductItem";
 import { SearchWrapper } from "./style";
 import Header from "../../Components/Common/Header";
 import Navigation from "./../Home/Navigation";
@@ -10,13 +10,12 @@ import { getListProduct } from "./../../services";
 import Loading from "../../Components/Common/Loading";
 
 const Search = ({ onAdd }) => {
-  // const [dataList, setDataList] = useState([]);
   const [listData, setListData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { key } = useParams();
   // const [inputValue, setInputValue] = useState("");
   // console.log(listData);
-  // console.log("key", key);
+  console.log("key", key);
   // console.log("Inputvalue", inputValue);
   // const dataFilter = () => {
   //   let data = [];
@@ -58,16 +57,32 @@ const Search = ({ onAdd }) => {
     };
     initData();
   }, [api]);
+  const filteredData = listData.filter((item) =>
+    item.name.toLowerCase().includes(key.toLowerCase())
+  );
   // console.log("filterData",filterData);
   if (isLoading) return <Loading />;
-  console.log(listData);
+  if (!key) {
+    return (
+      <SearchWrapper>
+        <Header />
+        <Navigation />
+        <div className="search-no-product">
+          <span className="title-search">Vui lòng nhập tên sản phẩm</span>
+        </div>
+        <Footer />
+        <Copyright />
+      </SearchWrapper>
+    );
+  }
+  console.log("listDataa sẻarrch===", listData);
   return (
     <SearchWrapper>
       <Header />
       <Navigation />
       <div className="list-search">
         {/* 1 điều kiện nữa khi key sai log ra ..... */}
-        {listData.length === 0 ? (
+        {filteredData.length === 0 || "" ? (
           <div className="search-no-product">
             <img src="/assets/images/khongtimthaysanpham.png" alt="" />
             <span className="title-search">Rất tiếc ! Sorry !</span>
@@ -77,10 +92,10 @@ const Search = ({ onAdd }) => {
             </span>
           </div>
         ) : (
-          listData.map((item) => {
+          filteredData.map((item) => {
             return (
               <ProductItem
-                className="product"
+                className="product-search"
                 key={item._id}
                 onAdd={onAdd}
                 listData={item}

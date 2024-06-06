@@ -12,14 +12,13 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = ({ cartItemsCount }) => {
-  // console.log("cảrrtHeader=====", cartItemsCount);
-  /**Set giá trị input*/
   const [formData, setFormData] = useState({
     nameproduct: "",
   });
   const [key, setKey] = useState("");
+  const [inputError, setInputError] = useState(false);
   const navigate = useNavigate();
-  /*Tìm kiếm sản phẩm Button*/
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setKey(value);
@@ -27,21 +26,24 @@ const Header = ({ cartItemsCount }) => {
       ...formData,
       [name]: value,
     });
-    //setInputValue(value);
+    setInputError(false); // Reset error khi người dùng nhập
   };
-  /*Tìm kiếm bằng Enter sử dụng Navigate */
+
   const handleKeyDown = (event) => {
-    const { name, value } = event.target;
     if (event.key === "Enter") {
-      setKey(value);
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-      navigate(`/search/${key}`);
+      handleSearch();
     }
   };
-  // const totalQuantity = cartItems ? cartItems.length : "";
+
+  const handleSearch = () => {
+    if (key.trim() === "") {
+      setInputError(true); // Hiển thị error nếu input rỗng
+      return;
+    }
+
+    navigate(`/search/${key}`);
+  };
+
   return (
     <HeaderWrapper>
       <div className="header-left">
@@ -62,14 +64,22 @@ const Header = ({ cartItemsCount }) => {
             autoFocus={true}
             type="text"
             name="nameproduct"
-            value={formData.nameproduct}
+            value={key}
             onChange={handleChange}
             onKeyDown={handleKeyDown}
           />
+          {inputError && (
+            <span className="error-message">
+              Vui lòng nhập từ khóa tìm kiếm.
+            </span>
+          )}
         </div>
-        {/* Truyền link key để lấy dữ liệu keys */}
         <Link to={`/search/${key}`}>
-          <button className="btn-search">
+          <button
+            className="btn-search"
+            onClick={handleSearch}
+            disabled={!key.trim()}
+          >
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </Link>
@@ -121,4 +131,5 @@ const Header = ({ cartItemsCount }) => {
     </HeaderWrapper>
   );
 };
+
 export default Header;

@@ -360,7 +360,7 @@ const FilterProduct = ({ onAdd }) => {
       setCurrentIndex(currentIndex + 1);
     }
   };
-  console.log("rrrrr",listData);
+  console.log("rrrrr", listData);
   return (
     <FilterProductWrapper>
       <div className="list-filter">

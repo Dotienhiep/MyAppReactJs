@@ -63,7 +63,9 @@ export const PhoneProductWrapper = styled.div`
   .list-product {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start; /* Đảm bảo các phần tử bắt đầu từ bên trái */
+    align-items: flex-start;
+    gap: 9px;
   }
   .title {
     margin: 10px 15px 0 0;
@@ -155,7 +157,9 @@ export const LaptopProductWrapper = styled.div`
   .list-product {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start; /* Đảm bảo các phần tử bắt đầu từ bên trái */
+    align-items: flex-start;
+    gap: 9px;
   }
   .title {
     margin: 10px 15px 0 0;
@@ -242,7 +246,9 @@ export const TabletProductWrapper = styled.div`
   .list-product {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start; /* Đảm bảo các phần tử bắt đầu từ bên trái */
+    align-items: flex-start;
+    gap: 9px;
   }
   .title {
     margin: 10px 15px 0 0;
@@ -318,25 +324,25 @@ export const ProductWrapper = styled.div`
   background-position: center top 5px;
   transition: transform 0.3s ease, filter 0.3s ease;
   @media ${device.desktopS} {
-    width: calc((100% - 45px) / 5);
+    width: calc((100% - (4 * 9px)) / 5);
   }
   @media ${device.desktopM} {
-    width: calc((100% - 45px) / 4);
+    width: calc((100% - (3 * 9px)) / 4);
   }
   @media ${device.laptopL} {
-    width: calc((100% - 45px) / 4);
+    width: calc((100% - (3 * 9px)) / 4);
   }
   @media ${device.laptopS} {
-    width: calc((100% - 45px) / 3);
+    width: calc((100% - (2 * 9px)) / 3);
   }
   @media ${device.laptopM} {
-    width: calc((100% - 45px) / 3);
+    width: calc((100% - (2 * 9px)) / 3);
   }
   @media ${device.laptopX} {
-    width: calc((100% - 45px) / 2);
+    width: calc((100% - 9px) / 2);
   }
   @media ${device.laptop} {
-    width: calc((100% - 45px) / 2);
+    width: calc((100% - 9px) / 2);
   }
   @media ${device.tablet} {
     width: 100%;
@@ -393,11 +399,11 @@ export const ProductWrapper = styled.div`
     }
     @media ${device.desktopXM} {
       .image {
-        margin: 30px auto;
+        margin: 10px auto;
       }
       img {
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
       }
@@ -405,11 +411,10 @@ export const ProductWrapper = styled.div`
     @media ${device.desktopM} {
       .image {
         margin: 20px auto;
-        border: 1px solid #000;
       }
       img {
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
       }
@@ -454,8 +459,8 @@ export const ProductWrapper = styled.div`
         margin: 70px auto;
       }
       img {
-        width: 175px;
-        height: 175px;
+        width: 170px;
+        height: 170px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
       }

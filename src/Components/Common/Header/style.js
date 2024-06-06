@@ -16,22 +16,22 @@ export const HeaderWrapper = styled.div`
   padding: 4px 100px;
   /* responsive */
   @media ${device.laptop} {
-    padding: 0 50px;
+    padding: 0 30px 0 50px;
   }
   @media ${device.tablet} {
-    padding: 0 50px;
+    padding: 0 25px 0 50px;
   }
   @media ${device.mobile} {
-    padding: 0 50px;
+    padding: 0 20px 0 50px;
   }
   @media ${device.mobileL} {
-    padding: 0 40px;
+    padding: 0 20px 0 40px;
   }
   @media ${device.mobileM} {
-    padding: 0 40px;
+    padding: 0 20px 0 40px;
   }
   @media ${device.mobileS} {
-    padding: 0 40px;
+    padding: 0 20px 0 40px;
   }
   /* Header left */
   .header-left {

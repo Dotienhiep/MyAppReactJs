@@ -67,8 +67,8 @@ export default styled.div`
         margin: 40px auto;
       }
       img {
-        width: 140px;
-        height: 140px;
+        width: 155px;
+        height: 155px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
       }

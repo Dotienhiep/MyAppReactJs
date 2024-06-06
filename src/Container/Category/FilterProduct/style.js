@@ -86,8 +86,9 @@ export const FilterProductWrapper = styled.div`
   .list-product {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: start;
+    justify-content: flex-start; /* Đảm bảo các phần tử bắt đầu từ bên trái */
+    align-items: flex-start;
+    gap: 9px;
   }
   .pagination {
     display: flex;
@@ -125,7 +126,7 @@ export const FilterProductWrapper = styled.div`
 `;
 export const ProductItemWrapper = styled.div`
   display: flex;
-  width: calc((100% - 45px) / 5);
+  width: calc((100% - (4 * 9px)) / 5);
   margin-top: 20px;
   /* flex: 0 0 20%;  */
   flex-direction: column;
@@ -138,6 +139,7 @@ export const ProductItemWrapper = styled.div`
   background-position: center top 5px;
   background-color: #fff;
   transition: transform 0.3s ease, filter 0.3s ease;
+  gap: 9px;
   &:hover {
     transform: translateY(-5px);
     filter: brightness(90%);
@@ -146,34 +148,34 @@ export const ProductItemWrapper = styled.div`
     transform: scale(1.12);
   }
   @media ${device.desktopS} {
-    width: calc((100% - 45px) / 4);
+    width: calc((100% - (3 * 9px)) / 4);
   }
   @media ${device.desktopXM} {
-    width: calc((100% - 30px) / 3);
+    width: calc((100% - (2 * 9px)) / 3);
   }
   @media ${device.desktopM} {
-    width: calc((100% - 30px) / 3);
+    width: calc((100% - (2 * 9px)) / 3);
   }
   @media ${device.laptopL} {
-    width: calc((100% - 30px) / 3);
+    width: calc((100% - (2 * 9px)) / 3);
   }
   @media ${device.laptopS} {
-    width: calc((100% - 15px) / 2);
+    width: calc((100% - 9px) / 2);
   }
   @media ${device.laptopM} {
-    width: calc((100% - 15px) / 2);
+    width: calc((100% - 9px) / 2);
   }
   @media ${device.laptopX} {
-    width: calc((100% - 15px) / 2);
+    width: calc((100% - 9px) / 2);
   }
   @media ${device.laptop} {
-    width: calc((100% - 15px) / 2);
+    width: calc((100% - 9px) / 2);
   }
   @media ${device.tablet} {
-    width: 100%;
+    width: calc((100% - 9px) / 2);
   }
   @media ${device.mobile} {
-    width: 100%;
+    width: calc((100% - 9px) / 2);
   }
   @media ${device.mobileL} {
     width: 100%;
@@ -193,7 +195,196 @@ export const ProductItemWrapper = styled.div`
   .image {
     display: flex;
     justify-content: center;
-    margin: 50px auto;
+    margin: 40px auto;
+    @media ${device.desktop} {
+      & {
+        margin: 40px auto;
+      }
+      img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopXS} {
+      & {
+        margin: 10px auto;
+      }
+      img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopA} {
+      & {
+        margin: 10px auto;
+      }
+      img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopS} {
+      img {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopA} {
+      & {
+        margin: 30px auto;
+      }
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopXS} {
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopXM} {
+      & {
+        margin: 40px auto;
+      }
+      img {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.desktopM} {
+      & {
+        margin: 40px auto;
+      }
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptopL} {
+      & {
+        margin: 30px auto;
+      }
+      img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptopS} {
+      & {
+        margin: 65px auto;
+      }
+      img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptopM} {
+      & {
+        margin: 50px auto;
+      }
+      img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptopX} {
+      & {
+        margin: 30px auto;
+      }
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.laptop} {
+      & {
+        margin: 60px auto;
+      }
+      img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.tablet} {
+      & {
+        margin: 30px auto;
+      }
+      img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.mobile} {
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.mobileL} {
+      & {
+        margin: 50px auto;
+      }
+      img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.mobileM} {
+      & {
+        margin: 50px auto;
+      }
+      img {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    @media ${device.mobileS} {
+      & {
+        margin: 25px auto;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
   }
   img {
     width: 120px;

@@ -1,4 +1,4 @@
-/* colors */
+/* colors
 :root {
     --darkBlue: #217093;
     --medBlue: #4eb8dd;
@@ -240,4 +240,4 @@
   form #showPasswordToggle input:disabled ~ .indicator:after {
     visibility: hidden;
   }
-  
+   */
