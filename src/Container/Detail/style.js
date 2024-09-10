@@ -207,7 +207,7 @@ export const DetailWrapper = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 35%; /* Đảm bảo ảnh không vượt quá chiều rộng của div */
+    max-width: 50%; /* Đảm bảo ảnh không vượt quá chiều rộng của div */
     max-height: 100%;
     display: block;
     background: transparent;
@@ -254,6 +254,30 @@ export const DetailWrapper = styled.div`
     @media ${device.mobileS} {
       max-width: 35%;
     }
+  }
+  .thumbnail-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .thumbnail-images .list-thumbnail {
+  }
+  .thumbnail-images img {
+    width: 100px !important;
+    height: auto !important;
+    margin: 5px !important;
+  }
+  .thumbnail-images button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 0 20px;
+  }
+  .active-thumb {
+    border: 10px solid black;
+    border-radius: 20px;
   }
   .information-product-detail {
     width: 50%;

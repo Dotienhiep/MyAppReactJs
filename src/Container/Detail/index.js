@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import "./font-awesome.css";
 import Modal from "./Modal";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Detail = ({ onAdd }) => {
   const lorem = "Thông tin đang được cập nhật";
@@ -21,25 +23,30 @@ const Detail = ({ onAdd }) => {
   const [star, setStar] = useState(null);
   const [comment, setComment] = useState("");
   const [refresh, setRefresh] = useState(1);
+  const [selectedImage, setSelectedImage] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const { productId } = useParams();
-  // const [mainImage, setMainImage] = useState('');
-  // const [thumbnailImages, setThumbnailImages] = useState([]);
-  // console.log("idpro",productId);
-  const callAPI = (api) => {
-    const response = getListProduct(api);
+  const imageBaseUrl = "https://api-nodejs-backend.onrender.com/";
+
+  const callAPI = async (api) => {
+    const response = await getListProduct(api);
     return response;
   };
+
   function format(n, currency) {
     return n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,") + currency;
   }
+
   const openModal = () => {
     if (comment && star) setModal(true);
   };
+
   const handleChange = (e) => {
     const value = e.target.value;
     setComment(value);
   };
-  const image = "https://api-nodejs-backend.onrender.com/";
+
   useEffect(() => {
     const initData = async () => {
       try {
@@ -50,16 +57,20 @@ const Detail = ({ onAdd }) => {
         const responseReview = await callAPI(
           `https://api-nodejs-backend.onrender.com/review/${productId}`
         );
-        // const urlImage = await callAPI(
-        //   `https://api-nodejs-backend.onrender.com/product/${productId}`
-        // )
+
         const { data, status } = response;
 
         if (status === 200 && responseReview) {
           setIsLoading(false);
           setListData(data.product);
-          console.log("dataaaaaproduct=====".data.product);
           setListReview(responseReview.data.listReview);
+          const listDetailImage = [
+            imageBaseUrl + data.product.urlPicture,
+            imageBaseUrl + data.product.urlPicture,
+            imageBaseUrl + data.product.urlPicture,
+            imageBaseUrl + data.product.urlPicture,
+          ];
+          setSelectedImage(listDetailImage[0]);
         } else {
           setIsLoading(false);
         }
@@ -68,25 +79,40 @@ const Detail = ({ onAdd }) => {
       }
     };
     initData();
-  }, []);
-  //
-  if (isLoading) return <Loading />;
-  // const handleThumbnailClick = (imagePath) => {
-  //   setMainImage(imagePath);
-  // };
-  // console.log(listReview)
-  console.log("listData", listData);
-  // const productDetail = listData?.find((item) => {
-  //   // console.log("porductId",typeof productId);
-  //   // console.log("itemid",typeof item._id);
-  //   if (item._id === productId) return true;
-  // });
-  // console.log("productDetail", productDetail);
-  //memory
-  // console.log("lítDtaa", listData);
+  }, [productId]);
+
+  const handleImageClick = (image, index) => {
+    setSelectedImage(image);
+    setCurrentIndex(index);
+  };
+
+  const nextImage = () => {
+    const newIndex = (currentIndex + 1) % 4;
+    const newImage = [
+      imageBaseUrl + listData.urlPicture,
+      imageBaseUrl + listData.urlPicture,
+      imageBaseUrl + listData.urlPicture,
+      imageBaseUrl + listData.urlPicture,
+    ][newIndex];
+    handleImageClick(newImage, newIndex);
+  };
+
+  const prevImage = () => {
+    const newIndex = (currentIndex - 1 + 4) % 4;
+    const newImage = [
+      imageBaseUrl + listData.urlPicture,
+      imageBaseUrl + listData.urlPicture,
+      imageBaseUrl + listData.urlPicture,
+      imageBaseUrl + listData.urlPicture,
+    ][newIndex];
+    handleImageClick(newImage, newIndex);
+  };
+
   const priceMory = parseInt(listData?.price);
   const priceHehe = format(priceMory, " VND");
-  // console.log(priceHehe);
+
+  if (isLoading) return <Loading />;
+
   return (
     <DetailWrapper>
       <Header />
@@ -101,53 +127,38 @@ const Detail = ({ onAdd }) => {
         <div className="content-detail-product">
           <div className="image-detail-product">
             <div className="image-acc">
-              <img src={image.concat(listData?.urlPicture)} alt="" />
+              <img src={selectedImage} alt="Product" />
             </div>
-            {/* callAPI lấy image */}
-            {/* <div className="thumbnail-list">
-              {thumbnailImages.map((image, index) => (
-                <div
-                  key={index}
-                  className="thumbnail"
-                  onClick={() => handleThumbnailClick(image)}
-                >
-                  <img src={image} alt={`Thumbnail ${index + 1}`} />
-                </div>
-              ))}
-            </div> */}
+            <div className="thumbnail-images">
+              <button onClick={prevImage} disabled={currentIndex === 0}>
+                <FontAwesomeIcon icon={faAngleLeft} />
+              </button>
+              <div className="list-thumbnail">
+                {[
+                  imageBaseUrl + listData.urlPicture,
+                  imageBaseUrl + listData.urlPicture,
+                  imageBaseUrl + listData.urlPicture,
+                  imageBaseUrl + listData.urlPicture,
+                ].map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Thumbnail ${index + 1}`}
+                    onClick={() => handleImageClick(image, index)}
+                    style={{
+                      border: currentIndex === index ? "2px solid red" : "",
+                      borderRadius: "10px",
+                      padding: "10px 5px",
+                    }}
+                  />
+                ))}
+              </div>
+              <button onClick={nextImage} disabled={currentIndex === 3}>
+                <FontAwesomeIcon icon={faAngleRight} />
+              </button>
+            </div>
           </div>
           <div className="information-product-detail">
-            {/* <Tabs
-              selectedIndex={tabIndex}
-              onSelect={(tabIndex) => setTabIndex(tabIndex)}
-            >
-              {productDetail?.listProductGroupDetail.map((item) => {
-                return <TabPanel>{format(item?.price, " đ")}</TabPanel>;
-              })}
-              <TabList>
-                {productDetail?.listProductGroupDetail.map((item, index) => {
-                  return (
-                    <Tab
-                      className={`tab-item ${
-                        tabIndex === index ? "active-tab" : ""
-                      }`}
-                    >
-                      <div className="tab-a">
-                        <span className="text-storage">
-                          <p
-                            className={`button ${
-                              tabIndex === index ? "active" : ""
-                            }`}
-                          ></p>
-                        </span>
-                        {item?.storage}
-                      </div>
-                      <div className="">{format(item?.price, "")}</div>
-                    </Tab>
-                  );
-                })}
-              </TabList>
-            </Tabs> */}
             <div className="price-detail">{priceHehe}</div>
             <div className="">
               <div className="title------"></div>
@@ -271,7 +282,7 @@ const Detail = ({ onAdd }) => {
 
 const Review = ({ listReview }) => {
   return listReview.map((item) => (
-    <div className="comment-item" style={{ marginTop: "40px" }}>
+    <div className="comment-item" style={{ marginTop: "40px" }} key={item._id}>
       <img
         src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png"
         alt=""
@@ -280,7 +291,6 @@ const Review = ({ listReview }) => {
         <h5>{item.customer.name}</h5>
         <p>Số sao: {item.rating}</p>
         <p>{item.comment}</p>
-        {/* <span>{'4 gio truoc'}</span> */}
       </div>
     </div>
   ));

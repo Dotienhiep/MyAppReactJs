@@ -24,6 +24,7 @@ const ProductType = [
         id: "62f0190024895662a4b85deb",
         name: "Samsung",
         nameAscii: "samsung",
+        // thêm mỗi cái 1 price....
       },
       {
         id: "62f0194fcd115398719c4a58",
@@ -61,6 +62,20 @@ const ProductType = [
         nameAscii: "vivo",
       },
     ],
+    price : [
+      {
+        id: 1, 
+        priceFilter: "từ 0 triệu tới 3 triệu" 
+      },
+      {
+        id: 2, 
+        priceFilter: "từ 3 triệu tới 7 triệu" 
+      },
+      {
+        id: 3, 
+        priceFilter: "từ 7 triệu trở lên"
+      }
+    ]
   },
   {
     id: "62f02663ca101bdf38a06f7c",
@@ -102,6 +117,20 @@ const ProductType = [
         nameAscii: "coolpad",
       },
     ],
+    price : [
+      {
+        id: 1, 
+        priceFilter: "từ 0 triệu tới 7 triệu" 
+      },
+      {
+        id: 2, 
+        priceFilter: "từ 7 triệu tới 12 triệu" 
+      },
+      {
+        id: 3, 
+        priceFilter: "từ 12 triệu trở lên"
+      }
+    ]
   },
   {
     id: "62f02663ca101bdf38a06f7d",
@@ -143,6 +172,20 @@ const ProductType = [
         nameAscii: "acer",
       },
     ],
+    price : [
+      {
+        id: 1, 
+        priceFilter: "từ 0 triệu tới 7 triệu" 
+      },
+      {
+        id: 2, 
+        priceFilter: "từ 7 triệu tới 12 triệu" 
+      },
+      {
+        id: 3, 
+        priceFilter: "từ 12 triệu trở lên"
+      }
+    ]
   },
   {
     id: "62f02663ca101bdf38a06f7e",
@@ -174,6 +217,20 @@ const ProductType = [
         nameAscii: "lenovo",
       },
     ],
+    price : [
+      {
+        id: 1, 
+        priceFilter: "từ 0 triệu tới 7 triệu" 
+      },
+      {
+        id: 2, 
+        priceFilter: "từ 7 triệu tới 12 triệu" 
+      },
+      {
+        id: 3, 
+        priceFilter: "từ 12 triệu trở lên"
+      }
+    ]
   },
   {
     id: "62f02663ca101bdf38a06f7f",
@@ -217,6 +274,20 @@ const ProductType = [
         nameAscii: "acer",
       },
     ],
+    price : [
+      {
+        id: 1, 
+        priceFilter: "từ 0 triệu tới 7 triệu" 
+      },
+      {
+        id: 2, 
+        priceFilter: "từ 7 triệu tới 12 triệu" 
+      },
+      {
+        id: 3, 
+        priceFilter: "từ 12 triệu trở lên"
+      }
+    ]
   },
 ];
 const FilterProduct = ({ onAdd }) => {
@@ -290,6 +361,8 @@ const FilterProduct = ({ onAdd }) => {
     return obj.nameAscii === productType;
   });
   const listBrand = type[0].brand;
+  const listPriceFilter = type[0].price;
+  // thêm price
   const searchParams = new URLSearchParams(Object.entries(queryObject));
   const api = `https://api-nodejs-backend.onrender.com/product/type/${productType}?${searchParams}`;
   useEffect(() => {
@@ -315,6 +388,7 @@ const FilterProduct = ({ onAdd }) => {
   if (isLoading) return <Loading />;
   // if (!isLoading) return <h1>Khong co san pham nao</h1>
 
+  //check brand
   const handleChange = (e) => {
     const value = e.target.value;
     setCurrentIndex(1);
@@ -332,6 +406,14 @@ const FilterProduct = ({ onAdd }) => {
       }
     }
   };
+  //check price 
+  // const handlePriceFilter = (e) => {
+  //   const value = e.target.value
+  //   if(price >1000000) {
+      
+  //   }
+  // }
+
   //pagination
   // console.log("totalpgae",totalPage);
   const handleChangeIndex = (index) => {
@@ -390,10 +472,37 @@ const FilterProduct = ({ onAdd }) => {
             );
           })}
         </div>
+        {/* <div className="price">Theo giá</div>
+        <div className="">
+          {listPriceFilter.map((item) => {
+            return (
+              <div className="filter-item" key={item.id}>
+                <label htmlFor="checkbox">
+                  <input
+                    value={item.priceFilter}
+                    autoFocus={true}
+                    type="checkbox"
+                    id="checkbox"
+                    // checked={
+                    //   item.name === "Tất cả" && checked.length === 0
+                    //     ? true
+                    //     : checked.includes(item.name)
+                    // }
+                    // onChange={(e) => {
+                    //   handleChange(e);
+                    // }}
+                  />
+                </label>
+                <span>{item.priceFilter}</span>
+              </div>
+            );
+          })}
+        </div> */}
       </div>
       <div className="category">
         {checked.length > 0 && (
           <div className="check-category">{`Lọc sản phẩm theo: ${checked}`}</div>
+          //lọc theo giá....
         )}
         <div className="list-product-page">
           <div className="list-product">

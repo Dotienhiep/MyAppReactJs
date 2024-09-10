@@ -48,6 +48,13 @@ export const FooterWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     width: 50%;
+    padding: 20px 20px 20px 0;
+    @media ${device.laptopM} {
+      width: 100%;
+    }
+    @media ${device.laptopX} {
+      width: 100%;
+    }
     @media ${device.laptop} {
       width: 100%;
     }
@@ -103,37 +110,54 @@ export const FooterWrapper = styled.div`
   .right {
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
-    margin-left: 50px;
+    padding: 20px 20px 20px 0;
+    justify-content: space-around;
+    @media ${device.laptopM} {
+      width: 100%;
+      margin-left: 0px;
+      justify-content: start;
+    }
+    @media ${device.laptopX} {
+      width: 100%;
+      margin-left: 0px;
+      justify-content: start;
+    }
     @media ${device.laptop} {
       width: 100%;
       margin-left: 0px;
+      justify-content: start;
     }
     @media ${device.tablet} {
       width: 100%;
       margin-left: 0px;
+      justify-content: start;
     }
     @media ${device.mobile} {
       width: 100%;
       margin-left: 0px;
+      justify-content: start;
     }
     @media ${device.mobileL} {
       width: 100%;
       margin-left: 0px;
+      justify-content: start;
     }
     @media ${device.mobileM} {
       width: 100%;
       margin-left: 0px;
+      justify-content: start;
     }
     @media ${device.mobileS} {
       width: 100%;
       margin-left: 0px;
+      justify-content: start;
     }
   }
   .right .top {
     display: flex;
     flex-direction: column;
     font-size: 16px;
+    padding-right: 20px;
     @media ${device.laptop} {
       font-size: 14px;
     }
