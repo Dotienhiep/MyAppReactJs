@@ -18,7 +18,7 @@ export const TabsSaleWrapper = styled.div`
     background-color: gray;
     border-radius: 6px 6px 0 0;
     box-sizing: border-box;
-    box-shadow: 0 4px 4px 0 #00000040;
+    box-shadow: 0px 4px 4px 0px #00000040;
     overflow: unset;
     @media ${device.laptop} {
       width: calc(100% - 100px) !important;

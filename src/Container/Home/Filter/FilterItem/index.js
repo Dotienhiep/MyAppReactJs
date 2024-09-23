@@ -16,7 +16,7 @@ const FilterItem = ({ filter }) => {
           </div>
         </Link>
       ) : (
-        <Link className="category-filter" to={`/`}>
+        <Link className="category-filter" to={`/empty`}>
           <div className="content-filter">
             <div className="content-image">
               <img src={filter.image} alt="" />

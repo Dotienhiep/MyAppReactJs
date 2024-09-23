@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const PayWrapper = styled.div`
   width: 100%;
   height: auto;
+  .pay-content {
+    padding-top: 80px;
+  }
   .banner-pay {
     background-image: url(/assets/images/banner-pay.png);
     background-repeat: no-repeat;

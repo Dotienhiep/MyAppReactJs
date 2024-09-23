@@ -65,10 +65,13 @@ export const FilterItemWrapper = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 15px;
+    transition: box-shadow 0.3s ease; /* Thêm transition để hiệu ứng mượt mà */
   }
   .content-filter:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    position: relative; /* Thêm position relative để box-shadow không bị cắt */
+    z-index: 1; /* Đảm bảo phần tử hover ở trên các phần tử khác */
   }
   .content-image {
     display: flex;

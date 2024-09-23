@@ -17,7 +17,7 @@ export const TabItemWrapper = styled.div`
       margin: 0 50px;
     }
     @media ${device.mobile} {
-      margin: 0 30px;
+      margin: 0 15px;
     }
     @media ${device.mobileL} {
       margin: 0 15px;
@@ -41,6 +41,7 @@ export const TabItemWrapper = styled.div`
     cursor: pointer;
     padding: 10px 5px;
     color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     @media ${device.laptop} {
       font-size: 1em;
     }
@@ -68,7 +69,7 @@ export const TabItemWrapper = styled.div`
     background-color: #ff0000;
   }
   .tab-item:hover {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   }
   /* .active {
     color: #fff;
@@ -98,7 +99,6 @@ export const TabItemWrapper = styled.div`
     background-color: #5a6267;
   }
   .enabled-ended {
-    cursor: not-allowed;
     pointer-events: none;
   }
   .bg-color-upcoming {

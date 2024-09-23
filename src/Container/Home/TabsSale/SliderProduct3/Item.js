@@ -188,6 +188,7 @@ export default styled.div`
     flex-direction: column;
     border-radius: 10px;
     justify-content: flex-start;
+    align-items: flex-start;
   }
   .content a {
     font-size: 1.2rem;

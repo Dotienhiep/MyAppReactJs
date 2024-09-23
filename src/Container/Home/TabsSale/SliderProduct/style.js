@@ -9,19 +9,8 @@ export const SliderProductWrapper = styled.div`
   .slick-list {
     margin: 0 75px;
     display: flex;
-    justify-content: flex-start; //111111111
-    @media ${device.mobile} {
-      margin: 0 35px;
-    }
-    @media ${device.mobileL} {
-      margin: 0 15px;
-    }
-    @media ${device.mobileM} {
-      margin: 0 15px;
-    }
-    @media ${device.mobileS} {
-      margin: 0 15px;
-    }
+    justify-content: space-between; //111111111\
+    border: 1px solid black;
   }
   .slick-track {
     display: flex;
@@ -51,10 +40,8 @@ export const SliderProductWrapper = styled.div`
     align-items: center;
     width: 100% important!;
   }
-  .slick-prev {
-    display: none;
-  }
+  .slick-prev,
   .slick-next {
-    display: none;
+    display: none !important; /* Ẩn cả nút "Previous" và "Next" */
   }
 `;

@@ -48,10 +48,8 @@ export const SliderProductWrapper = styled.div`
     align-items: center;
     width: 100% important!;
   }
-  .slick-prev {
-    display: none;
-  }
+  .slick-prev,
   .slick-next {
-    display: none;
+    display: none !important; /* Ẩn cả nút "Previous" và "Next" */
   }
 `;

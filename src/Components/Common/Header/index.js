@@ -45,7 +45,7 @@ const Header = ({ cartItemsCount }) => {
   };
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper className="header">
       <div className="header-left">
         <Link to="/">
           <span className="logo">

@@ -56,6 +56,9 @@ export const FilterItemWrapper = styled.div`
   @media ${device.mobileS} {
     width: calc((100% / 2));
   }
+  .category-filter {
+    text-decoration: none;
+  }
   .content-filter {
     display: flex;
     justify-content: center;
@@ -64,10 +67,15 @@ export const FilterItemWrapper = styled.div`
     padding: 15px;
     height: 100%;
     padding: 20px;
+    color: black;
+    transition: box-shadow 0.3s ease;
   }
+
   .content-filter:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    position: relative; /* Thêm position relative để box-shadow không bị cắt */
+    z-index: 1; /* Đảm bảo phần tử hover ở trên các phần tử khác */
   }
   .content-image {
     display: flex;

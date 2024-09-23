@@ -9,6 +9,7 @@ import Detail from "./Container/Detail";
 import Search from "./Container/Search";
 import Pay from "./Container/Pay";
 import Login from "./Container/Login";
+import Empty from "./Components/Common/Empty";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -81,8 +82,9 @@ function App() {
             element={<Detail onAdd={onAdd} />}
           />
           <Route path="/search/:key" element={<Search onAdd={onAdd} />} />
-          <Route path ="/login" element={<Login />}/>
+          <Route path="/login" element={<Login />} />
           <Route path="/pay" element={<Pay />} />
+          <Route path="/empty" element={<Empty />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -3,6 +3,9 @@ import { device } from "../../contants";
 
 export const CartWrapper = styled.div`
   width: 100%;
+  .header {
+    padding-top: 0;
+  }
   .product-cart {
     margin: 100px;
     @media ${device.laptop} {
@@ -204,15 +207,15 @@ export const CartWrapper = styled.div`
     width: 100%;
     height: 30px;
     margin: 10px 0;
-    font-size: 1rem;
+    font-size: 0.7rem;
     border: 1px solid #cacaca;
     padding-left: 10px;
     border-radius: 5px;
   }
-  input[type="text"]:hover {
+  form input[type="text"]:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
-  input[type="tel"] {
+  form input[type="tel"] {
     width: 100%;
     height: 30px;
     margin: 10px 0;
@@ -221,7 +224,7 @@ export const CartWrapper = styled.div`
     padding-left: 10px;
     border-radius: 5px;
   }
-  input[type="tel"]:hover {
+  form input[type="tel"]:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   textarea {
@@ -275,7 +278,7 @@ export const CartWrapper = styled.div`
   .form-padding {
     padding: 20px;
   }
-  input[type="submit"] {
+  form input[type="submit"] {
     font-size: 40px;
     cursor: pointer;
   }

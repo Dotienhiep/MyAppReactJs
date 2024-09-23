@@ -4,6 +4,7 @@ import { device } from "../../../../contants";
 export default styled.div`
   display: flex;
   height: auto;
+  margin-top: 20px;
   justify-content: center;
   padding: 15px 0 3px 0;
   width: 94%;
@@ -17,11 +18,11 @@ export default styled.div`
   background-position: center top 5px;
   transition: transform 0.3s ease, filter 0.3s ease;
   &:hover {
-    transform: translateY(-1px);
-    filter: brightness(80%);
+    transform: translateY(-5px);
+    filter: brightness(90%);
   }
-  &:hover {
-    transform: scale(1.02);
+  &:hover img {
+    transform: scale(1.12);
   }
   &:hover .list-btn {
     display: block;
@@ -188,6 +189,7 @@ export default styled.div`
     flex-direction: column;
     border-radius: 10px;
     justify-content: flex-start;
+    align-items: flex-start;
   }
   .content a {
     font-size: 1.2rem;

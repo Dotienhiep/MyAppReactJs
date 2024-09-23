@@ -51,4 +51,8 @@ export const SliderProductWrapper = styled.div`
   .slick-slider > button {
     width: 40px;
   }
+  .slick-prev,
+  .slick-next {
+    display: none !important; /* Ẩn cả nút "Previous" và "Next" */
+  }
 `;
