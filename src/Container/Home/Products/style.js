@@ -29,6 +29,77 @@ export const ProductsWrapper = styled.div`
       padding: 5px 15px;
     }
   }
+  &:hover .swiper-button-next,
+  &:hover .swiper-button-prev {
+    opacity: 1; /* Hiện nút */
+  }
+  &:hover .swiper-button-disabled {
+    display: none;
+  }
+  .swiper {
+    margin: 0;
+  }
+  /* Ẩn nút khi không hover */
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute; /* Đặt các nút ở vị trí tuyệt đối */
+    top: 50%; /* Đặt nút ở giữa theo chiều dọc */
+    z-index: 10; /* Đảm bảo nút nổi lên trên slide */
+    color: white; /* Tùy chỉnh màu icon */
+    border-radius: 50%; /* Nếu bạn muốn nút tròn */
+    transform: translateY(-50%); /* Đưa nút về giữa theo chiều dọc */
+    opacity: 0; /* Ẩn nút ban đầu */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng chuyển tiếp */
+  }
+
+  /* Tùy chỉnh nút prev */
+  .swiper-button-prev {
+    left: 10px;
+    top: 200px; /* Vị trí nút Prev cách mép trái 20px */
+  }
+
+  /* Tùy chỉnh nút next */
+  .swiper-button-next {
+    right: 10px;
+    top: 200px; /* Vị trí nút Next cách mép phải 20px */
+  }
+
+  /* Khi hover vào phần chứa Swiper, hiển thị nút với hiệu ứng mượt mà */
+  &:hover .swiper-button-next {
+    transform: translateY(-50%) translateX(0); /* Đưa nút Next về vị trí ban đầu */
+  }
+
+  &:hover .swiper-button-prev {
+    transform: translateY(-50%) translateX(0); /* Đưa nút Prev về vị trí ban đầu */
+  }
+
+  /* Tạo hiệu ứng trượt từ trái sang phải hoặc từ phải sang trái */
+  &:hover .swiper-button-next {
+    transform: translateY(-50%) translateX(-20px); /* Trượt vào từ bên trái */
+  }
+
+  &:hover .swiper-button-prev {
+    transform: translateY(-50%) translateX(20px); /* Trượt vào từ bên phải */
+  }
+  .swiper-button-prev::after {
+    font-size: 10px;
+    font-weight: bold;
+    color: #000;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 13px;
+    background-color: white;
+    border-radius: 50%; /* Màu của biểu tượng */
+  }
+
+  .swiper-button-next::after {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 13px;
+    background-color: white;
+    border-radius: 50%; /* Màu của biểu tượng */
+  }
   .banner-product img {
     border-radius: 10px;
     min-width: 100%;
@@ -66,6 +137,7 @@ export const PhoneProductWrapper = styled.div`
     justify-content: flex-start; /* Đảm bảo các phần tử bắt đầu từ bên trái */
     align-items: flex-start;
     gap: 9px;
+    padding: 10px;
   }
   .title {
     margin: 10px 15px 0 0;
@@ -100,35 +172,35 @@ export const PhoneProductWrapper = styled.div`
         font-size: 16px;
       }
     }
-  }
-  .title span a {
-    color: #0168fa;
-    text-decoration: none;
-    background-color: transparent;
-    position: relative;
-    cursor: pointer;
-  }
-  .title span a:before {
-    content: " ";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    transform: scale(0);
-    transition: transform 0.5s ease;
-  }
-  .title span a:hover {
-    text-decoration: none;
-    outline: none;
-    color: #000;
-  }
-  .title span a:hover:before {
-    transform: scale(1);
-  }
-  a {
-    text-decoration: none;
+    .title span a {
+      color: #0168fa;
+      text-decoration: none;
+      background-color: transparent;
+      position: relative;
+      cursor: pointer;
+    }
+    .title span a:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transform: scale(0);
+      transition: transform 0.5s ease;
+    }
+    .title span a:hover {
+      text-decoration: none;
+      outline: none;
+      color: #000;
+    }
+    .title span a:hover:before {
+      transform: scale(1);
+    }
+    a {
+      text-decoration: none;
+    }
   }
 `;
 export const LaptopProductWrapper = styled.div`
@@ -160,6 +232,7 @@ export const LaptopProductWrapper = styled.div`
     justify-content: flex-start; /* Đảm bảo các phần tử bắt đầu từ bên trái */
     align-items: flex-start;
     gap: 9px;
+    padding: 10px;
   }
   .title {
     margin: 10px 15px 0 0;
@@ -249,6 +322,7 @@ export const TabletProductWrapper = styled.div`
     justify-content: flex-start; /* Đảm bảo các phần tử bắt đầu từ bên trái */
     align-items: flex-start;
     gap: 9px;
+    margin: 10px;
   }
   .title {
     margin: 10px 15px 0 0;
@@ -311,69 +385,105 @@ export const TabletProductWrapper = styled.div`
 `;
 export const ProductWrapper = styled.div`
   display: flex;
-  height: 100%;
-  width: calc((100% - 45px) / 6);
-  margin-top: 20px;
-  justify-content: center;
   flex-direction: column;
-  padding: 0 15px;
-  border-radius: 6px;
-  background-image: url("/assets/images/boder-product1.png");
-  background-size: 95% auto;
-  background-repeat: no-repeat;
-  background-position: center top 5px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #fff;
   transition: transform 0.3s ease, filter 0.3s ease;
-  @media ${device.desktopS} {
-    width: calc((100% - (4 * 9px)) / 5);
-  }
-  @media ${device.desktopM} {
-    width: calc((100% - (3 * 9px)) / 4);
-  }
-  @media ${device.laptopL} {
-    width: calc((100% - (3 * 9px)) / 4);
-  }
-  @media ${device.laptopS} {
-    width: calc((100% - (2 * 9px)) / 3);
-  }
-  @media ${device.laptopM} {
-    width: calc((100% - (2 * 9px)) / 3);
-  }
-  @media ${device.laptopX} {
-    width: calc((100% - 9px) / 2);
-  }
-  @media ${device.laptop} {
-    width: calc((100% - 9px) / 2);
-  }
-  @media ${device.tablet} {
-    width: 100%;
-  }
-  @media ${device.mobile} {
-    width: 100%;
-  }
-  @media ${device.mobileL} {
-    width: 100%;
-  }
-  @media ${device.mobileM} {
-    width: 100%;
-  }
-  @media ${device.mobileS} {
-    width: 100%;
-  }
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-1px);
-    filter: brightness(100%);
-    transform: scale(1.02);
+    /* transform: translateY(-1px);
+    filter: brightness(80%);
+    transform: scale(1.01); */
   }
   &:hover .list-btn {
     display: block;
+  }
+  & a:first-child {
+    display: flex;
+    justify-content: center;
+  }
+  &:hover .swiper-button-next,
+  &:hover .swiper-button-prev {
+    opacity: 1; /* Hiện nút */
+  }
+  &:hover .swiper-button-disabled {
+    display: none;
+  }
+  .swiper {
+    margin: 0;
+  }
+  /* Ẩn nút khi không hover */
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute; /* Đặt các nút ở vị trí tuyệt đối */
+    top: 50%; /* Đặt nút ở giữa theo chiều dọc */
+    z-index: 10; /* Đảm bảo nút nổi lên trên slide */
+    color: white; /* Tùy chỉnh màu icon */
+    border-radius: 50%; /* Nếu bạn muốn nút tròn */
+    transform: translateY(-50%); /* Đưa nút về giữa theo chiều dọc */
+    opacity: 0; /* Ẩn nút ban đầu */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng chuyển tiếp */
+  }
+
+  /* Tùy chỉnh nút prev */
+  .swiper-button-prev {
+    left: 10px;
+    top: 200px; /* Vị trí nút Prev cách mép trái 20px */
+  }
+
+  /* Tùy chỉnh nút next */
+  .swiper-button-next {
+    right: 10px;
+    top: 200px; /* Vị trí nút Next cách mép phải 20px */
+  }
+
+  /* Khi hover vào phần chứa Swiper, hiển thị nút với hiệu ứng mượt mà */
+  &:hover .swiper-button-next {
+    transform: translateY(-50%) translateX(0); /* Đưa nút Next về vị trí ban đầu */
+  }
+
+  &:hover .swiper-button-prev {
+    transform: translateY(-50%) translateX(0); /* Đưa nút Prev về vị trí ban đầu */
+  }
+
+  /* Tạo hiệu ứng trượt từ trái sang phải hoặc từ phải sang trái */
+  &:hover .swiper-button-next {
+    transform: translateY(-50%) translateX(-20px); /* Trượt vào từ bên trái */
+  }
+
+  &:hover .swiper-button-prev {
+    transform: translateY(-50%) translateX(20px); /* Trượt vào từ bên phải */
+  }
+  .swiper-button-prev::after {
+    font-size: 10px;
+    font-weight: bold;
+    color: #000;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 13px;
+    background-color: white;
+    border-radius: 50%; /* Màu của biểu tượng */
+  }
+
+  .swiper-button-next::after {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 13px;
+    background-color: white;
+    border-radius: 50%; /* Màu của biểu tượng */
   }
   .image {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px auto;
-    @media ${device.desktopS} {
+    margin: 40px auto;
+    /* @media ${device.desktopS} {
       img {
         width: 190px;
         height: 190px;
@@ -510,29 +620,39 @@ export const ProductWrapper = styled.div`
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
       }
-    }
+    } */
   }
   img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
   }
-  .content {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    background-color: #f8f9fa;
+  .sale-percent {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 10px;
   }
-  & a .title {
+  .sale-percent span {
+    background-color: #d3d3d3;
+    color: #303030;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+  & a:nth-child(4) {
+    text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
+    padding-left: 10px;
     color: #000;
+    width: 100%;
+    display: -webkit-box; /* Hỗ trợ cho line-clamp */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
     overflow: hidden;
-    white-space: nowrap;
+    white-space: normal; /* Cho phép nội dung xuống dòng */
     text-overflow: ellipsis;
-    max-width: 270px; /* Độ rộng tối đa cho phép */
-    display: inline-block;
   }
   .title:hover {
     color: #cb1a21;
@@ -540,16 +660,26 @@ export const ProductWrapper = styled.div`
   .title:active {
     color: #8a2be2;
   }
-  .cost {
-    margin: 10px 0;
-    border-radius: 30px;
-    font-weight: bold;
+  & .cost {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 10px;
   }
   .cost span {
-    background-color: #cb1a21;
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 30px;
+    color: #000;
+    padding: 6px 0px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding-left: 10px;
   }
   .content .info {
     display: flex;

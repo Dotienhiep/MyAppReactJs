@@ -3,20 +3,20 @@ import { device } from "../../../contants";
 
 export const TabsSaleWrapper = styled.div`
   margin: 100px 0;
+  /* border: 10px solid white; */
   .container-content-banner {
     position: relative;
     z-index: 2 !important;
     width: calc(100% - 200px) !important;
-    border: 1px solid #fff;
     /* max-width: 1236px; */
     margin: 0 auto;
     display: flex;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: gray;
-    border-radius: 6px 6px 0 0;
+    background-color: #0a2137;
+    border-radius: 20px 20px 0 0;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px 0px #00000040;
     overflow: unset;
@@ -74,13 +74,14 @@ export const TabsSaleWrapper = styled.div`
     width: 100%;
   }
   .flashsale-banner {
-    background-color: #cb1c22;
-    border: 1px solid #fff;
+    background-color: #092238;
     width: 100%;
+    border-radius: 20px 20px 0 0;
   }
   .flashsale-banner img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 20px 20px 0 0;
   }
 `;

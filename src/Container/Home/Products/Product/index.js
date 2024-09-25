@@ -29,12 +29,15 @@ const Product = ({ onAdd, product }) => {
           <img src={image.concat(product.urlPicture)} alt="" />
         </div>
       </Link>
-      <Link className="link" to={`/product/${product._id}`}>
-        <span className="title">{product.name}</span>
-      </Link>
+      <div className="sale-percent">
+        <span>Trả góp 0%</span>
+      </div>
       <div className="cost">
         <span>{formatCurrency(product.price)}</span>
       </div>
+      <Link className="link" to={`/product/${product._id}`}>
+        <span className="title">{product.name}</span>
+      </Link>
       <div className="content">
         <div className="info">
           <div className="list-info">

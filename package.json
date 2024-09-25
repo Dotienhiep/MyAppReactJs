@@ -24,6 +24,7 @@
     "redux-saga": "^1.2.3",
     "reselect": "^4.1.8",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.14",
     "toolkit": "^1.5.4",
     "web-vitals": "^2.1.4"
   },

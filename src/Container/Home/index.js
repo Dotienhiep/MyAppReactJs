@@ -69,7 +69,18 @@ const Home = ({ onAdd, cartItemsCount }) => {
   //     // Xóa timeouts của các component khác nếu có
   //   };
   // }, []); // Chạy 1 lần
-
+  const listData = [
+    { _id: '1', image: '/assets/images/slider-banner-1.png', content: 'Sản phẩm 1' },
+    { _id: '2', image: '/assets/images/slider-banner-2.png', content: 'Sản phẩm 2' },
+    { _id: '2', image: '/assets/images/slider-banner-3.png', content: 'Sản phẩm 2' },
+    { _id: '2', image: '/assets/images/slider-banner-4.png', content: 'Sản phẩm 2' },
+    { _id: '2', image: '/assets/images/slider-banner-5.png', content: 'Sản phẩm 2' },
+    { _id: '2', image: '/assets/images/slider-banner-6.png', content: 'Sản phẩm 2' },
+    { _id: '2', image: '/assets/images/slider-banner-2.png', content: 'Sản phẩm 2' },
+    { _id: '2', image: '/assets/images/slider-banner-4.png', content: 'Sản phẩm 2' },
+    { _id: '2', image: '/assets/images/slider-banner-6.png', content: 'Sản phẩm 2' },
+    // ... thêm các sản phẩm khác
+  ];
   return (
     <HomeWrapper>
       <Fireworks />

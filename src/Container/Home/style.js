@@ -5,6 +5,7 @@ export const HomeWrapper = styled.div`
   height: auto;
   /* background-color: #f8f9fa; */
   background-color: #cd1917;
+  overflow: hidden;
   .canvas {
     position: absolute;
     top: 100px;

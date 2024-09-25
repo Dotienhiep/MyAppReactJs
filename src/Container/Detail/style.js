@@ -31,7 +31,7 @@ export const DetailWrapper = styled.div`
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
   }
-  ..title-detail-product-length h1 {
+  .title-detail-product-length h1 {
     font-size: 1.8rem;
     @media ${device.desktopS} {
       font-size: 1.7rem;

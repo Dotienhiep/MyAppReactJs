@@ -2,13 +2,20 @@ import styled from "styled-components";
 import { device } from "./../../../../contants";
 
 export const TabItemWrapper = styled.div`
-  width: 100%;
-
+  padding: 0 10px 10px; /* Thêm khoảng cách 100px mỗi bên */
+  width: calc(100% - 200px); /* Điều chỉnh width để trừ padding hai bên */
+  background-color: #0a2137;
+  margin: 0 auto;
+  border-radius: 0 0 20px 20px;
+  .bg-tabsale {
+    padding: 0;
+  }
   .list-tab {
     list-style-type: none;
-    margin: 0 100px;
+    margin: 0;
     display: flex;
     align-items: center;
+    background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     @media ${device.laptop} {
       margin: 0 50px;
@@ -106,9 +113,11 @@ export const TabItemWrapper = styled.div`
     color: #cb1c22;
   }
   .list-content {
+    width: 100%;
     list-style-type: none;
-    padding: 1.5rem;
-    overflow-x: hidden;
+    background-color: white;
+    padding: 0 15px 15px;
+    border-radius: 0 0 20px 20px;
   }
   .content-item {
     font-size: 15px;

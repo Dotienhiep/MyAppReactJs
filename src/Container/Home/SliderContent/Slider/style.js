@@ -25,7 +25,14 @@ export const SliderWrapper = styled.div`
   @media ${device.mobileS} {
     width: 100%;
   }
+.slider-items {
+  display: flex; /* Sử dụng flexbox để sắp xếp các sản phẩm */
+  transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
+}
 
+.slider-item {
+  min-width: calc(100% / 6); /* Chia đều cho 6 sản phẩm */
+}
   .wrapper {
     width: 100%;
     display: flex;
@@ -59,6 +66,7 @@ export const SliderWrapper = styled.div`
     justify-content: center;
     align-items: center;
     height: auto;
+    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng hiển thị */
     @media ${device.laptopX} {
       width: 100%;
     }

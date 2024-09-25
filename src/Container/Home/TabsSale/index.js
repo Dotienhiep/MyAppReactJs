@@ -313,7 +313,7 @@ const TabsSale = () => {
           <img src="/assets/images/flashsale-banner.png" alt="" />
         </div>
         <div className="flashsale-banner">
-          <img src="/assets/images/flash-banner-image.png" alt="" />
+          <img src="/assets/images/flashsale-banner1.png" alt="" />
         </div>
       </div>
       <TabItem
