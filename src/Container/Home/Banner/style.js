@@ -8,7 +8,10 @@ export const BannerWrapper = styled.div`
   line-height: 1.4;
   width: 100%;
   z-index: 100;
-  margin-top: 83px; //45px
+  margin-top: 88px; //45px
+  @media ${device.laptopM} {
+    margin-top: 53px;
+  }
   @media ${device.laptop} {
     margin-top: 45px;
   }
@@ -28,11 +31,12 @@ export const BannerWrapper = styled.div`
     margin-top: 45px;
   }
   .container {
-    height: 400px; //độ dài banner
+    height: 500px; //độ dài banner
     background-color: transparent;
   }
   .container img {
     object-fit: cover;
+    padding-top: 30px;
   }
   .content {
     color: #000;
@@ -104,11 +108,11 @@ export const BannerWrapper = styled.div`
   .wave {
     opacity: 0.6;
     position: absolute;
-    top: 250px;
+    top: 300px;
     left: 50%;
     width: 6000px;
     height: 6000px;
-    background: #cd1917;
+    background: #f2f4f6;
     margin-left: -3000px;
     transform-origin: 50% 50%;
     border-radius: 46%;
@@ -126,7 +130,7 @@ export const BannerWrapper = styled.div`
   }
   .container {
     position: relative;
-    background-image: url(/assets/images/bg-banner-top.png);
+    background-image: url(/assets/images/banner-bg.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;

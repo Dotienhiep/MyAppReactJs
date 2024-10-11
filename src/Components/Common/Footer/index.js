@@ -1,5 +1,11 @@
 import React from "react";
 import { FooterWrapper } from "./style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -83,6 +89,17 @@ const Footer = () => {
             </div>
             <div className="">
               <span className="title-c">0964480434</span>
+            </div>
+            <div className="contact-icon-wrapper">
+              <a href="a" className="icon-haha">
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
+              <a href="a" className="icon-haha">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <a href="a" className="icon-haha">
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../Components/Common/Header";
 import Banner from "./Banner";
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
 import SliderContent from "./SliderContent";
 import Filter from "./Filter";
 import TabsSale from "./TabsSale";
@@ -14,6 +14,7 @@ import { HomeWrapper } from "./style";
 import ScrollToTop from "react-scroll-to-top";
 import SwingingCouplets from "../../Container/Home/SwingingCouplets";
 import Fireworks from "../../Components/Common/Fireworks";
+import DealNav from "../../Components/Common/DealNav";
 
 const Home = ({ onAdd, cartItemsCount }) => {
   // console.log("cartItemsssss=home");
@@ -69,25 +70,14 @@ const Home = ({ onAdd, cartItemsCount }) => {
   //     // Xóa timeouts của các component khác nếu có
   //   };
   // }, []); // Chạy 1 lần
-  const listData = [
-    { _id: '1', image: '/assets/images/slider-banner-1.png', content: 'Sản phẩm 1' },
-    { _id: '2', image: '/assets/images/slider-banner-2.png', content: 'Sản phẩm 2' },
-    { _id: '2', image: '/assets/images/slider-banner-3.png', content: 'Sản phẩm 2' },
-    { _id: '2', image: '/assets/images/slider-banner-4.png', content: 'Sản phẩm 2' },
-    { _id: '2', image: '/assets/images/slider-banner-5.png', content: 'Sản phẩm 2' },
-    { _id: '2', image: '/assets/images/slider-banner-6.png', content: 'Sản phẩm 2' },
-    { _id: '2', image: '/assets/images/slider-banner-2.png', content: 'Sản phẩm 2' },
-    { _id: '2', image: '/assets/images/slider-banner-4.png', content: 'Sản phẩm 2' },
-    { _id: '2', image: '/assets/images/slider-banner-6.png', content: 'Sản phẩm 2' },
-    // ... thêm các sản phẩm khác
-  ];
   return (
     <HomeWrapper>
       <Fireworks />
       <ScrollToTop smooth color="#6f00ff" />
       <Header cartItemsCount={cartItemsCount} />
-      <Navigation />
+      {/* <Navigation /> */}
       {/* {showBanner && <Banner />} */}
+      <DealNav />
       <Banner />
       {/* {showSliderContent && <SliderContent />} */}
       <SliderContent />

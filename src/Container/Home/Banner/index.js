@@ -7,7 +7,7 @@ const Banner = () => {
       <div className="container">
         <img
           className="banner"
-          src="/assets/images/center-image-banner.png"
+          src="/assets/images/center-image-banner1.png"
           alt="banner website"
         />
         <div className="wave"></div>

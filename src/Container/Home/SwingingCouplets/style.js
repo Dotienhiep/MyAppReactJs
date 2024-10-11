@@ -6,7 +6,7 @@ export const SwingingCoupletsWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 340px;
+  top: 420px;
   width: 100%; /* Điều1 chỉnh kích thước của wrapper theo ý của bạn */
   height: auto; /* Điều chỉnh kích thước của wrapper theo ý của bạn */
   margin-bottom: 50px;

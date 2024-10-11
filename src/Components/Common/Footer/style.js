@@ -245,4 +245,11 @@ export const FooterWrapper = styled.div`
       font-size: 10px;
     }
   }
+  .right .contact-icon-wrapper {
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+  }
 `;
