@@ -1,10 +1,28 @@
 import styled from "styled-components";
-import { device } from "../../../../contants";
+import { device } from "../../../contants";
 
 export const SliderProductWrapper = styled.div`
-  width: 100%;
-
-  /* Hiện nút khi hover */
+  max-width: 100%; /* Đặt chiều rộng tối đa cho container */
+  padding: 0 100px; /* Khoảng cách 100px ở 2 bên */
+  margin: 0 auto; /* Căn giữa phần tử */
+  @media ${device.laptop} {
+    padding: 0 50px;
+  }
+  @media ${device.tablet} {
+    padding: 0 50px;
+  }
+  @media ${device.mobile} {
+    padding: 0 30px;
+  }
+  @media ${device.mobileL} {
+    padding: 0 15px;
+  }
+  @media ${device.mobileM} {
+    padding: 0 15px;
+  }
+  @media ${device.mobileS} {
+    padding: 0 15px;
+  }
   &:hover .swiper-button-next,
   &:hover .swiper-button-prev {
     opacity: 1; /* Hiện nút */
@@ -28,13 +46,13 @@ export const SliderProductWrapper = styled.div`
   /* Tùy chỉnh nút prev */
   .swiper-button-prev {
     left: 10px;
-    top: 200px; /* Vị trí nút Prev cách mép trái 20px */
+    top: 60%; /* Vị trí nút Prev cách mép trái 20px */
   }
 
   /* Tùy chỉnh nút next */
   .swiper-button-next {
     right: 10px;
-    top: 200px; /* Vị trí nút Next cách mép phải 20px */
+    top: 60%; /* Vị trí nút Next cách mép phải 20px */
   }
 
   /* Khi hover vào phần chứa Swiper, hiển thị nút với hiệu ứng mượt mà */
@@ -56,90 +74,32 @@ export const SliderProductWrapper = styled.div`
   }
 
   .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin-top: 20px;
-    width: 100%;
     border-radius: 20px;
     background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, filter 0.3s ease;
-  }
-  .border-sale {
-    border: 3px solid #b81d1b;
-    width: 100%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-  }
-  /* .swiper-slide:hover {
-    transform: translateY(-5px);
-    filter: brightness(90%);
-  }
-
-  .swiper-slide:hover img {
-    transform: scale(1.12);
-  } */
-
-  .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 20px auto;
-    max-width: 200px; /* Điều chỉnh kích thước tối đa của hình ảnh */
-    height: 200px;
-    overflow: hidden; /* Ẩn phần hình ảnh bị vượt ra khỏi khung */
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease-in-out;
+    @media ${device.tablet} {
+      width: 100% !important;
     }
   }
 
-  .content {
+  a {
     display: flex;
-    flex-direction: column;
-    border-radius: 10px;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-bottom: 60px; /* Điều chỉnh khoảng cách giữa hình ảnh và nội dung */
+    border-radius: 20px;
   }
-
-  .content a {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #000;
-    padding: 0;
-    width: 200px;
-    white-space: nowrap; /* Ngăn text quá dài xuống dòng */
-    overflow: hidden; /* Ẩn phần dư thừa của văn bản */
-    text-overflow: ellipsis; /* Hiển thị dấu chấm ellipsis (...) */
-    font-family: "Helvetica Neue", Helvetica;
-  }
-
-  .content .title:hover {
-    color: #cb1a21;
-  }
-
-  .content .title:active {
-    color: #8a2be2;
-  }
-
-  a {
-    text-decoration: none;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
   }
 
   .swiper {
     margin: 0px;
+    border-radius: 20px;
   }
 
   .swiper-button-prev::after {
@@ -160,26 +120,5 @@ export const SliderProductWrapper = styled.div`
     padding: 10px 13px;
     background-color: white;
     border-radius: 50%; /* Màu của biểu tượng */
-  }
-
-  .sale-fire {
-    background-color: #cb1a21;
-    margin: 30px 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    border-radius: 15px;
-    padding: 3px;
-    color: white;
-  }
-  .sale-fire .svg-icon {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .sale-fire .title-sale-fire {
-    font-weight: bold;
-    font-size: 14px;
   }
 `;

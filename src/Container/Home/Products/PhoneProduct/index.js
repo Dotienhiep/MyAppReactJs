@@ -14,7 +14,7 @@ const PhoneProduct = ({ onAdd, listProduct }) => {
     <PhoneProductWrapper>
       <div className="title">
         <h3 className="">Điện thoại nổi bật</h3>
-        <span className="">
+        <span className="hove">
           <Link to="/dien-thoai">Xem tất cả</Link>
         </span>
       </div>

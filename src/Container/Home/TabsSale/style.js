@@ -3,15 +3,12 @@ import { device } from "../../../contants";
 
 export const TabsSaleWrapper = styled.div`
   margin: 100px 0;
-  /* border: 10px solid white; */
   .container-content-banner {
     position: relative;
     z-index: 2 !important;
     width: calc(100% - 200px) !important;
-    /* max-width: 1236px; */
     margin: 0 auto;
     display: flex;
-    /* padding-top: 20px; */
     justify-content: center;
     align-items: center;
     flex-direction: column;

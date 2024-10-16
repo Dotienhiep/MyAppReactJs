@@ -7,6 +7,25 @@ export const TabItemWrapper = styled.div`
   background-color: #0a2137;
   margin: 0 auto;
   border-radius: 0 0 20px 20px;
+  @media ${device.laptop} {
+    width: calc(100% - 100px) !important;
+  }
+  @media ${device.tablet} {
+    width: calc(100% - 100px) !important;
+  }
+  @media ${device.mobile} {
+    width: calc(100% - 60px) !important;
+  }
+  @media ${device.mobileL} {
+    width: calc(100% - 30px) !important;
+  }
+  @media ${device.mobileM} {
+    width: calc(100% - 30px) !important;
+  }
+  @media ${device.mobileS} {
+    width: calc(100% - 30px) !important;
+  }
+
   .bg-tabsale {
     padding: 0;
   }
@@ -17,24 +36,6 @@ export const TabItemWrapper = styled.div`
     align-items: center;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    @media ${device.laptop} {
-      margin: 0 50px;
-    }
-    @media ${device.tablet} {
-      margin: 0 50px;
-    }
-    @media ${device.mobile} {
-      margin: 0 15px;
-    }
-    @media ${device.mobileL} {
-      margin: 0 15px;
-    }
-    @media ${device.mobileM} {
-      margin: 0 15px;
-    }
-    @media ${device.mobileS} {
-      margin: 0 15px;
-    }
   }
   .tab-item {
     width: calc(100% / 4);

@@ -4,252 +4,266 @@ import { device } from "./../../../contants";
 export const FooterWrapper = styled.div`
   .footer {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px 100px;
-    background-color: #fff;
+    background-color: #000;
+    color: white;
+    border-bottom: 1px solid white;
+
     @media ${device.laptop} {
-      padding: 0 50px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      padding: 20px 50px;
     }
     @media ${device.tablet} {
-      padding: 0 50px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      padding: 20px 50px;
     }
     @media ${device.mobile} {
-      padding: 0 30px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      padding: 20px 30px;
     }
     @media ${device.mobileL} {
-      padding: 0 15px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      padding: 20px 15px;
     }
     @media ${device.mobileM} {
-      padding: 0 15px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      padding: 20px 15px;
     }
     @media ${device.mobileS} {
-      padding: 0 15px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      padding: 20px 15px;
     }
   }
-  .left {
+
+  .footer-store-chain {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    padding: 20px 20px 20px 0;
-    @media ${device.laptopM} {
-      width: 100%;
-    }
-    @media ${device.laptopX} {
-      width: 100%;
-    }
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+
     @media ${device.laptop} {
-      width: 100%;
-    }
-    @media ${device.tablet} {
-      width: 100%;
-    }
-    @media ${device.mobile} {
-      width: 100%;
-    }
-    @media ${device.mobileL} {
-      width: 100%;
-    }
-    @media ${device.mobileM} {
-      width: 100%;
-    }
-    @media ${device.mobileS} {
-      width: 100%;
+      flex-direction: column;
+      margin-bottom: 0;
     }
   }
-  ul {
-    list-style-type: none;
-  }
-  li {
-    padding-top: 10px;
-  }
-  li a {
-    text-decoration: none;
-    color: #3399d2;
-    font-size: 14px;
+
+  .footer-store-chain-content {
     @media ${device.laptop} {
-      font-size: 14px;
-    }
-    @media ${device.tablet} {
-      font-size: 14px;
-    }
-    @media ${device.mobile} {
-      font-size: 14px;
-    }
-    @media ${device.mobileL} {
-      font-size: 10px;
-    }
-    @media ${device.mobileM} {
-      font-size: 10px;
-    }
-    @media ${device.mobileS} {
-      font-size: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 20px;
     }
   }
-  li a:hover {
-    text-decoration: underline;
-    color: red;
+
+  .footer-store-chain-content h3 {
+    padding-bottom: 10px;
   }
-  .right {
+  .footer-store-chain-content span {
+    text-align: center;
+  }
+  .footer-store-chain-button {
     display: flex;
-    flex-grow: 1;
-    padding: 20px 20px 20px 0;
-    justify-content: space-around;
-    @media ${device.laptopM} {
-      width: 100%;
-      margin-left: 0px;
-      justify-content: start;
-    }
-    @media ${device.laptopX} {
-      width: 100%;
-      margin-left: 0px;
-      justify-content: start;
-    }
-    @media ${device.laptop} {
-      width: 100%;
-      margin-left: 0px;
-      justify-content: start;
-    }
-    @media ${device.tablet} {
-      width: 100%;
-      margin-left: 0px;
-      justify-content: start;
-    }
-    @media ${device.mobile} {
-      width: 100%;
-      margin-left: 0px;
-      justify-content: start;
-    }
-    @media ${device.mobileL} {
-      width: 100%;
-      margin-left: 0px;
-      justify-content: start;
-    }
-    @media ${device.mobileM} {
-      width: 100%;
-      margin-left: 0px;
-      justify-content: start;
-    }
-    @media ${device.mobileS} {
-      width: 100%;
-      margin-left: 0px;
-      justify-content: start;
-    }
+    justify-content: flex-end;
+    align-items: center;
   }
-  .right .top {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    padding-right: 20px;
-    @media ${device.laptop} {
-      font-size: 14px;
-    }
-    @media ${device.tablet} {
-      font-size: 14px;
-    }
-    @media ${device.mobile} {
-      font-size: 14px;
-    }
-    @media ${device.mobileL} {
-      font-size: 10px;
-    }
-    @media ${device.mobileM} {
-      font-size: 10px;
-    }
-    @media ${device.mobileS} {
-      font-size: 10px;
-    }
-    line-height: 30px;
-  }
-  .title-f {
+
+  .footer-store-chain-button button {
+    padding: 10px 14px;
     font-size: 17px;
     font-weight: 700;
-    @media ${device.laptop} {
-      font-size: 14px;
-    }
-    @media ${device.tablet} {
-      font-size: 14px;
-    }
-    @media ${device.mobile} {
-      font-size: 14px;
-    }
-    @media ${device.mobileL} {
-      font-size: 10px;
-    }
-    @media ${device.mobileM} {
-      font-size: 10px;
-    }
-    @media ${device.mobileS} {
-      font-size: 10px;
-    }
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 20px;
   }
-  .title-c {
-    font-size: 20px;
+
+  .footer-content {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin-bottom: 30px;
+  }
+  /* tablet */
+  .footer-connect {
+    width: 100%;
+    color: white;
+  }
+
+  .footer-section {
+    width: 25%;
+  }
+
+  .ant-collapse-item {
+    color: white;
+    width: 100%;
+    border-bottom: 1px solid gray;
+  }
+  .ant-collapse {
+    border: none !important;
+  }
+  .ant-collapse-header {
+    padding: 12px 0 !important;
+    border: none !important;
+  }
+  .ant-collapse-header-text {
+    color: white;
+    padding-inline-end: 0px !important;
+  }
+
+  .ant-collapse-expand-icon {
+    color: white;
+  }
+
+  .ant-collapse-header .ant-collapse-header-text {
+    order: 1;
     font-weight: 700;
-    color: red;
-    @media ${device.laptop} {
-      font-size: 16px;
-    }
-    @media ${device.tablet} {
-      font-size: 16px;
-    }
-    @media ${device.mobile} {
-      font-size: 16px;
-    }
-    @media ${device.mobileL} {
-      font-size: 14px;
-    }
-    @media ${device.mobileM} {
-      font-size: 14px;
-    }
-    @media ${device.mobileS} {
-      font-size: 14px;
+    font-size: 18px;
+  }
+
+  .ant-collapse-header .ant-collapse-expand-icon {
+    order: 2;
+  }
+
+  .ant-collapse-content {
+    background-color: black;
+    color: #fff;
+    border: none !important;
+  }
+
+  @media ${device.laptop} {
+    .footer-desktop {
+      display: none;
     }
   }
-  .bottom {
-    font-size: 16px;
-    line-height: 30px;
-    @media ${device.laptop} {
-      font-size: 14px;
-    }
-    @media ${device.tablet} {
-      font-size: 14px;
-    }
-    @media ${device.mobile} {
-      font-size: 14px;
-    }
-    @media ${device.mobileL} {
-      font-size: 10px;
-    }
-    @media ${device.mobileM} {
-      font-size: 10px;
-    }
-    @media ${device.mobileS} {
-      font-size: 10px;
+
+  @media (min-width: 992px) {
+    .ant-collapse {
+      display: none;
     }
   }
-  .right .contact-icon-wrapper {
-    border: 1px solid red;
+  /* desktop */
+  .footer-desktop {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+  }
+  .footer-list-contact {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
-    gap: 8px;
+    padding: 20px 0;
+    @media ${device.laptop} {
+      padding: 0;
+    }
+  }
+  .footer-list-contact li {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 10px;
+  }
+
+  .footer-list-contact li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 0.4s ease-out;
+    z-index: -1; /* Nền phía sau icon */
+  }
+
+  .footer-list-contact li::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-out;
+    z-index: 2; /* Tooltip phía trên icon */
+  }
+
+  .footer-list-contact li .fa-icon {
+    position: relative;
+    z-index: 1; /* Icon nằm trên nền */
+    transition: color 0.4s ease-out;
+  }
+
+  /* Áp dụng màu trực tiếp thay vì dùng biến */
+  .footer-list-contact li.facebook:hover {
+    color: #1877f2;
+  }
+
+  .footer-list-contact li.youtube:hover {
+    color: #ff0000;
+  }
+
+  .footer-list-contact li.discord:hover {
+    color: #5865f2;
+  }
+
+  .footer-list-contact li:hover::before {
+    opacity: 1; /* Hiển thị nền khi hover */
+  }
+
+  .footer-list-contact li:hover::after {
+    opacity: 1; /* Hiển thị tooltip khi hover */
+  }
+
+  .footer-list-con li {
+    padding-bottom: 10px;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .footer-list-we {
+    padding: 20px 0;
+    @media ${device.laptop} {
+      padding: 0;
+    }
+  }
+
+  .footer-list-we li {
+    padding-bottom: 10px;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    display: block; /* Đặt kiểu hiển thị là block để nằm theo cột */
+    width: fit-content; /* Đặt chiều rộng theo nội dung */
+  }
+
+  .footer-list-we li::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%; /* Đặt width là 100% để kéo dài dưới nội dung */
+    height: 2px;
+    background-color: #fff;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+  }
+
+  .footer-list-we li:hover {
+    text-decoration: none;
+    outline: none;
+  }
+
+  .footer-list-we li:hover::before {
+    transform: scale(1);
   }
 `;

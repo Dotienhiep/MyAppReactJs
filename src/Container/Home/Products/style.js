@@ -108,9 +108,8 @@ export const ProductsWrapper = styled.div`
 `;
 
 export const PhoneProductWrapper = styled.div`
-  margin: 0 100px;
+  margin: 0 100px 40px;
   border-radius: 5px;
-  margin-bottom: 40px;
   border: 1px solid #ccc;
   background-color: #fff;
   @media ${device.laptop} {
@@ -149,58 +148,53 @@ export const PhoneProductWrapper = styled.div`
     font-size: 26px;
     font-weight: bold;
     margin-left: 15px;
-    .title h3 {
-      font-size: 26px;
-      font-weight: bold;
-      margin-left: 15px;
-      @media ${device.laptop} {
-        font-size: 20px;
-      }
-      @media ${device.tablet} {
-        font-size: 20px;
-      }
-      @media ${device.mobile} {
-        font-size: 16px;
-      }
-      @media ${device.mobileL} {
-        font-size: 16px;
-      }
-      @media ${device.mobileM} {
-        font-size: 16px;
-      }
-      @media ${device.mobileS} {
-        font-size: 16px;
-      }
+    @media ${device.laptop} {
+      font-size: 20px;
     }
-    .title span a {
-      color: #0168fa;
-      text-decoration: none;
-      background-color: transparent;
-      position: relative;
-      cursor: pointer;
+    @media ${device.tablet} {
+      font-size: 20px;
     }
-    .title span a:before {
-      content: " ";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 100%;
-      height: 2px;
-      background-color: #000;
-      transform: scale(0);
-      transition: transform 0.5s ease;
+    @media ${device.mobile} {
+      font-size: 16px;
     }
-    .title span a:hover {
-      text-decoration: none;
-      outline: none;
-      color: #000;
+    @media ${device.mobileL} {
+      font-size: 16px;
     }
-    .title span a:hover:before {
-      transform: scale(1);
+    @media ${device.mobileM} {
+      font-size: 16px;
     }
-    a {
-      text-decoration: none;
+    @media ${device.mobileS} {
+      font-size: 16px;
     }
+  }
+  .title span a {
+    color: #0168fa;
+    text-decoration: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  .title span a:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+  }
+  .title span a:hover {
+    text-decoration: none;
+    outline: none;
+    color: #000;
+  }
+  .title span a:hover:before {
+    transform: scale(1);
+  }
+  a {
+    text-decoration: none;
   }
 `;
 export const LaptopProductWrapper = styled.div`

@@ -3,7 +3,7 @@ import { device } from "./../../../contants";
 
 export const FilterAccessoryWrapper = styled.div`
   width: 100%;
-  margin: 50px 0;
+  margin: 0 0 50px 0;
 `;
 export const ListFilterWrapper = styled.div`
   width: 100%;

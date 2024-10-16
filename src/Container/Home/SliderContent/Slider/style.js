@@ -25,14 +25,15 @@ export const SliderWrapper = styled.div`
   @media ${device.mobileS} {
     width: 100%;
   }
-.slider-items {
-  display: flex; /* Sử dụng flexbox để sắp xếp các sản phẩm */
-  transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
-}
+  .slider-items {
+    display: flex; /* Sử dụng flexbox để sắp xếp các sản phẩm */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
+  }
 
-.slider-item {
-  min-width: calc(100% / 6); /* Chia đều cho 6 sản phẩm */
-}
+  .slider-item {
+    min-width: calc(100% / 6); /* Chia đều cho 6 sản phẩm */
+    border: 1px solid red;
+  }
   .wrapper {
     width: 100%;
     display: flex;
@@ -131,10 +132,11 @@ export const SliderWrapper = styled.div`
   .content-slider-item {
     cursor: pointer;
     font-size: 1.4rem;
-    display: flex;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
     text-align: center;
-    justify-content: center;
-    align-items: center;
     margin: 0 5px;
     padding-bottom: 2px;
     text-overflow: ellipsis;

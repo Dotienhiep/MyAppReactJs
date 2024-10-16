@@ -15,6 +15,8 @@ import ScrollToTop from "react-scroll-to-top";
 import SwingingCouplets from "../../Container/Home/SwingingCouplets";
 import Fireworks from "../../Components/Common/Fireworks";
 import DealNav from "../../Components/Common/DealNav";
+import SliderProduct from "./SliderProduct";
+import FeaturePolicy from "./FeaturePolicy";
 
 const Home = ({ onAdd, cartItemsCount }) => {
   // console.log("cartItemsssss=home");
@@ -81,11 +83,13 @@ const Home = ({ onAdd, cartItemsCount }) => {
       <Banner />
       {/* {showSliderContent && <SliderContent />} */}
       <SliderContent />
+      <SliderProduct />
       <SwingingCouplets />
       <Filter />
       <TabsSale />
       <LaptopGaming />
       <Products onAdd={onAdd} />
+      <FeaturePolicy />
       <FilterAccessory />
       <Footer />
       <Copyright />

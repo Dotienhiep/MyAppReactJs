@@ -9,19 +9,13 @@ import {
   faMagnifyingGlass,
   faCircleUser,
   faBarsStaggered,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import Burger from "./Burguer";
 
 const Header = ({ cartItemsCount }) => {
-  // function formatCurrency(price) {
-  //   // Sử dụng hàm toLocaleString() để định dạng số tiền và thêm dấu chấm phân cách
-  //   const formattedPrice = price.toLocaleString("vi-VN", {
-  //     style: "currency",
-  //     currency: "VND",
-  //   });
-  //   return formattedPrice;
-  // }
   function convertMoney(amount) {
     // Format the number with commas as thousand separators
     const formattedAmount = new Intl.NumberFormat("vi-VN").format(amount);
@@ -38,6 +32,7 @@ const Header = ({ cartItemsCount }) => {
   const navigate = useNavigate();
   const addSubMenuRef = useRef(null);
   const submenuLeftRef = useRef(null);
+  const [open, setOpen] = useState(false);
   // const [hoveredListItem, setHoveredListItem] = useState(null); // Sử dụng useRef để lấy DOM của add-submenu
   const listNavigation = [
     {
@@ -2059,6 +2054,65 @@ const Header = ({ cartItemsCount }) => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="menu-icon">
+          <Burger open={open} setOpen={setOpen} />
+        </div>
+        <div className={`menu-content-mobile ${open ? "open" : ""}`}>
+          <div className="logo-nav-icon-mobile">
+            <Link to="/">
+              <span className="logo">
+                <img src="/assets/images/logoshoplaptop.png" alt="logo" />
+              </span>
+              <div className="logoo">
+                <span className="shop">Shop</span>
+                <span className="com">.Com.vn</span>
+              </div>
+            </Link>
+          </div>
+          <div className="menu-mobile-nav">
+            <div className="log-nav">
+              <div className="log-nav-left">
+                <button className="login" type="">
+                  Đăng nhập
+                </button>
+                <button className="logout" type="">
+                  Đăng ký
+                </button>
+              </div>
+              <div className="log-nav-right">
+                <img src="/assets/images/login_mobile.png" alt="" />
+              </div>
+            </div>
+            <ul className="list-nav-mobile">
+              {listNavigation.map((item) => {
+                return (
+                  <div className="list-nav-mobile-item" key={item.id}>
+                    {/* Kiểm tra nếu có `nameAscii`, nếu không thì link đến trang chủ */}
+                    <div className="list-nav-mobile-item-left">
+                      <Link to={item.nameAscii ? `/${item.nameAscii}` : "/"}>
+                        {item.imageIconBrand && (
+                          <div className="list-nav-mobile-item-icon">
+                            <img
+                              src={item.imageIconBrand}
+                              alt={item.brandType}
+                            />
+                          </div>
+                        )}
+                        <div className="list-nav-mobile-item-title">
+                          {item.brandType}
+                        </div>
+                      </Link>
+                    </div>
+
+                    <div className="list-nav-mobile-item-right">
+                      <FontAwesomeIcon icon={faChevronRight} />
+                    </div>
+                  </div>
+                );
+              })}
+            </ul>
           </div>
         </div>
         <div className="input-header">

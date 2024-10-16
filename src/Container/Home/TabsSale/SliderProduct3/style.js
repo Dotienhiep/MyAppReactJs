@@ -143,7 +143,7 @@ export const SliderProductWrapper = styled.div`
   }
 
   .swiper-button-prev::after {
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bold;
     color: #000;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
