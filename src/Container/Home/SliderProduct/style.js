@@ -77,7 +77,7 @@ export const SliderProductWrapper = styled.div`
     border-radius: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: 0.5s ease-in-out;
     @media ${device.tablet} {
       width: 100% !important;
     }
@@ -94,7 +94,7 @@ export const SliderProductWrapper = styled.div`
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    transition: transform 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
   }
 
   .swiper {

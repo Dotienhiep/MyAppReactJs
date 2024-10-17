@@ -1,15 +1,15 @@
 import React from "react";
-import Slider from "./Slider";
 import { v4 as uuidv4 } from "uuid";
 import { SliderContentWrapper } from "./style";
 import { Link } from "react-router-dom";
+import ThumbsGallery from "./ThumbsGallery/ThumbsGallery";
 
 const SliderContent = () => {
   const listData = [
     {
       id: uuidv4(),
       image: "/assets/images/slider-banner-1.png",
-      content: "Galaxy A15|A25 5G mới từ 4.99 triệu",
+      content: "Galaxy A15 | A25 5G mới từ 4.99 triệu",
     },
     {
       id: uuidv4(),
@@ -63,7 +63,7 @@ const SliderContent = () => {
     <SliderContentWrapper>
       <div className="content-slider-res">
         <div className="content-left">
-          <Slider listData={listData} isInfinity={true} />
+          <ThumbsGallery listData={listData} />
         </div>
         <div className="content-right">
           <div className="content-top">

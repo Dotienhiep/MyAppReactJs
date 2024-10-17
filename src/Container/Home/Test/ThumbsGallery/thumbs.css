@@ -1,0 +1,14 @@
+.swiper-slide {
+  cursor: pointer;
+}
+
+.swiper-slide img {
+  border-radius: 10px; /* Tùy chỉnh viền cho hình ảnh */
+  object-fit: cover;
+  width: 100% !important;
+  height: 200px;
+}
+
+.swiper {
+  margin: 0 auto; /* Căn giữa */
+}

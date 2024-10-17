@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { CartWrapper } from "./style";
 import Header from "../../Components/Common/Header";
-import Navigation from "./../Home/Navigation";
 import Footer from "../../Components/Common/Footer";
 import Copyright from "../../Components/Common/Copyright";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Form from "./Form";
+import DealNav from "../../Components/Common/DealNav";
 
 const Cart = ({ cartItems, onAdd, onRemove, onRemoveAll, cartItemsCount }) => {
   // console.log("cartItemCart", cartItems);
@@ -66,7 +66,7 @@ const Cart = ({ cartItems, onAdd, onRemove, onRemoveAll, cartItemsCount }) => {
   return (
     <CartWrapper>
       <Header cartItems={cartItems} />
-      <Navigation />
+      <DealNav />
       <div className="product-cart">
         {cartItems.length === 0 && (
           <div className="no-product">

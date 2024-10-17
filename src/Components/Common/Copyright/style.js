@@ -9,47 +9,46 @@ export const CopyrightWrapper = styled.div`
   display: flex;
   flex-direction: column;
   @media ${device.laptop} {
-      padding: 20px 50px;
-    }
-    @media ${device.tablet} {
-      padding: 20px 50px;
-    }
-    @media ${device.mobile} {
-      padding: 20px 30px;
-    }
-    @media ${device.mobileL} {
-      padding: 20px 15px;
-    }
-    @media ${device.mobileM} {
-      padding: 20px 15px;
-    }
-    @media ${device.mobileS} {
-      padding: 20px 15px;
-    }
+    padding: 20px 50px;
+  }
+  @media ${device.tablet} {
+    padding: 20px 50px;
+  }
+  @media ${device.mobile} {
+    padding: 20px 30px;
+  }
+  @media ${device.mobileL} {
+    padding: 20px 15px;
+  }
+  @media ${device.mobileM} {
+    padding: 20px 15px;
+  }
+  @media ${device.mobileS} {
+    padding: 20px 15px;
+  }
   & span {
     text-align: center;
     @media ${device.laptop} {
-    text-align: start;
-  }
+      text-align: start;
+    }
   }
   & ul {
-   display: flex;
-   text-align: center;
-   justify-content: center;
-   align-items: center;
-   @media ${device.laptop} {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-align-items: flex-start;
-  }
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    @media ${device.laptop} {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 
   & ul li {
     margin: 0 15px;
     white-space: nowrap;
   }
-
 
   @media ${device.laptop} {
     font-size: 14px;

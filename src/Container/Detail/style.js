@@ -154,10 +154,10 @@ export const DetailWrapper = styled.div`
     width: 100%;
     height: 700px;
     border: 1px solid transparent;
-    background-image: url(/assets/images/boder-product1.png);
-    background-size: contain; /* Background sẽ nằm bên trong phần nền của div mà không tràn ra ngoài */
+    /* background-image: url(/assets/images/boder-product1.png);
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     position: relative;
     @media ${device.desktop} {
       height: 600px;
@@ -262,6 +262,10 @@ export const DetailWrapper = styled.div`
     padding-top: 30px;
   }
   .thumbnail-images .list-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .thumbnail-images img {
     width: 100px !important;

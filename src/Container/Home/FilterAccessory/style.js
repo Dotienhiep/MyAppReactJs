@@ -7,6 +7,7 @@ export const FilterAccessoryWrapper = styled.div`
 `;
 export const ListFilterWrapper = styled.div`
   width: 100%;
+  padding-top: 30px;
   .list-filter {
     display: flex;
     margin: 0 100px;

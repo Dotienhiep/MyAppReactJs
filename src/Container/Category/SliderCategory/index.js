@@ -1,8 +1,7 @@
 import React from "react";
-import Slider from "./Slider";
 import { v4 as uuidv4 } from "uuid";
 import { SliderContentWrapper } from "./style";
-import { Link } from "react-router-dom";
+import ThumbsGallery from "./ThumbsGallery/ThumbsGallery";
 
 const SliderCategory = () => {
   const listData = [
@@ -39,7 +38,8 @@ const SliderCategory = () => {
     <SliderContentWrapper>
       <div className="wrapper">
         <div className="content-left">
-          <Slider listData={listData} isInfinity={true} />
+          {/* <Slider listData={listData} isInfinity={true} /> */}
+          <ThumbsGallery listData={listData} />
         </div>
       </div>
     </SliderContentWrapper>

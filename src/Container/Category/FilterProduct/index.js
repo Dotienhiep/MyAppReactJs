@@ -62,20 +62,20 @@ const ProductType = [
         nameAscii: "vivo",
       },
     ],
-    price : [
+    price: [
       {
-        id: 1, 
-        priceFilter: "từ 0 triệu tới 3 triệu" 
+        id: 1,
+        priceFilter: "từ 0 triệu tới 3 triệu",
       },
       {
-        id: 2, 
-        priceFilter: "từ 3 triệu tới 7 triệu" 
+        id: 2,
+        priceFilter: "từ 3 triệu tới 7 triệu",
       },
       {
-        id: 3, 
-        priceFilter: "từ 7 triệu trở lên"
-      }
-    ]
+        id: 3,
+        priceFilter: "từ 7 triệu trở lên",
+      },
+    ],
   },
   {
     id: "62f02663ca101bdf38a06f7c",
@@ -117,20 +117,20 @@ const ProductType = [
         nameAscii: "coolpad",
       },
     ],
-    price : [
+    price: [
       {
-        id: 1, 
-        priceFilter: "từ 0 triệu tới 7 triệu" 
+        id: 1,
+        priceFilter: "từ 0 triệu tới 7 triệu",
       },
       {
-        id: 2, 
-        priceFilter: "từ 7 triệu tới 12 triệu" 
+        id: 2,
+        priceFilter: "từ 7 triệu tới 12 triệu",
       },
       {
-        id: 3, 
-        priceFilter: "từ 12 triệu trở lên"
-      }
-    ]
+        id: 3,
+        priceFilter: "từ 12 triệu trở lên",
+      },
+    ],
   },
   {
     id: "62f02663ca101bdf38a06f7d",
@@ -172,20 +172,20 @@ const ProductType = [
         nameAscii: "acer",
       },
     ],
-    price : [
+    price: [
       {
-        id: 1, 
-        priceFilter: "từ 0 triệu tới 7 triệu" 
+        id: 1,
+        priceFilter: "từ 0 triệu tới 7 triệu",
       },
       {
-        id: 2, 
-        priceFilter: "từ 7 triệu tới 12 triệu" 
+        id: 2,
+        priceFilter: "từ 7 triệu tới 12 triệu",
       },
       {
-        id: 3, 
-        priceFilter: "từ 12 triệu trở lên"
-      }
-    ]
+        id: 3,
+        priceFilter: "từ 12 triệu trở lên",
+      },
+    ],
   },
   {
     id: "62f02663ca101bdf38a06f7e",
@@ -217,20 +217,20 @@ const ProductType = [
         nameAscii: "lenovo",
       },
     ],
-    price : [
+    price: [
       {
-        id: 1, 
-        priceFilter: "từ 0 triệu tới 7 triệu" 
+        id: 1,
+        priceFilter: "từ 0 triệu tới 7 triệu",
       },
       {
-        id: 2, 
-        priceFilter: "từ 7 triệu tới 12 triệu" 
+        id: 2,
+        priceFilter: "từ 7 triệu tới 12 triệu",
       },
       {
-        id: 3, 
-        priceFilter: "từ 12 triệu trở lên"
-      }
-    ]
+        id: 3,
+        priceFilter: "từ 12 triệu trở lên",
+      },
+    ],
   },
   {
     id: "62f02663ca101bdf38a06f7f",
@@ -274,20 +274,20 @@ const ProductType = [
         nameAscii: "acer",
       },
     ],
-    price : [
+    price: [
       {
-        id: 1, 
-        priceFilter: "từ 0 triệu tới 7 triệu" 
+        id: 1,
+        priceFilter: "từ 0 triệu tới 7 triệu",
       },
       {
-        id: 2, 
-        priceFilter: "từ 7 triệu tới 12 triệu" 
+        id: 2,
+        priceFilter: "từ 7 triệu tới 12 triệu",
       },
       {
-        id: 3, 
-        priceFilter: "từ 12 triệu trở lên"
-      }
-    ]
+        id: 3,
+        priceFilter: "từ 12 triệu trở lên",
+      },
+    ],
   },
 ];
 const FilterProduct = ({ onAdd }) => {
@@ -406,11 +406,11 @@ const FilterProduct = ({ onAdd }) => {
       }
     }
   };
-  //check price 
+  //check price
   // const handlePriceFilter = (e) => {
   //   const value = e.target.value
   //   if(price >1000000) {
-      
+
   //   }
   // }
 

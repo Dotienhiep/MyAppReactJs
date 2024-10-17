@@ -36,6 +36,13 @@ export const ProductsWrapper = styled.div`
   &:hover .swiper-button-disabled {
     display: none;
   }
+  .swiper-slide {
+  }
+  .swiper-slide img {
+    width: 150px !important;
+    height: 150px;
+    object-fit: cover;
+  }
   .swiper {
     margin: 0;
   }
@@ -477,144 +484,6 @@ export const ProductWrapper = styled.div`
     justify-content: center;
     align-items: center;
     margin: 40px auto;
-    /* @media ${device.desktopS} {
-      img {
-        width: 190px;
-        height: 190px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopA} {
-      img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopXS} {
-      img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopXM} {
-      .image {
-        margin: 10px auto;
-      }
-      img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopM} {
-      .image {
-        margin: 20px auto;
-      }
-      img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptopL} {
-      .image {
-        margin: 10px auto;
-      }
-      img {
-        width: 105px;
-        height: 105px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptopS} {
-      img {
-        width: 190px;
-        height: 190px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptopM} {
-      img {
-        width: 140px;
-        height: 140px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptopX} {
-      img {
-        width: 210px;
-        height: 210px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptop} {
-      & {
-        margin: 70px auto;
-      }
-      img {
-        width: 170px;
-        height: 170px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.tablet} {
-      & {
-        margin: 95px auto;
-      }
-      img {
-        width: 265px;
-        height: 265px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.mobile} {
-      img {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.mobileL} {
-      img {
-        width: 140px;
-        height: 140px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.mobileM} {
-      img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.mobileS} {
-      & {
-        margin: 45px auto;
-      }
-      img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    } */
   }
   img {
     width: 150px;
@@ -687,19 +556,38 @@ export const ProductWrapper = styled.div`
   }
   .list-btn {
     display: none;
-    margin: 20px 0;
+    width: 100%;
   }
   .list-btn-responsive {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5px;
   }
   .list-btn button {
     padding: 5px 8px;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 5px;
     border: none;
     color: #fff;
     font-weight: bold;
+    @media ${device.mobile} {
+      padding: 3px 5px;
+      font-size: 12px;
+    }
+    @media ${device.mobileL} {
+      padding: 3px 5px;
+      font-size: 12px;
+    }
+    @media ${device.mobileM} {
+      padding: 3px 5px;
+      font-size: 12px;
+    }
+    @media ${device.mobileS} {
+      padding: 3px 5px;
+      font-size: 12px;
+    }
   }
   .buy-now {
     margin-right: 30px;

@@ -17,6 +17,8 @@ import Fireworks from "../../Components/Common/Fireworks";
 import DealNav from "../../Components/Common/DealNav";
 import SliderProduct from "./SliderProduct";
 import FeaturePolicy from "./FeaturePolicy";
+import ThumbsGallery from "./Test/ThumbsGallery/ThumbsGallery";
+import Test from "./Test/test";
 
 const Home = ({ onAdd, cartItemsCount }) => {
   // console.log("cartItemsssss=home");
@@ -89,8 +91,8 @@ const Home = ({ onAdd, cartItemsCount }) => {
       <TabsSale />
       <LaptopGaming />
       <Products onAdd={onAdd} />
-      <FeaturePolicy />
       <FilterAccessory />
+      <FeaturePolicy />
       <Footer />
       <Copyright />
       {/* {showFilter && <Filter />}
@@ -100,6 +102,8 @@ const Home = ({ onAdd, cartItemsCount }) => {
       {showFilterAccessory && <FilterAccessory />}
       {showFooter && <Footer />}
       {showCopyright && <Copyright />} */}
+
+      {/* <Test /> */}
     </HomeWrapper>
   );
 };

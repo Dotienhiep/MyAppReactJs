@@ -25,20 +25,13 @@ export const SliderWrapper = styled.div`
   @media ${device.mobileS} {
     width: 100%;
   }
-  .slider-items {
-    display: flex; /* Sử dụng flexbox để sắp xếp các sản phẩm */
-    transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
-  }
-
-  .slider-item {
-    min-width: calc(100% / 6); /* Chia đều cho 6 sản phẩm */
-    border: 1px solid red;
-  }
   .wrapper {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    transition: transform 0.5s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà */
+    will-change: transform; /* Tối ưu hóa hiệu suất cho các hoạt động chuyển đổi */
     @media ${device.laptopX} {
       width: 100%;
     }
@@ -62,12 +55,15 @@ export const SliderWrapper = styled.div`
     }
   }
   .slider-content {
+    position: relative;
+    overflow: hidden; /* Đảm bảo không có khoảng trắng xuất hiện */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
-    overflow: hidden; /* Ẩn các sản phẩm ngoài vùng hiển thị */
+    transition: transform 1s ease-in-out;
+    will-change: transform;
     @media ${device.laptopX} {
       width: 100%;
     }
@@ -94,12 +90,49 @@ export const SliderWrapper = styled.div`
     width: 100%;
     height: 300px;
   }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
   .slider-content img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
+    position: absolute; /* Đảm bảo tất cả các hình ảnh chồng lên nhau */
+    top: 0;
+    left: 0;
+    transition: transform 1s ease-in-out; /* Tạo hiệu ứng chuyển đổi mượt */
+  }
+
+  .slide-in {
+    z-index: 1;
+    animation: slide 0.1s forwards;
+  }
+
+  .slide-out {
+    z-index: 0;
+    animation: slide-out 0.3s forwards;
+  }
+  .slider-content img {
+    width: 100%; /* Đảm bảo chiếm hết chiều rộng của container */
+    height: 100%;
   }
   .btn-prev {
     margin-right: -50px;

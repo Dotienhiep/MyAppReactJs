@@ -34,23 +34,27 @@ export const SliderContentWrapper = styled.div`
   }
   .content-slider-res {
     display: flex;
+    justify-content: space-between;
     width: 100%;
-  }
-  .content-left {
-    flex-grow: 1;
-    display: flex;
+    position: relative;
   }
   .content-right {
-    min-width: 15%;
+    width: 20%;
+    height: auto;
     padding-left: 20px;
     padding-right: 0px;
+
+    @media ${device.desktopS} {
+      width: 30%;
+    }
+    @media ${device.desktopM} {
+      width: 30%;
+    }
     @media ${device.laptopL} {
-      min-width: 25%;
-      padding-left: 18px;
+      width: 30%;
     }
     @media ${device.laptopS} {
-      min-width: 30%;
-      padding-left: 18px;
+      width: 30%;
     }
     @media ${device.laptopM} {
       display: none;
@@ -77,19 +81,50 @@ export const SliderContentWrapper = styled.div`
       display: none;
     }
   }
+
+  .content-left {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    @media ${device.laptopM} {
+      width: 100%; /* Khi phần bên phải biến mất, slider chiếm 100% chiều rộng */
+    }
+    @media ${device.laptopX} {
+      width: 100%;
+    }
+    @media ${device.laptop} {
+      width: 100%;
+    }
+    @media ${device.tablet} {
+      width: 100%;
+    }
+    @media ${device.mobile} {
+      width: 100%;
+    }
+    @media ${device.mobileL} {
+      width: 100%;
+    }
+    @media ${device.mobileM} {
+      width: 100%;
+    }
+    @media ${device.mobileS} {
+      width: 100%;
+    }
+  }
+
   .content-top {
     padding-bottom: 10px;
     position: relative;
   }
   .content-top .item-image {
     width: 100%;
-    max-width: 400px;
+    height: 100%;
   }
   .content-top .item-image img {
     width: 100%; /* Hình ảnh sẽ chiếm toàn bộ chiều rộng của div */
-    height: auto; /* Giữ tỷ lệ khung hình */
-    max-width: 100%; /* Đặt giá trị tối đa cho chiều rộng của hình ảnh */
-    max-height: 100%; /* Đặt giá trị tối đa cho chiều cao của hình ảnh */
+    height: 100%; /* Giữ tỷ lệ khung hình */
+    object-fit: cover;
   }
   .content-bottom .content-title {
     display: flex;

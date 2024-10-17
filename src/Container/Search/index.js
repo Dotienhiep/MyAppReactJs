@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProductItem from "../Search/ProductItem";
+// import ProductItem from "../Category/FilterProduct/ProductItem";
 import { SearchWrapper } from "./style";
 import Header from "../../Components/Common/Header";
-import Navigation from "./../Home/Navigation";
 import Footer from "../../Components/Common/Footer";
 import Copyright from "../../Components/Common/Copyright";
 import { getListProduct } from "./../../services";
 import Loading from "../../Components/Common/Loading";
+import DealNav from "../../Components/Common/DealNav";
 
 const Search = ({ onAdd }) => {
   const [listData, setListData] = useState([]);
@@ -66,7 +67,7 @@ const Search = ({ onAdd }) => {
     return (
       <SearchWrapper>
         <Header />
-        <Navigation />
+        <DealNav />
         <div className="search-no-product">
           <span className="title-search">Vui lòng nhập tên sản phẩm</span>
         </div>
@@ -79,7 +80,7 @@ const Search = ({ onAdd }) => {
   return (
     <SearchWrapper>
       <Header />
-      <Navigation />
+      <DealNav />
       <div className="list-search">
         {/* 1 điều kiện nữa khi key sai log ra ..... */}
         {filteredData.length === 0 || "" ? (

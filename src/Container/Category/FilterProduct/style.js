@@ -133,7 +133,7 @@ export const ProductItemWrapper = styled.div`
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  background-image: url("/assets/images/boder-product1.png");
+  /* background-image: url("/assets/images/boder-product1.png"); */
   background-size: 95% auto;
   background-repeat: no-repeat;
   background-position: center top 5px;
@@ -151,7 +151,7 @@ export const ProductItemWrapper = styled.div`
     width: calc((100% - (3 * 9px)) / 4);
   }
   @media ${device.desktopXM} {
-    width: calc((100% - (2 * 9px)) / 3);
+    width: calc((100% - (3 * 9px)) / 4);
   }
   @media ${device.desktopM} {
     width: calc((100% - (2 * 9px)) / 3);
@@ -160,7 +160,7 @@ export const ProductItemWrapper = styled.div`
     width: calc((100% - (2 * 9px)) / 3);
   }
   @media ${device.laptopS} {
-    width: calc((100% - 9px) / 2);
+    width: calc((100% - 18px) / 3);
   }
   @media ${device.laptopM} {
     width: calc((100% - 9px) / 2);
@@ -169,7 +169,7 @@ export const ProductItemWrapper = styled.div`
     width: calc((100% - 9px) / 2);
   }
   @media ${device.laptop} {
-    width: calc((100% - 9px) / 2);
+    width: calc((100% - 18px) / 3);
   }
   @media ${device.tablet} {
     width: calc((100% - 9px) / 2);
@@ -196,199 +196,10 @@ export const ProductItemWrapper = styled.div`
     display: flex;
     justify-content: center;
     margin: 40px auto;
-    @media ${device.desktop} {
-      & {
-        margin: 40px auto;
-      }
-      img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopXS} {
-      & {
-        margin: 10px auto;
-      }
-      img {
-        width: 170px;
-        height: 170px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopA} {
-      & {
-        margin: 10px auto;
-      }
-      img {
-        width: 170px;
-        height: 170px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopS} {
-      img {
-        width: 190px;
-        height: 190px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopA} {
-      & {
-        margin: 30px auto;
-      }
-      img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopXS} {
-      img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopXM} {
-      & {
-        margin: 40px auto;
-      }
-      img {
-        width: 190px;
-        height: 190px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.desktopM} {
-      & {
-        margin: 40px auto;
-      }
-      img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptopL} {
-      & {
-        margin: 30px auto;
-      }
-      img {
-        width: 140px;
-        height: 140px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptopS} {
-      & {
-        margin: 65px auto;
-      }
-      img {
-        width: 170px;
-        height: 170px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptopM} {
-      & {
-        margin: 50px auto;
-      }
-      img {
-        width: 170px;
-        height: 170px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptopX} {
-      & {
-        margin: 30px auto;
-      }
-      img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.laptop} {
-      & {
-        margin: 60px auto;
-      }
-      img {
-        width: 170px;
-        height: 170px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.tablet} {
-      & {
-        margin: 30px auto;
-      }
-      img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.mobile} {
-      img {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.mobileL} {
-      & {
-        margin: 50px auto;
-      }
-      img {
-        width: 160px;
-        height: 160px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.mobileM} {
-      & {
-        margin: 50px auto;
-      }
-      img {
-        width: 130px;
-        height: 130px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-    @media ${device.mobileS} {
-      & {
-        margin: 25px auto;
-      }
-      img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-      }
-    }
   }
   img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
   }
@@ -409,11 +220,36 @@ export const ProductItemWrapper = styled.div`
     font-weight: bold;
     color: #000;
     font-family: "Helvetica Neue", Helvetica;
+    @media ${device.mobile} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileL} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileM} {
+      font-size: 1rem;
+    }
+    @media ${device.mobileS} {
+      font-size: 1rem;
+    }
   }
   .cost {
     margin: 20px 0;
     border-radius: 30px;
     font-weight: bold;
+    font-size: 17px;
+    @media ${device.mobile} {
+      font-size: 15px;
+    }
+    @media ${device.mobileL} {
+      font-size: 15px;
+    }
+    @media ${device.mobileM} {
+      font-size: 15px;
+    }
+    @media ${device.mobileS} {
+      font-size: 15px;
+    }
   }
   .cost span {
     background-color: #cb1a21;
@@ -439,15 +275,30 @@ export const ProductItemWrapper = styled.div`
   }
   .list-btn button {
     padding: 5px 8px;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 5px;
     border: none;
     color: #fff;
     cursor: pointer;
     font-weight: bold;
+    @media ${device.mobile} {
+      padding: 3px;
+      font-size: 12px;
+    }
+    @media ${device.mobileL} {
+      padding: 3px;
+      font-size: 10px;
+    }
+    @media ${device.mobileM} {
+      padding: 3px;
+      font-size: 10px;
+    }
+    @media ${device.mobileS} {
+      padding: 3px;
+      font-size: 10px;
+    }
   }
   .buy-now {
-    margin-right: 30px;
     background-color: #cb1a21;
   }
   .buy-now:active {

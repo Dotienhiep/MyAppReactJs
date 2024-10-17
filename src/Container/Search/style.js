@@ -5,27 +5,27 @@ export const SearchWrapper = styled.div`
   .list-search {
     display: flex;
     flex-wrap: wrap;
-    margin: 100px 100px 0;
+    margin: 100px 100px 50px 100px;
     justify-content: flex-start; /* Đảm bảo các phần tử bắt đầu từ bên trái */
     align-items: flex-start;
     gap: 15px;
     @media ${device.laptop} {
-      margin: 50px 50px 0;
+      margin: 50px 50px 30px 50px;
     }
     @media ${device.tablet} {
-      margin: 50px 50px 0;
+      margin: 50px 50px 30px 50px;
     }
     @media ${device.mobile} {
-      margin: 50px 30px 0;
+      margin: 50px 30px 20px 30px;
     }
     @media ${device.mobileL} {
-      margin: 50px 15px 0;
+      margin: 50px 15px 20px 15px;
     }
     @media ${device.mobileM} {
-      margin: 50px 15px 0;
+      margin: 50px 15px 20px 15px;
     }
     @media ${device.mobileS} {
-      margin: 50px 15px 0;
+      margin: 50px 15px 20px 15px;
     }
   }
   .list-btn {
@@ -64,10 +64,10 @@ export const ProductItemWrapper = styled.div`
   padding: 15px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  background-image: url("/assets/images/boder-product1.png");
+  /* background-image: url("/assets/images/boder-product1.png");
   background-size: 95% auto;
   background-repeat: no-repeat;
-  background-position: center top 5px;
+  background-position: center top 5px; */
   background-color: #fff;
   transition: transform 0.3s ease, filter 0.3s ease;
   &:hover {

@@ -1,7 +1,7 @@
 import React from "react";
 import { SliderProductWrapper } from "./style";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { v4 as uuidv4 } from "uuid";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -42,11 +42,14 @@ const SliderProduct = () => {
   return (
     <SliderProductWrapper>
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]} // Thêm Autoplay vào modules
         navigation
         spaceBetween={20}
         slidesPerView={2} // Hiển thị 2 sản phẩm trên màn hình lớn
-      >
+        autoplay={{
+          delay: 1000, // Thay đổi hình ảnh mỗi 3 giây
+          disableOnInteraction: false, // Cho phép autoplay tiếp tục ngay cả khi người dùng tương tác
+         }} >
         {listData.map((item) => (
           <SwiperSlide key={item.id}>
             <Link to="/">

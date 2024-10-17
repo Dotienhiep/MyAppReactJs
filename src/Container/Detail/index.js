@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { DetailWrapper } from "./style";
 import { getListProduct } from "./../../services";
 import Header from "../../Components/Common/Header";
-import Navigation from "./../Home/Navigation";
 import Footer from "../../Components/Common/Footer";
 import Copyright from "../../Components/Common/Copyright";
 import Loading from "../../Components/Common/Loading";
@@ -13,6 +12,7 @@ import Modal from "./Modal";
 // import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import DealNav from "../../Components/Common/DealNav";
 
 const Detail = ({ onAdd }) => {
   const lorem = "Thông tin đang được cập nhật";
@@ -116,10 +116,10 @@ const Detail = ({ onAdd }) => {
   return (
     <DetailWrapper>
       <Header />
-      <Navigation />
+      <DealNav />
       <div className="detail-wrapper">
         <div className="title-detail-product-length">
-          <h1 className="title-detail">{listData?.name}</h1>
+          <h1 className="title-detail">Tên sản phẩm : {listData?.name}</h1>
           <span className="length-product">
             Số sản phẩm đã bán : {listData?.totalOrder}
           </span>

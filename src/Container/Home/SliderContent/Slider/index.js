@@ -9,56 +9,69 @@ import { Link } from "react-router-dom";
 
 const Slider = ({ listData, isInfinity = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [animationClass, setAnimationClass] = useState("slide-in");
+
   const handlePrev = () => {
-    if (isInfinity && currentIndex === 0) {
-      //Preview vô hạn
-      setCurrentIndex(listData.length - 1);
-    } else {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setAnimationClass("slide-out"); // Áp dụng hiệu ứng trượt ra
+    setTimeout(() => {
+      if (isInfinity && currentIndex === 0) {
+        setCurrentIndex(listData.length - 1);
+      } else {
+        setCurrentIndex(currentIndex - 1);
+      }
+      setAnimationClass("slide-in"); // Áp dụng hiệu ứng trượt vào
+    }, 1500); // Thời gian trùng với thời gian animation
   };
+
   const handleNext = () => {
-    if (isInfinity && currentIndex === listData.length - 1) {
-      //Next vô hạn
-      setCurrentIndex(0);
-    } else {
-      setCurrentIndex(currentIndex + 1);
-    }
+    setAnimationClass("slide-out"); // Áp dụng hiệu ứng trượt ra
+    setTimeout(() => {
+      if (isInfinity && currentIndex === listData.length - 1) {
+        setCurrentIndex(0);
+      } else {
+        setCurrentIndex(currentIndex + 1);
+      }
+      setAnimationClass("slide-in"); // Áp dụng hiệu ứng trượt vào
+    }, 500); // Thời gian trùng với thời gian animation
   };
+
   const handleHover = (index) => {
-    setCurrentIndex(index);
+    setAnimationClass("slide-out");
+    setTimeout(() => {
+      setCurrentIndex(index);
+      setAnimationClass("slide-in");
+    }, 500);
   };
+
   useEffect(() => {
     const ef = setInterval(() => {
-      setCurrentIndex(currentIndex + 1);
-      if (currentIndex === listData.length - 1) {
-        setCurrentIndex(0);
-      }
+      setAnimationClass("slide-out");
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === listData.length - 1 ? 0 : prevIndex + 1
+        );
+        setAnimationClass("slide-in");
+      }, 500);
     }, 2000);
     return () => clearInterval(ef);
   }, [currentIndex, listData.length]);
-  //slider content
+
   return (
     <SliderWrapper>
       <div className="wrapper">
-        <button
-          className="btn-prev"
-          onClick={handlePrev}
-          disabled={isInfinity && currentIndex === 0}
-        >
+        <button className="btn-prev" onClick={handlePrev}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
         <div className="slider-content">
           <Link to="/">
-            {/* page /sale */}
-            <img src={listData[currentIndex].image} alt="" />
+            <img
+              src={listData[currentIndex].image}
+              alt=""
+              className={animationClass} /* Sử dụng animation class */
+            />
           </Link>
         </div>
-        <button
-          className="btn-next"
-          onClick={handleNext}
-          disabled={isInfinity && currentIndex === listData.length - 1}
-        >
+        <button className="btn-next" onClick={handleNext}>
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
@@ -80,4 +93,5 @@ const Slider = ({ listData, isInfinity = false }) => {
     </SliderWrapper>
   );
 };
+
 export default Slider;

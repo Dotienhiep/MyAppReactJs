@@ -14,9 +14,9 @@ import {
   faTv,
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../../Components/Common/Header";
-import Navigation from "../Home/Navigation";
 import Footer from "../../Components/Common/Footer";
 import Copyright from "../../Components/Common/Copyright";
+import DealNav from "../../Components/Common/DealNav";
 
 const Pay = () => {
   const listPay = [
@@ -69,7 +69,7 @@ const Pay = () => {
   return (
     <PayWrapper>
       <Header />
-      <Navigation />
+      <DealNav />
       <div className="pay-content">
         <div className="banner-pay">
           <img src="/assets/images/banner-object-pay.png" alt="" />
