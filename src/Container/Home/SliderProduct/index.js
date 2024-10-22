@@ -49,7 +49,8 @@ const SliderProduct = () => {
         autoplay={{
           delay: 1000, // Thay đổi hình ảnh mỗi 3 giây
           disableOnInteraction: false, // Cho phép autoplay tiếp tục ngay cả khi người dùng tương tác
-         }} >
+        }}
+      >
         {listData.map((item) => (
           <SwiperSlide key={item.id}>
             <Link to="/">

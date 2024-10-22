@@ -38,7 +38,6 @@ const SliderCategory = () => {
     <SliderContentWrapper>
       <div className="wrapper">
         <div className="content-left">
-          {/* <Slider listData={listData} isInfinity={true} /> */}
           <ThumbsGallery listData={listData} />
         </div>
       </div>

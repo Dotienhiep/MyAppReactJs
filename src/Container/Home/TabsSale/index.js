@@ -5,7 +5,7 @@ import SliderProduct from "./SliderProduct";
 import SliderProduct1 from "./SilderProduct1";
 import SliderProduct2 from "./SliderProduct2";
 import SliderProduct3 from "./SliderProduct3";
-import { getListProduct, getListProductHome } from "./../../../services";
+import { getListProductHome } from "./../../../services";
 import Loading from "./../../../Components/Common/Loading";
 
 const TabsSale = () => {

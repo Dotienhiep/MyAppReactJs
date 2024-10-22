@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../../../contants";
+// import { device } from "../../../../contants";
 
 export const SliderProductWrapper = styled.div`
   width: 100%;

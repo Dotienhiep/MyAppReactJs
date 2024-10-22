@@ -12,6 +12,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Product = ({ onAdd, product }) => {
+  console.log("product======", product);
+
   function formatCurrency(price) {
     // Sử dụng hàm toLocaleString() để định dạng số tiền và thêm dấu chấm phân cách
     const formattedPrice = price.toLocaleString("vi-VN", {
@@ -22,9 +24,13 @@ const Product = ({ onAdd, product }) => {
   }
   // console.log("listDeetail====", product.listAttrDetailShort.slice(0, 8));
   const image = "https://api-nodejs-backend.onrender.com/";
+  // const productType = localStorage.getItem("productType");
   return (
     <ProductWrapper>
-      <Link className="link" to={`/product/${product._id}`}>
+      <Link
+        className="link"
+        to={`/${product.productType.nameAscii}/${product._id}`}
+      >
         <div className="image">
           <img src={image.concat(product.urlPicture)} alt="" />
         </div>
@@ -35,7 +41,10 @@ const Product = ({ onAdd, product }) => {
       <div className="cost">
         <span>{formatCurrency(product.price)}</span>
       </div>
-      <Link className="link" to={`/product/${product._id}`}>
+      <Link
+        className="link"
+        to={`/${product.productType.nameAscii}/${product._id}`}
+      >
         <span className="title">{product.name}</span>
       </Link>
       <div className="content">

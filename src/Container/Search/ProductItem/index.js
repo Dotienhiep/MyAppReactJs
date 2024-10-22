@@ -24,10 +24,10 @@ const ProductItem = ({ onAdd, listData }) => {
   //   switch (currentIndexActive) {
   //     case 0:
   //       return (
-  //         // <SliderProduct
-  //         //   listData={listData}
-  //         //   isInfinity={true}
-  //         // />
+  // <SliderProduct
+  //   listData={listData}
+  //   isInfinity={true}
+  // />
   //         <div>
   //           <Price data={listData.listProductGroupDetail[0]} />
   //         </div>
@@ -54,7 +54,7 @@ const ProductItem = ({ onAdd, listData }) => {
   //       return "";
   //   }
   // };
-  // console.log("listData",listData);
+  console.log("listData", listData);
   /* <Memory
   listData={listData}
   currentIndexActive={currentIndexActive}

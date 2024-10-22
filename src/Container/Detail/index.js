@@ -118,6 +118,9 @@ const Detail = ({ onAdd }) => {
       <Header />
       <DealNav />
       <div className="detail-wrapper">
+        <div>
+          <Link to="/">Trang chu</Link>
+        </div>
         <div className="title-detail-product-length">
           <h1 className="title-detail">Tên sản phẩm : {listData?.name}</h1>
           <span className="length-product">

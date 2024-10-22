@@ -78,7 +78,7 @@ function App() {
             }
           />
           <Route
-            path="/product/:productId"
+            path="/:productType/:productId"
             element={<Detail onAdd={onAdd} />}
           />
           <Route path="/search/:key" element={<Search onAdd={onAdd} />} />

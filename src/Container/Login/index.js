@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../Login/login.css";
-import { TweenMax, Power2, Expo } from "gsap";
+// import { TweenMax, Power2, Expo } from "gsap";
 
 const Login = () => {
   return (

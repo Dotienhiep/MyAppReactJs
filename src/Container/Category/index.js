@@ -8,6 +8,7 @@ import FilterProduct from "./FilterProduct";
 import DealNav from "../../Components/Common/DealNav";
 
 const Category = ({ onAdd, cartItems }) => {
+
   // console.log("cartCatee",cartItems);
   return (
     <CategoryWrapper>

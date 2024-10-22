@@ -10,7 +10,6 @@ import {
   faGithub,
   faGooglePay,
   faPaypal,
-  faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 

@@ -11,7 +11,7 @@ export const DealNavWrapper = styled.div`
   top: 53px;
   padding-left: 100px;
   display: flex;
-  overflow: hidden; /* Loại bỏ thanh cuộn ngang */
+  overflow: hidden;
 
   @media ${device.laptopM} {
     display: none;
@@ -21,7 +21,6 @@ export const DealNavWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Đảm bảo các phần tử cách đều nhau */
-    /* Chiếm hết chiều rộng container */
     padding-right: 20px; /* Thêm padding cho khoảng cách giữa các phần tử */
     box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng thực tế */
   }

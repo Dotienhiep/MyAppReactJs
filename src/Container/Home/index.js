@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../../Components/Common/Header";
 import Banner from "./Banner";
 // import Navigation from "./Navigation";
@@ -17,8 +17,6 @@ import Fireworks from "../../Components/Common/Fireworks";
 import DealNav from "../../Components/Common/DealNav";
 import SliderProduct from "./SliderProduct";
 import FeaturePolicy from "./FeaturePolicy";
-import ThumbsGallery from "./Test/ThumbsGallery/ThumbsGallery";
-import Test from "./Test/test";
 
 const Home = ({ onAdd, cartItemsCount }) => {
   // console.log("cartItemsssss=home");

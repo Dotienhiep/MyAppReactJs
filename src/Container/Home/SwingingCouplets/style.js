@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../../contants";
+// import { device } from "../../../contants";
 
 export const SwingingCoupletsWrapper = styled.div`
   display: flex;
@@ -14,32 +14,6 @@ export const SwingingCoupletsWrapper = styled.div`
   z-index: 10000;
   pointer-events: none;
   cursor: pointer;
-  @media ${device.desktopS} {
-  }
-  @media ${device.desktopXM} {
-  }
-  @media ${device.desktopM} {
-  }
-  @media ${device.laptopL} {
-  }
-  @media ${device.laptopS} {
-  }
-  @media ${device.laptopM} {
-  }
-  @media ${device.laptopX} {
-  }
-  @media ${device.laptop} {
-  }
-  @media ${device.tablet} {
-  }
-  @media ${device.mobile} {
-  }
-  @media ${device.mobileL} {
-  }
-  @media ${device.mobileM} {
-  }
-  @media ${device.mobileS} {
-  }
   .couplet {
     width: 100px; /* Điều chỉnh kích thước của câu đối theo ý của bạn */
     height: auto; /* Điều chỉnh kích thước của câu đối theo ý của bạn */

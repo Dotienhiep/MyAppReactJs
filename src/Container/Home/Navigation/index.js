@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import NavItem from "./NavItem";
 import { NavWrapper } from "./style";
 import { v4 as uuidv4 } from "uuid";
@@ -14,8 +14,6 @@ import {
   faHouseLaptop,
   faSimCard,
   faUniversalAccess,
-  faBars,
-  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import Burger from "./Burguer";
 import { Link } from "react-router-dom";

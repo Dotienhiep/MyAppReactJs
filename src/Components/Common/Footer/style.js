@@ -213,11 +213,11 @@ export const FooterWrapper = styled.div`
   }
 
   .footer-list-contact li:hover::before {
-    opacity: 1; /* Hiển thị nền khi hover */
+    opacity: 1;
   }
 
   .footer-list-contact li:hover::after {
-    opacity: 1; /* Hiển thị tooltip khi hover */
+    opacity: 1;
   }
 
   .footer-list-con li {

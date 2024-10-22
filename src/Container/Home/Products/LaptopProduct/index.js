@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 
 const LaptopProduct = ({ onAdd, listProduct }) => {
   console.log("hahhaaa", listProduct);
-  const image = "https://api-nodejs-backend.onrender.com/";
+  // const image = "https://api-nodejs-backend.onrender.com/";
   return (
     <LaptopProductWrapper>
       <div className="title">

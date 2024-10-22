@@ -8,6 +8,8 @@ import "swiper/css/navigation";
 
 const SliderProduct = ({ listData }) => {
   const image = "https://api-nodejs-backend.onrender.com/";
+  console.log("listDtaaaaaaahome===", listData.laptop);
+
   return (
     <SliderProductWrapper>
       <Swiper
@@ -77,13 +79,13 @@ const SliderProduct = ({ listData }) => {
         {listData?.laptop?.map((item) => (
           <SwiperSlide key={item._id} className="slider-item">
             <div className="border-sale">
-              <Link to={`/product/${item._id}`}>
+              <Link to={`/${item.productType.nameAscii}/${item._id}`}>
                 <div className="image">
                   <img src={image.concat(item.urlPicture)} alt="" />
                 </div>
               </Link>
               <div className="content">
-                <Link to={`/product/${item._id}`}>
+                <Link to={`/${item.productType.nameAscii}/${item._id}`}>
                   <span className="title">{item.nameExt}</span>
                 </Link>
               </div>

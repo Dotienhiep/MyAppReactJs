@@ -1,6 +1,5 @@
 import React from "react";
 import { SliderProductWrapper } from "./style";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
@@ -11,81 +10,6 @@ import "swiper/css/navigation";
 
 const SliderProduct = ({ listData }) => {
   const image = "https://api-nodejs-backend.onrender.com/";
-
-  // const settings = {
-  //   slidesToShow: 6.5,
-  //   slidesToScroll: 1,
-  //   autoplay: false,
-  //   autoplaySpeed: 1000,
-  //   responsive: [
-  //     {
-  //       breakpoint: 2560,
-  //       settings: {
-  //         slidesToShow: 6.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 2105,
-  //       settings: {
-  //         slidesToShow: 5.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1756,
-  //       settings: {
-  //         slidesToShow: 4.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1440,
-  //       settings: {
-  //         slidesToShow: 4.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1366,
-  //       settings: {
-  //         slidesToShow: 3.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1280,
-  //       settings: {
-  //         slidesToShow: 3.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1100,
-  //       settings: {
-  //         slidesToShow: 3.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1086,
-  //       settings: {
-  //         slidesToShow: 2.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         slidesToShow: 1.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 500,
-  //       settings: {
-  //         slidesToShow: 1.5,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1,
-  //       settings: {
-  //         slidesToShow: 1.5,
-  //       },
-  //     },
-  //   ],
-  // };
 
   return (
     <SliderProductWrapper>
@@ -156,13 +80,13 @@ const SliderProduct = ({ listData }) => {
         {listData?.laptop?.map((item) => (
           <SwiperSlide key={item._id} className="slider-item">
             <div className="border-sale">
-              <Link to={`/product/${item._id}`}>
+              <Link to={`/${item.productType.nameAscii}/${item._id}`}>
                 <div className="image">
                   <img src={image.concat(item.urlPicture)} alt="" />
                 </div>
               </Link>
               <div className="content">
-                <Link to={`/product/${item._id}`}>
+                <Link to={`/${item.productType.nameAscii}/${item._id}`}>
                   <span className="title">{item.nameExt}</span>
                 </Link>
               </div>

@@ -3,17 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartPlus,
   faInbox,
-  // faMedal,
   faMemory,
   faMicrochip,
   faMobile,
 } from "@fortawesome/free-solid-svg-icons";
 import { ProductItemWrapper } from "./../style";
 import { Link } from "react-router-dom";
-// import Memory from "./Memory";
-// import Price from "./Price";
 
-const ProductItem = ({ onAdd, listData }) => {
+const ProductItem = ({ onAdd, listData, productType }) => {
   // const [currentIndexActive, setCurrentIndexActive] = useState(0);
   const image = "https://api-nodejs-backend.onrender.com/";
 
@@ -24,10 +21,10 @@ const ProductItem = ({ onAdd, listData }) => {
   //   switch (currentIndexActive) {
   //     case 0:
   //       return (
-  //         // <SliderProduct
-  //         //   listData={listData}
-  //         //   isInfinity={true}
-  //         // />
+  // <SliderProduct
+  //   listData={listData}
+  //   isInfinity={true}
+  // />
   //         <div>
   //           <Price data={listData.listProductGroupDetail[0]} />
   //         </div>
@@ -73,13 +70,13 @@ const ProductItem = ({ onAdd, listData }) => {
     listData.quantity > 0 && (
       <ProductItemWrapper>
         <div className="product-wrapper">
-          <Link className="link" to={`/product/${listData._id}`}>
+          <Link className="link" to={`/${productType}/${listData._id}`}>
             <div className="image">
               <img src={image.concat(listData.urlPicture)} alt="" />
             </div>
           </Link>
           <div className="content-pro">
-            <Link className="link" to={`/product/${listData._id}`}>
+            <Link className="link" to={`/${productType}/${listData._id}`}>
               <span className="title">{listData.name}</span>
             </Link>
           </div>
@@ -145,7 +142,6 @@ const ProductItem = ({ onAdd, listData }) => {
                 </div>
               </div>
             </div>
-            {/* <div>{product.listAttrDetailShort.value}</div> */}
           </div>
           <div className="list-btn">
             <div className="list-btn-responsive">

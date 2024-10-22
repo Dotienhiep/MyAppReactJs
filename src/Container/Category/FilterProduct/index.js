@@ -8,7 +8,6 @@ import removeVietnameseTones from "../../../utils/CharAsciiConvert";
 import { range } from "lodash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-// import { Link } from "react-router-dom";
 
 const ProductType = [
   {
@@ -361,10 +360,11 @@ const FilterProduct = ({ onAdd }) => {
     return obj.nameAscii === productType;
   });
   const listBrand = type[0].brand;
-  const listPriceFilter = type[0].price;
+  // const listPriceFilter = type[0].price;
   // thêm price
   const searchParams = new URLSearchParams(Object.entries(queryObject));
   const api = `https://api-nodejs-backend.onrender.com/product/type/${productType}?${searchParams}`;
+  console.log("API URL:", api);
   useEffect(() => {
     const initData = async () => {
       try {
@@ -422,7 +422,6 @@ const FilterProduct = ({ onAdd }) => {
   // if (!listCountry.length) return null;
   //btn
   const handlePrev = () => {
-    // console.log("hehehe");
     // prev vo han
     if (currentIndex === 1) {
       setCurrentIndex(currentIndex);
@@ -432,8 +431,6 @@ const FilterProduct = ({ onAdd }) => {
   };
   const handleNext = () => {
     // next vo han
-    // console.log("curentIndex", currentIndex);
-    // console.log("totalpgae", totalPage);
     if (currentIndex === totalPage - 1) {
       // next vo han
       // console.log("hahahahhahha");
@@ -508,7 +505,12 @@ const FilterProduct = ({ onAdd }) => {
           <div className="list-product">
             {listData.map((item) => {
               return (
-                <ProductItem key={item._id} listData={item} onAdd={onAdd} />
+                <ProductItem
+                  productType={productType}
+                  key={item._id}
+                  listData={item}
+                  onAdd={onAdd}
+                />
               );
             })}
           </div>

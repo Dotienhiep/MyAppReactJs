@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 
 const PhoneProduct = ({ onAdd, listProduct }) => {
   console.log("hahhaaa", listProduct);
-  const image = "https://api-nodejs-backend.onrender.com/";
+  // const image = "https://api-nodejs-backend.onrender.com/";
   return (
     <PhoneProductWrapper>
       <div className="title">

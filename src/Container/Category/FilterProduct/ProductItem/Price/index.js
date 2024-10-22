@@ -3,9 +3,6 @@ import { PriceWrapper } from "./style";
 
 const Price = ({ data }) => {
   const dataMemory = parseInt(data?.price);
-  // function format(n, currency) {
-  //   return n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,") + currency;
-  // }
   function format(n, currency) {
     return n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,") + currency;
   }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../../contants";
+import { device } from "./../../../contants";
 
 export const SliderProductWrapper = styled.div`
   max-width: 100%; /* Đặt chiều rộng tối đa cho container */
